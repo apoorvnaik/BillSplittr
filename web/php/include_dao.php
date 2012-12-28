@@ -1,0 +1,45 @@
+<?php
+	//include all DAO files
+	require_once('class/sql/Connection.class.php');
+	require_once('class/sql/ConnectionFactory.class.php');
+	require_once('class/sql/ConnectionProperty.class.php');
+	require_once('class/sql/QueryExecutor.class.php');
+	require_once('class/sql/Transaction.class.php');
+	require_once('class/sql/SqlQuery.class.php');
+	require_once('class/core/ArrayList.class.php');
+	require_once('class/dao/DAOFactory.class.php');
+ 	
+	require_once('class/dao/BugReportDAO.class.php');
+	require_once('class/dto/BugReport.class.php');
+	require_once('class/mysql/BugReportMySqlDAO.class.php');
+	require_once('class/mysql/ext/BugReportMySqlExtDAO.class.php');
+	require_once('class/dao/EmailSentDAO.class.php');
+	require_once('class/dto/EmailSent.class.php');
+	require_once('class/mysql/EmailSentMySqlDAO.class.php');
+	require_once('class/mysql/ext/EmailSentMySqlExtDAO.class.php');
+	require_once('class/dao/ItemShareDAO.class.php');
+	require_once('class/dto/ItemShare.class.php');
+	require_once('class/mysql/ItemShareMySqlDAO.class.php');
+	require_once('class/mysql/ext/ItemShareMySqlExtDAO.class.php');
+	require_once('class/dao/ItemizedBillDAO.class.php');
+	require_once('class/dto/ItemizedBill.class.php');
+	require_once('class/mysql/ItemizedBillMySqlDAO.class.php');
+	require_once('class/mysql/ext/ItemizedBillMySqlExtDAO.class.php');
+	require_once('class/dao/ItemsDAO.class.php');
+	require_once('class/dto/Item.class.php');
+	require_once('class/mysql/ItemsMySqlDAO.class.php');
+	require_once('class/mysql/ext/ItemsMySqlExtDAO.class.php');
+	require_once('class/dao/LedgerDAO.class.php');
+	require_once('class/dto/Ledger.class.php');
+	require_once('class/mysql/LedgerMySqlDAO.class.php');
+	require_once('class/mysql/ext/LedgerMySqlExtDAO.class.php');
+	require_once('class/dao/SharedBillDAO.class.php');
+	require_once('class/dto/SharedBill.class.php');
+	require_once('class/mysql/SharedBillMySqlDAO.class.php');
+	require_once('class/mysql/ext/SharedBillMySqlExtDAO.class.php');
+	require_once('class/dao/UserDAO.class.php');
+	require_once('class/dto/User.class.php');
+	require_once('class/mysql/UserMySqlDAO.class.php');
+	require_once('class/mysql/ext/UserMySqlExtDAO.class.php');
+
+?>
