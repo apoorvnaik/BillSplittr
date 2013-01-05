@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="build">
+  <target name="build">
+    <property name="axis.home" value="path.to.axis" />
+    <path id="axis.classpath">
+      <fileset dir="${axis.home}/lib">
+        <include name="**/*.jar" />
+      </fileset>
+    </path>
+    <taskdef resource="axis-tasks.properties" classpathref="axis.classpath" />
+    <mkdir dir="src" />
+    <mkdir dir="classes" />
+    <axis-java2wsdl output="BugReport.wsdl" className="com.mybillr.app.jdbc.BugReportDaoImpl" namespace="urn:MyBillr" location="http://localhost:8080/axis/services/BugReport" methods="insert,update,delete,findByPrimaryKey,findAll,findByUser,findWhereIdEquals,findWhereTitleEquals,findWhereUserIdEquals,findWhereMessageEquals,findWhereReportedOnEquals">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-java2wsdl>
+    <axis-wsdl2java url="BugReport.wsdl" deployscope="session" serverSide="yes" noimports="no" verbose="no" testcase="no" output="src">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-wsdl2java>
+    <axis-java2wsdl output="EmailSent.wsdl" className="com.mybillr.app.jdbc.EmailSentDaoImpl" namespace="urn:MyBillr" location="http://localhost:8080/axis/services/EmailSent" methods="insert,update,delete,findByPrimaryKey,findAll,findWhereIdEquals,findWhereFromEquals,findWhereToEquals,findWhereSubjectEquals,findWhereMessageEquals,findWhereSentOnEquals">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-java2wsdl>
+    <axis-wsdl2java url="EmailSent.wsdl" deployscope="session" serverSide="yes" noimports="no" verbose="no" testcase="no" output="src">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-wsdl2java>
+    <axis-java2wsdl output="ItemShare.wsdl" className="com.mybillr.app.jdbc.ItemShareDaoImpl" namespace="urn:MyBillr" location="http://localhost:8080/axis/services/ItemShare" methods="insert,update,delete,findByPrimaryKey,findAll,findByItems,findByUser,findWhereIdEquals,findWhereItemIdEquals,findWhereUserIdEquals,findWhereShareEquals">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-java2wsdl>
+    <axis-wsdl2java url="ItemShare.wsdl" deployscope="session" serverSide="yes" noimports="no" verbose="no" testcase="no" output="src">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-wsdl2java>
+    <axis-java2wsdl output="ItemizedBill.wsdl" className="com.mybillr.app.jdbc.ItemizedBillDaoImpl" namespace="urn:MyBillr" location="http://localhost:8080/axis/services/ItemizedBill" methods="insert,update,delete,findByPrimaryKey,findAll,findWhereIdEquals,findWherePaidByEquals,findWhereItemsEquals">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-java2wsdl>
+    <axis-wsdl2java url="ItemizedBill.wsdl" deployscope="session" serverSide="yes" noimports="no" verbose="no" testcase="no" output="src">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-wsdl2java>
+    <axis-java2wsdl output="Items.wsdl" className="com.mybillr.app.jdbc.ItemsDaoImpl" namespace="urn:MyBillr" location="http://localhost:8080/axis/services/Items" methods="insert,update,delete,findByPrimaryKey,findAll,findWhereIdEquals,findWhereNameEquals,findWhereParticipantEquals,findWherePriceEquals">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-java2wsdl>
+    <axis-wsdl2java url="Items.wsdl" deployscope="session" serverSide="yes" noimports="no" verbose="no" testcase="no" output="src">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-wsdl2java>
+    <axis-java2wsdl output="Ledger.wsdl" className="com.mybillr.app.jdbc.LedgerDaoImpl" namespace="urn:MyBillr" location="http://localhost:8080/axis/services/Ledger" methods="insert,update,delete,findByPrimaryKey,findAll,findByUser,findByUser2,findWhereIdEquals,findWhereOwedByEquals,findWhereOwesToEquals,findWhereAmountEquals,findWhereCurrencyEquals">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-java2wsdl>
+    <axis-wsdl2java url="Ledger.wsdl" deployscope="session" serverSide="yes" noimports="no" verbose="no" testcase="no" output="src">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-wsdl2java>
+    <axis-java2wsdl output="SharedBill.wsdl" className="com.mybillr.app.jdbc.SharedBillDaoImpl" namespace="urn:MyBillr" location="http://localhost:8080/axis/services/SharedBill" methods="insert,update,delete,findByPrimaryKey,findAll,findWhereIdEquals,findWhereTitleEquals,findWhereParticipantsEquals,findWherePaidByEquals,findWhereItemsEquals">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-java2wsdl>
+    <axis-wsdl2java url="SharedBill.wsdl" deployscope="session" serverSide="yes" noimports="no" verbose="no" testcase="no" output="src">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-wsdl2java>
+    <axis-java2wsdl output="User.wsdl" className="com.mybillr.app.jdbc.UserDaoImpl" namespace="urn:MyBillr" location="http://localhost:8080/axis/services/User" methods="insert,update,delete,findByPrimaryKey,findAll,findWhereIdEquals,findWhereFnameEquals,findWhereLnameEquals,findWhereEmailEquals,findWherePhoneEquals,findWhereSaltEquals,findWherePasswordEquals,findWhereCreatedOnEquals,findWhereUpdatedOnEquals,findWhereLastLoggedEquals">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-java2wsdl>
+    <axis-wsdl2java url="User.wsdl" deployscope="session" serverSide="yes" noimports="no" verbose="no" testcase="no" output="src">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-wsdl2java>
+    <axis-java2wsdl output="Currencies.wsdl" className="com.mybillr.app.jdbc.CurrenciesDaoImpl" namespace="urn:MyBillr" location="http://localhost:8080/axis/services/Currencies" methods="insert,update,delete,findByPrimaryKey,findAll,findWhereIdEquals,findWhereCodeEquals,findWhereCurrencyEquals,findWhereCountryEquals">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-java2wsdl>
+    <axis-wsdl2java url="Currencies.wsdl" deployscope="session" serverSide="yes" noimports="no" verbose="no" testcase="no" output="src">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-wsdl2java>
+    <axis-java2wsdl output="Friends.wsdl" className="com.mybillr.app.jdbc.FriendsDaoImpl" namespace="urn:MyBillr" location="http://localhost:8080/axis/services/Friends" methods="insert,update,delete,findByPrimaryKey,findAll,findByUser,findByUser2,findWhereUserIdEquals,findWhereFriendIdEquals">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-java2wsdl>
+    <axis-wsdl2java url="Friends.wsdl" deployscope="session" serverSide="yes" noimports="no" verbose="no" testcase="no" output="src">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-wsdl2java>
+    <axis-java2wsdl output="Geoip.wsdl" className="com.mybillr.app.jdbc.GeoipDaoImpl" namespace="urn:MyBillr" location="http://localhost:8080/axis/services/Geoip" methods="insert,findAll,findWhereStartEquals,findWhereEndEquals,findWhereStartIntEquals,findWhereEndIntEquals,findWhereCountrySymbolEquals,findWhereCountryEquals">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-java2wsdl>
+    <axis-wsdl2java url="Geoip.wsdl" deployscope="session" serverSide="yes" noimports="no" verbose="no" testcase="no" output="src">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-wsdl2java>
+    <axis-java2wsdl output="Groups.wsdl" className="com.mybillr.app.jdbc.GroupsDaoImpl" namespace="urn:MyBillr" location="http://localhost:8080/axis/services/Groups" methods="insert,update,delete,findByPrimaryKey,findAll,findByUser,findWhereIdEquals,findWhereNameEquals,findWhereMemberIdEquals">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-java2wsdl>
+    <axis-wsdl2java url="Groups.wsdl" deployscope="session" serverSide="yes" noimports="no" verbose="no" testcase="no" output="src">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-wsdl2java>
+    <axis-java2wsdl output="News.wsdl" className="com.mybillr.app.jdbc.NewsDaoImpl" namespace="urn:MyBillr" location="http://localhost:8080/axis/services/News" methods="insert,update,delete,findByPrimaryKey,findAll,findWhereIdEquals,findWhereContentEquals,findWhereDatedEquals">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-java2wsdl>
+    <axis-wsdl2java url="News.wsdl" deployscope="session" serverSide="yes" noimports="no" verbose="no" testcase="no" output="src">
+      <mapping namespace="urn:MyBillr" package="com.mybillr.app.jdbc" />
+    </axis-wsdl2java>
+    <javac srcdir="src" destdir="classes">
+      <classpath refid="axis.classpath" />
+    </javac>
+  </target>
+</project>
+

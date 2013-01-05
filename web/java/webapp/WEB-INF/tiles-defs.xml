@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<!--
+     This is a blank Tiles definition file with a commented example.
+-->
+<tiles-definitions>
+  <!-- sample tiles definitions
+    <definition name=".mainLayout" path="/common/layouts/classicLayout.jsp">
+        <put name="title"  value="Sample Page Title" />
+        <put name="header" value="/common/header.jsp" />
+        <put name="menu"   value=".mainMenu" />
+        <put name="footer" value="/common/footer.jsp" />
+        <put name="body"   value=".portal.body" />
+    </definition>
+
+    <definition name=".mainMenu" path="/common/layouts/vboxLayout.jsp" >
+        <putList name="list" >
+            <add value=".menu.links" />
+            <add value=".menu.taglib.references" />
+            <add value=".menu.printer.friendly" />
+            <add value=".menu.old.documents" />
+      </putList>
+    </definition>
+
+    <definition name="aPage" extends=".mainLayout">
+        <put name="title"  value="Another Title" />
+        <put name="body"   value=".aPage.body" />
+    </definition>
+
+    end samples -->
+  <definition name="${YOUR_DEFINITION_HERE}" />
+  <definition name=".mainLayout" path="/layouts/mainLayout.jsp">
+    <put name="nav" value="/pages/Nav.jsp" />
+  </definition>
+  <definition name=".index" extends=".mainLayout">
+    <put name="title" value="Index" />
+    <put name="body" value="/pages/Welcome.jsp" />
+  </definition>
+  <definition name=".bugReport.index" extends=".mainLayout">
+    <put name="title" value="BugReport" />
+    <put name="body" value="/BugReport.jsp" />
+  </definition>
+  <definition name=".bugReport.view" extends=".mainLayout">
+    <put name="title" value="BugReport" />
+    <put name="body" value="/BugReportView.jsp" />
+  </definition>
+  <definition name=".bugReport.edit" extends=".mainLayout">
+    <put name="title" value="BugReport" />
+    <put name="body" value="/BugReportEdit.jsp" />
+  </definition>
+  <definition name=".bugReport.findByPrimaryKey.form" extends=".mainLayout">
+    <put name="title" value="BugReport findByPrimaryKey" />
+    <put name="body" value="/BugReportFindByPrimaryKey.jsp" />
+  </definition>
+  <definition name=".bugReport.findByPrimaryKey.results" extends=".mainLayout">
+    <put name="title" value="BugReport findByPrimaryKey" />
+    <put name="body" value="/BugReportView.jsp" />
+  </definition>
+  <definition name=".bugReport.findAll.form" extends=".mainLayout">
+    <put name="title" value="BugReport findAll" />
+    <put name="body" value="/BugReportFindAll.jsp" />
+  </definition>
+  <definition name=".bugReport.findAll.results" extends=".mainLayout">
+    <put name="title" value="BugReport findAll" />
+    <put name="body" value="/BugReportResult.jsp" />
+  </definition>
+  <definition name=".bugReport.findByUser.form" extends=".mainLayout">
+    <put name="title" value="BugReport findByUser" />
+    <put name="body" value="/BugReportFindByUser.jsp" />
+  </definition>
+  <definition name=".bugReport.findByUser.results" extends=".mainLayout">
+    <put name="title" value="BugReport findByUser" />
+    <put name="body" value="/BugReportResult.jsp" />
+  </definition>
+  <definition name=".bugReport.findWhereIdEquals.form" extends=".mainLayout">
+    <put name="title" value="BugReport findWhereIdEquals" />
+    <put name="body" value="/BugReportFindWhereIdEquals.jsp" />
+  </definition>
+  <definition name=".bugReport.findWhereIdEquals.results" extends=".mainLayout">
+    <put name="title" value="BugReport findWhereIdEquals" />
+    <put name="body" value="/BugReportResult.jsp" />
+  </definition>
+  <definition name=".bugReport.findWhereTitleEquals.form" extends=".mainLayout">
+    <put name="title" value="BugReport findWhereTitleEquals" />
+    <put name="body" value="/BugReportFindWhereTitleEquals.jsp" />
+  </definition>
+  <definition name=".bugReport.findWhereTitleEquals.results" extends=".mainLayout">
+    <put name="title" value="BugReport findWhereTitleEquals" />
+    <put name="body" value="/BugReportResult.jsp" />
+  </definition>
+  <definition name=".bugReport.findWhereUserIdEquals.form" extends=".mainLayout">
+    <put name="title" value="BugReport findWhereUserIdEquals" />
+    <put name="body" value="/BugReportFindWhereUserIdEquals.jsp" />
+  </definition>
+  <definition name=".bugReport.findWhereUserIdEquals.results" extends=".mainLayout">
+    <put name="title" value="BugReport findWhereUserIdEquals" />
+    <put name="body" value="/BugReportResult.jsp" />
+  </definition>
+  <definition name=".bugReport.findWhereMessageEquals.form" extends=".mainLayout">
+    <put name="title" value="BugReport findWhereMessageEquals" />
+    <put name="body" value="/BugReportFindWhereMessageEquals.jsp" />
+  </definition>
+  <definition name=".bugReport.findWhereMessageEquals.results" extends=".mainLayout">
+    <put name="title" value="BugReport findWhereMessageEquals" />
+    <put name="body" value="/BugReportResult.jsp" />
+  </definition>
+  <definition name=".bugReport.findWhereReportedOnEquals.form" extends=".mainLayout">
+    <put name="title" value="BugReport findWhereReportedOnEquals" />
+    <put name="body" value="/BugReportFindWhereReportedOnEquals.jsp" />
+  </definition>
+  <definition name=".bugReport.findWhereReportedOnEquals.results" extends=".mainLayout">
+    <put name="title" value="BugReport findWhereReportedOnEquals" />
+    <put name="body" value="/BugReportResult.jsp" />
+  </definition>
+  <definition name=".emailSent.index" extends=".mainLayout">
+    <put name="title" value="EmailSent" />
+    <put name="body" value="/EmailSent.jsp" />
+  </definition>
+  <definition name=".emailSent.view" extends=".mainLayout">
+    <put name="title" value="EmailSent" />
+    <put name="body" value="/EmailSentView.jsp" />
+  </definition>
+  <definition name=".emailSent.edit" extends=".mainLayout">
+    <put name="title" value="EmailSent" />
+    <put name="body" value="/EmailSentEdit.jsp" />
+  </definition>
+  <definition name=".emailSent.findByPrimaryKey.form" extends=".mainLayout">
+    <put name="title" value="EmailSent findByPrimaryKey" />
+    <put name="body" value="/EmailSentFindByPrimaryKey.jsp" />
+  </definition>
+  <definition name=".emailSent.findByPrimaryKey.results" extends=".mainLayout">
+    <put name="title" value="EmailSent findByPrimaryKey" />
+    <put name="body" value="/EmailSentView.jsp" />
+  </definition>
+  <definition name=".emailSent.findAll.form" extends=".mainLayout">
+    <put name="title" value="EmailSent findAll" />
+    <put name="body" value="/EmailSentFindAll.jsp" />
+  </definition>
+  <definition name=".emailSent.findAll.results" extends=".mainLayout">
+    <put name="title" value="EmailSent findAll" />
+    <put name="body" value="/EmailSentResult.jsp" />
+  </definition>
+  <definition name=".emailSent.findWhereIdEquals.form" extends=".mainLayout">
+    <put name="title" value="EmailSent findWhereIdEquals" />
+    <put name="body" value="/EmailSentFindWhereIdEquals.jsp" />
+  </definition>
+  <definition name=".emailSent.findWhereIdEquals.results" extends=".mainLayout">
+    <put name="title" value="EmailSent findWhereIdEquals" />
+    <put name="body" value="/EmailSentResult.jsp" />
+  </definition>
+  <definition name=".emailSent.findWhereFromEquals.form" extends=".mainLayout">
+    <put name="title" value="EmailSent findWhereFromEquals" />
+    <put name="body" value="/EmailSentFindWhereFromEquals.jsp" />
+  </definition>
+  <definition name=".emailSent.findWhereFromEquals.results" extends=".mainLayout">
+    <put name="title" value="EmailSent findWhereFromEquals" />
+    <put name="body" value="/EmailSentResult.jsp" />
+  </definition>
+  <definition name=".emailSent.findWhereToEquals.form" extends=".mainLayout">
+    <put name="title" value="EmailSent findWhereToEquals" />
+    <put name="body" value="/EmailSentFindWhereToEquals.jsp" />
+  </definition>
+  <definition name=".emailSent.findWhereToEquals.results" extends=".mainLayout">
+    <put name="title" value="EmailSent findWhereToEquals" />
+    <put name="body" value="/EmailSentResult.jsp" />
+  </definition>
+  <definition name=".emailSent.findWhereSubjectEquals.form" extends=".mainLayout">
+    <put name="title" value="EmailSent findWhereSubjectEquals" />
+    <put name="body" value="/EmailSentFindWhereSubjectEquals.jsp" />
+  </definition>
+  <definition name=".emailSent.findWhereSubjectEquals.results" extends=".mainLayout">
+    <put name="title" value="EmailSent findWhereSubjectEquals" />
+    <put name="body" value="/EmailSentResult.jsp" />
+  </definition>
+  <definition name=".emailSent.findWhereMessageEquals.form" extends=".mainLayout">
+    <put name="title" value="EmailSent findWhereMessageEquals" />
+    <put name="body" value="/EmailSentFindWhereMessageEquals.jsp" />
+  </definition>
+  <definition name=".emailSent.findWhereMessageEquals.results" extends=".mainLayout">
+    <put name="title" value="EmailSent findWhereMessageEquals" />
+    <put name="body" value="/EmailSentResult.jsp" />
+  </definition>
+  <definition name=".emailSent.findWhereSentOnEquals.form" extends=".mainLayout">
+    <put name="title" value="EmailSent findWhereSentOnEquals" />
+    <put name="body" value="/EmailSentFindWhereSentOnEquals.jsp" />
+  </definition>
+  <definition name=".emailSent.findWhereSentOnEquals.results" extends=".mainLayout">
+    <put name="title" value="EmailSent findWhereSentOnEquals" />
+    <put name="body" value="/EmailSentResult.jsp" />
+  </definition>
+  <definition name=".itemShare.index" extends=".mainLayout">
+    <put name="title" value="ItemShare" />
+    <put name="body" value="/ItemShare.jsp" />
+  </definition>
+  <definition name=".itemShare.view" extends=".mainLayout">
+    <put name="title" value="ItemShare" />
+    <put name="body" value="/ItemShareView.jsp" />
+  </definition>
+  <definition name=".itemShare.edit" extends=".mainLayout">
+    <put name="title" value="ItemShare" />
+    <put name="body" value="/ItemShareEdit.jsp" />
+  </definition>
+  <definition name=".itemShare.findByPrimaryKey.form" extends=".mainLayout">
+    <put name="title" value="ItemShare findByPrimaryKey" />
+    <put name="body" value="/ItemShareFindByPrimaryKey.jsp" />
+  </definition>
+  <definition name=".itemShare.findByPrimaryKey.results" extends=".mainLayout">
+    <put name="title" value="ItemShare findByPrimaryKey" />
+    <put name="body" value="/ItemShareView.jsp" />
+  </definition>
+  <definition name=".itemShare.findAll.form" extends=".mainLayout">
+    <put name="title" value="ItemShare findAll" />
+    <put name="body" value="/ItemShareFindAll.jsp" />
+  </definition>
+  <definition name=".itemShare.findAll.results" extends=".mainLayout">
+    <put name="title" value="ItemShare findAll" />
+    <put name="body" value="/ItemShareResult.jsp" />
+  </definition>
+  <definition name=".itemShare.findByItems.form" extends=".mainLayout">
+    <put name="title" value="ItemShare findByItems" />
+    <put name="body" value="/ItemShareFindByItems.jsp" />
+  </definition>
+  <definition name=".itemShare.findByItems.results" extends=".mainLayout">
+    <put name="title" value="ItemShare findByItems" />
+    <put name="body" value="/ItemShareResult.jsp" />
+  </definition>
+  <definition name=".itemShare.findByUser.form" extends=".mainLayout">
+    <put name="title" value="ItemShare findByUser" />
+    <put name="body" value="/ItemShareFindByUser.jsp" />
+  </definition>
+  <definition name=".itemShare.findByUser.results" extends=".mainLayout">
+    <put name="title" value="ItemShare findByUser" />
+    <put name="body" value="/ItemShareResult.jsp" />
+  </definition>
+  <definition name=".itemShare.findWhereIdEquals.form" extends=".mainLayout">
+    <put name="title" value="ItemShare findWhereIdEquals" />
+    <put name="body" value="/ItemShareFindWhereIdEquals.jsp" />
+  </definition>
+  <definition name=".itemShare.findWhereIdEquals.results" extends=".mainLayout">
+    <put name="title" value="ItemShare findWhereIdEquals" />
+    <put name="body" value="/ItemShareResult.jsp" />
+  </definition>
+  <definition name=".itemShare.findWhereItemIdEquals.form" extends=".mainLayout">
+    <put name="title" value="ItemShare findWhereItemIdEquals" />
+    <put name="body" value="/ItemShareFindWhereItemIdEquals.jsp" />
+  </definition>
+  <definition name=".itemShare.findWhereItemIdEquals.results" extends=".mainLayout">
+    <put name="title" value="ItemShare findWhereItemIdEquals" />
+    <put name="body" value="/ItemShareResult.jsp" />
+  </definition>
+  <definition name=".itemShare.findWhereUserIdEquals.form" extends=".mainLayout">
+    <put name="title" value="ItemShare findWhereUserIdEquals" />
+    <put name="body" value="/ItemShareFindWhereUserIdEquals.jsp" />
+  </definition>
+  <definition name=".itemShare.findWhereUserIdEquals.results" extends=".mainLayout">
+    <put name="title" value="ItemShare findWhereUserIdEquals" />
+    <put name="body" value="/ItemShareResult.jsp" />
+  </definition>
+  <definition name=".itemShare.findWhereShareEquals.form" extends=".mainLayout">
+    <put name="title" value="ItemShare findWhereShareEquals" />
+    <put name="body" value="/ItemShareFindWhereShareEquals.jsp" />
+  </definition>
+  <definition name=".itemShare.findWhereShareEquals.results" extends=".mainLayout">
+    <put name="title" value="ItemShare findWhereShareEquals" />
+    <put name="body" value="/ItemShareResult.jsp" />
+  </definition>
+  <definition name=".itemizedBill.index" extends=".mainLayout">
+    <put name="title" value="ItemizedBill" />
+    <put name="body" value="/ItemizedBill.jsp" />
+  </definition>
+  <definition name=".itemizedBill.view" extends=".mainLayout">
+    <put name="title" value="ItemizedBill" />
+    <put name="body" value="/ItemizedBillView.jsp" />
+  </definition>
+  <definition name=".itemizedBill.edit" extends=".mainLayout">
+    <put name="title" value="ItemizedBill" />
+    <put name="body" value="/ItemizedBillEdit.jsp" />
+  </definition>
+  <definition name=".itemizedBill.findByPrimaryKey.form" extends=".mainLayout">
+    <put name="title" value="ItemizedBill findByPrimaryKey" />
+    <put name="body" value="/ItemizedBillFindByPrimaryKey.jsp" />
+  </definition>
+  <definition name=".itemizedBill.findByPrimaryKey.results" extends=".mainLayout">
+    <put name="title" value="ItemizedBill findByPrimaryKey" />
+    <put name="body" value="/ItemizedBillView.jsp" />
+  </definition>
+  <definition name=".itemizedBill.findAll.form" extends=".mainLayout">
+    <put name="title" value="ItemizedBill findAll" />
+    <put name="body" value="/ItemizedBillFindAll.jsp" />
+  </definition>
+  <definition name=".itemizedBill.findAll.results" extends=".mainLayout">
+    <put name="title" value="ItemizedBill findAll" />
+    <put name="body" value="/ItemizedBillResult.jsp" />
+  </definition>
+  <definition name=".itemizedBill.findWhereIdEquals.form" extends=".mainLayout">
+    <put name="title" value="ItemizedBill findWhereIdEquals" />
+    <put name="body" value="/ItemizedBillFindWhereIdEquals.jsp" />
+  </definition>
+  <definition name=".itemizedBill.findWhereIdEquals.results" extends=".mainLayout">
+    <put name="title" value="ItemizedBill findWhereIdEquals" />
+    <put name="body" value="/ItemizedBillResult.jsp" />
+  </definition>
+  <definition name=".itemizedBill.findWherePaidByEquals.form" extends=".mainLayout">
+    <put name="title" value="ItemizedBill findWherePaidByEquals" />
+    <put name="body" value="/ItemizedBillFindWherePaidByEquals.jsp" />
+  </definition>
+  <definition name=".itemizedBill.findWherePaidByEquals.results" extends=".mainLayout">
+    <put name="title" value="ItemizedBill findWherePaidByEquals" />
+    <put name="body" value="/ItemizedBillResult.jsp" />
+  </definition>
+  <definition name=".itemizedBill.findWhereItemsEquals.form" extends=".mainLayout">
+    <put name="title" value="ItemizedBill findWhereItemsEquals" />
+    <put name="body" value="/ItemizedBillFindWhereItemsEquals.jsp" />
+  </definition>
+  <definition name=".itemizedBill.findWhereItemsEquals.results" extends=".mainLayout">
+    <put name="title" value="ItemizedBill findWhereItemsEquals" />
+    <put name="body" value="/ItemizedBillResult.jsp" />
+  </definition>
+  <definition name=".items.index" extends=".mainLayout">
+    <put name="title" value="Items" />
+    <put name="body" value="/Items.jsp" />
+  </definition>
+  <definition name=".items.view" extends=".mainLayout">
+    <put name="title" value="Items" />
+    <put name="body" value="/ItemsView.jsp" />
+  </definition>
+  <definition name=".items.edit" extends=".mainLayout">
+    <put name="title" value="Items" />
+    <put name="body" value="/ItemsEdit.jsp" />
+  </definition>
+  <definition name=".items.findByPrimaryKey.form" extends=".mainLayout">
+    <put name="title" value="Items findByPrimaryKey" />
+    <put name="body" value="/ItemsFindByPrimaryKey.jsp" />
+  </definition>
+  <definition name=".items.findByPrimaryKey.results" extends=".mainLayout">
+    <put name="title" value="Items findByPrimaryKey" />
+    <put name="body" value="/ItemsView.jsp" />
+  </definition>
+  <definition name=".items.findAll.form" extends=".mainLayout">
+    <put name="title" value="Items findAll" />
+    <put name="body" value="/ItemsFindAll.jsp" />
+  </definition>
+  <definition name=".items.findAll.results" extends=".mainLayout">
+    <put name="title" value="Items findAll" />
+    <put name="body" value="/ItemsResult.jsp" />
+  </definition>
+  <definition name=".items.findWhereIdEquals.form" extends=".mainLayout">
+    <put name="title" value="Items findWhereIdEquals" />
+    <put name="body" value="/ItemsFindWhereIdEquals.jsp" />
+  </definition>
+  <definition name=".items.findWhereIdEquals.results" extends=".mainLayout">
+    <put name="title" value="Items findWhereIdEquals" />
+    <put name="body" value="/ItemsResult.jsp" />
+  </definition>
+  <definition name=".items.findWhereNameEquals.form" extends=".mainLayout">
+    <put name="title" value="Items findWhereNameEquals" />
+    <put name="body" value="/ItemsFindWhereNameEquals.jsp" />
+  </definition>
+  <definition name=".items.findWhereNameEquals.results" extends=".mainLayout">
+    <put name="title" value="Items findWhereNameEquals" />
+    <put name="body" value="/ItemsResult.jsp" />
+  </definition>
+  <definition name=".items.findWhereParticipantEquals.form" extends=".mainLayout">
+    <put name="title" value="Items findWhereParticipantEquals" />
+    <put name="body" value="/ItemsFindWhereParticipantEquals.jsp" />
+  </definition>
+  <definition name=".items.findWhereParticipantEquals.results" extends=".mainLayout">
+    <put name="title" value="Items findWhereParticipantEquals" />
+    <put name="body" value="/ItemsResult.jsp" />
+  </definition>
+  <definition name=".items.findWherePriceEquals.form" extends=".mainLayout">
+    <put name="title" value="Items findWherePriceEquals" />
+    <put name="body" value="/ItemsFindWherePriceEquals.jsp" />
+  </definition>
+  <definition name=".items.findWherePriceEquals.results" extends=".mainLayout">
+    <put name="title" value="Items findWherePriceEquals" />
+    <put name="body" value="/ItemsResult.jsp" />
+  </definition>
+  <definition name=".ledger.index" extends=".mainLayout">
+    <put name="title" value="Ledger" />
+    <put name="body" value="/Ledger.jsp" />
+  </definition>
+  <definition name=".ledger.view" extends=".mainLayout">
+    <put name="title" value="Ledger" />
+    <put name="body" value="/LedgerView.jsp" />
+  </definition>
+  <definition name=".ledger.edit" extends=".mainLayout">
+    <put name="title" value="Ledger" />
+    <put name="body" value="/LedgerEdit.jsp" />
+  </definition>
+  <definition name=".ledger.findByPrimaryKey.form" extends=".mainLayout">
+    <put name="title" value="Ledger findByPrimaryKey" />
+    <put name="body" value="/LedgerFindByPrimaryKey.jsp" />
+  </definition>
+  <definition name=".ledger.findByPrimaryKey.results" extends=".mainLayout">
+    <put name="title" value="Ledger findByPrimaryKey" />
+    <put name="body" value="/LedgerView.jsp" />
+  </definition>
+  <definition name=".ledger.findAll.form" extends=".mainLayout">
+    <put name="title" value="Ledger findAll" />
+    <put name="body" value="/LedgerFindAll.jsp" />
+  </definition>
+  <definition name=".ledger.findAll.results" extends=".mainLayout">
+    <put name="title" value="Ledger findAll" />
+    <put name="body" value="/LedgerResult.jsp" />
+  </definition>
+  <definition name=".ledger.findByUser.form" extends=".mainLayout">
+    <put name="title" value="Ledger findByUser" />
+    <put name="body" value="/LedgerFindByUser.jsp" />
+  </definition>
+  <definition name=".ledger.findByUser.results" extends=".mainLayout">
+    <put name="title" value="Ledger findByUser" />
+    <put name="body" value="/LedgerResult.jsp" />
+  </definition>
+  <definition name=".ledger.findByUser2.form" extends=".mainLayout">
+    <put name="title" value="Ledger findByUser2" />
+    <put name="body" value="/LedgerFindByUser2.jsp" />
+  </definition>
+  <definition name=".ledger.findByUser2.results" extends=".mainLayout">
+    <put name="title" value="Ledger findByUser2" />
+    <put name="body" value="/LedgerResult.jsp" />
+  </definition>
+  <definition name=".ledger.findWhereIdEquals.form" extends=".mainLayout">
+    <put name="title" value="Ledger findWhereIdEquals" />
+    <put name="body" value="/LedgerFindWhereIdEquals.jsp" />
+  </definition>
+  <definition name=".ledger.findWhereIdEquals.results" extends=".mainLayout">
+    <put name="title" value="Ledger findWhereIdEquals" />
+    <put name="body" value="/LedgerResult.jsp" />
+  </definition>
+  <definition name=".ledger.findWhereOwedByEquals.form" extends=".mainLayout">
+    <put name="title" value="Ledger findWhereOwedByEquals" />
+    <put name="body" value="/LedgerFindWhereOwedByEquals.jsp" />
+  </definition>
+  <definition name=".ledger.findWhereOwedByEquals.results" extends=".mainLayout">
+    <put name="title" value="Ledger findWhereOwedByEquals" />
+    <put name="body" value="/LedgerResult.jsp" />
+  </definition>
+  <definition name=".ledger.findWhereOwesToEquals.form" extends=".mainLayout">
+    <put name="title" value="Ledger findWhereOwesToEquals" />
+    <put name="body" value="/LedgerFindWhereOwesToEquals.jsp" />
+  </definition>
+  <definition name=".ledger.findWhereOwesToEquals.results" extends=".mainLayout">
+    <put name="title" value="Ledger findWhereOwesToEquals" />
+    <put name="body" value="/LedgerResult.jsp" />
+  </definition>
+  <definition name=".ledger.findWhereAmountEquals.form" extends=".mainLayout">
+    <put name="title" value="Ledger findWhereAmountEquals" />
+    <put name="body" value="/LedgerFindWhereAmountEquals.jsp" />
+  </definition>
+  <definition name=".ledger.findWhereAmountEquals.results" extends=".mainLayout">
+    <put name="title" value="Ledger findWhereAmountEquals" />
+    <put name="body" value="/LedgerResult.jsp" />
+  </definition>
+  <definition name=".ledger.findWhereCurrencyEquals.form" extends=".mainLayout">
+    <put name="title" value="Ledger findWhereCurrencyEquals" />
+    <put name="body" value="/LedgerFindWhereCurrencyEquals.jsp" />
+  </definition>
+  <definition name=".ledger.findWhereCurrencyEquals.results" extends=".mainLayout">
+    <put name="title" value="Ledger findWhereCurrencyEquals" />
+    <put name="body" value="/LedgerResult.jsp" />
+  </definition>
+  <definition name=".sharedBill.index" extends=".mainLayout">
+    <put name="title" value="SharedBill" />
+    <put name="body" value="/SharedBill.jsp" />
+  </definition>
+  <definition name=".sharedBill.view" extends=".mainLayout">
+    <put name="title" value="SharedBill" />
+    <put name="body" value="/SharedBillView.jsp" />
+  </definition>
+  <definition name=".sharedBill.edit" extends=".mainLayout">
+    <put name="title" value="SharedBill" />
+    <put name="body" value="/SharedBillEdit.jsp" />
+  </definition>
+  <definition name=".sharedBill.findByPrimaryKey.form" extends=".mainLayout">
+    <put name="title" value="SharedBill findByPrimaryKey" />
+    <put name="body" value="/SharedBillFindByPrimaryKey.jsp" />
+  </definition>
+  <definition name=".sharedBill.findByPrimaryKey.results" extends=".mainLayout">
+    <put name="title" value="SharedBill findByPrimaryKey" />
+    <put name="body" value="/SharedBillView.jsp" />
+  </definition>
+  <definition name=".sharedBill.findAll.form" extends=".mainLayout">
+    <put name="title" value="SharedBill findAll" />
+    <put name="body" value="/SharedBillFindAll.jsp" />
+  </definition>
+  <definition name=".sharedBill.findAll.results" extends=".mainLayout">
+    <put name="title" value="SharedBill findAll" />
+    <put name="body" value="/SharedBillResult.jsp" />
+  </definition>
+  <definition name=".sharedBill.findWhereIdEquals.form" extends=".mainLayout">
+    <put name="title" value="SharedBill findWhereIdEquals" />
+    <put name="body" value="/SharedBillFindWhereIdEquals.jsp" />
+  </definition>
+  <definition name=".sharedBill.findWhereIdEquals.results" extends=".mainLayout">
+    <put name="title" value="SharedBill findWhereIdEquals" />
+    <put name="body" value="/SharedBillResult.jsp" />
+  </definition>
+  <definition name=".sharedBill.findWhereTitleEquals.form" extends=".mainLayout">
+    <put name="title" value="SharedBill findWhereTitleEquals" />
+    <put name="body" value="/SharedBillFindWhereTitleEquals.jsp" />
+  </definition>
+  <definition name=".sharedBill.findWhereTitleEquals.results" extends=".mainLayout">
+    <put name="title" value="SharedBill findWhereTitleEquals" />
+    <put name="body" value="/SharedBillResult.jsp" />
+  </definition>
+  <definition name=".sharedBill.findWhereParticipantsEquals.form" extends=".mainLayout">
+    <put name="title" value="SharedBill findWhereParticipantsEquals" />
+    <put name="body" value="/SharedBillFindWhereParticipantsEquals.jsp" />
+  </definition>
+  <definition name=".sharedBill.findWhereParticipantsEquals.results" extends=".mainLayout">
+    <put name="title" value="SharedBill findWhereParticipantsEquals" />
+    <put name="body" value="/SharedBillResult.jsp" />
+  </definition>
+  <definition name=".sharedBill.findWherePaidByEquals.form" extends=".mainLayout">
+    <put name="title" value="SharedBill findWherePaidByEquals" />
+    <put name="body" value="/SharedBillFindWherePaidByEquals.jsp" />
+  </definition>
+  <definition name=".sharedBill.findWherePaidByEquals.results" extends=".mainLayout">
+    <put name="title" value="SharedBill findWherePaidByEquals" />
+    <put name="body" value="/SharedBillResult.jsp" />
+  </definition>
+  <definition name=".sharedBill.findWhereItemsEquals.form" extends=".mainLayout">
+    <put name="title" value="SharedBill findWhereItemsEquals" />
+    <put name="body" value="/SharedBillFindWhereItemsEquals.jsp" />
+  </definition>
+  <definition name=".sharedBill.findWhereItemsEquals.results" extends=".mainLayout">
+    <put name="title" value="SharedBill findWhereItemsEquals" />
+    <put name="body" value="/SharedBillResult.jsp" />
+  </definition>
+  <definition name=".user.index" extends=".mainLayout">
+    <put name="title" value="User" />
+    <put name="body" value="/User.jsp" />
+  </definition>
+  <definition name=".user.view" extends=".mainLayout">
+    <put name="title" value="User" />
+    <put name="body" value="/UserView.jsp" />
+  </definition>
+  <definition name=".user.edit" extends=".mainLayout">
+    <put name="title" value="User" />
+    <put name="body" value="/UserEdit.jsp" />
+  </definition>
+  <definition name=".user.findByPrimaryKey.form" extends=".mainLayout">
+    <put name="title" value="User findByPrimaryKey" />
+    <put name="body" value="/UserFindByPrimaryKey.jsp" />
+  </definition>
+  <definition name=".user.findByPrimaryKey.results" extends=".mainLayout">
+    <put name="title" value="User findByPrimaryKey" />
+    <put name="body" value="/UserView.jsp" />
+  </definition>
+  <definition name=".user.findAll.form" extends=".mainLayout">
+    <put name="title" value="User findAll" />
+    <put name="body" value="/UserFindAll.jsp" />
+  </definition>
+  <definition name=".user.findAll.results" extends=".mainLayout">
+    <put name="title" value="User findAll" />
+    <put name="body" value="/UserResult.jsp" />
+  </definition>
+  <definition name=".user.findWhereIdEquals.form" extends=".mainLayout">
+    <put name="title" value="User findWhereIdEquals" />
+    <put name="body" value="/UserFindWhereIdEquals.jsp" />
+  </definition>
+  <definition name=".user.findWhereIdEquals.results" extends=".mainLayout">
+    <put name="title" value="User findWhereIdEquals" />
+    <put name="body" value="/UserResult.jsp" />
+  </definition>
+  <definition name=".user.findWhereFnameEquals.form" extends=".mainLayout">
+    <put name="title" value="User findWhereFnameEquals" />
+    <put name="body" value="/UserFindWhereFnameEquals.jsp" />
+  </definition>
+  <definition name=".user.findWhereFnameEquals.results" extends=".mainLayout">
+    <put name="title" value="User findWhereFnameEquals" />
+    <put name="body" value="/UserResult.jsp" />
+  </definition>
+  <definition name=".user.findWhereLnameEquals.form" extends=".mainLayout">
+    <put name="title" value="User findWhereLnameEquals" />
+    <put name="body" value="/UserFindWhereLnameEquals.jsp" />
+  </definition>
+  <definition name=".user.findWhereLnameEquals.results" extends=".mainLayout">
+    <put name="title" value="User findWhereLnameEquals" />
+    <put name="body" value="/UserResult.jsp" />
+  </definition>
+  <definition name=".user.findWhereEmailEquals.form" extends=".mainLayout">
+    <put name="title" value="User findWhereEmailEquals" />
+    <put name="body" value="/UserFindWhereEmailEquals.jsp" />
+  </definition>
+  <definition name=".user.findWhereEmailEquals.results" extends=".mainLayout">
+    <put name="title" value="User findWhereEmailEquals" />
+    <put name="body" value="/UserResult.jsp" />
+  </definition>
+  <definition name=".user.findWherePhoneEquals.form" extends=".mainLayout">
+    <put name="title" value="User findWherePhoneEquals" />
+    <put name="body" value="/UserFindWherePhoneEquals.jsp" />
+  </definition>
+  <definition name=".user.findWherePhoneEquals.results" extends=".mainLayout">
+    <put name="title" value="User findWherePhoneEquals" />
+    <put name="body" value="/UserResult.jsp" />
+  </definition>
+  <definition name=".user.findWhereSaltEquals.form" extends=".mainLayout">
+    <put name="title" value="User findWhereSaltEquals" />
+    <put name="body" value="/UserFindWhereSaltEquals.jsp" />
+  </definition>
+  <definition name=".user.findWhereSaltEquals.results" extends=".mainLayout">
+    <put name="title" value="User findWhereSaltEquals" />
+    <put name="body" value="/UserResult.jsp" />
+  </definition>
+  <definition name=".user.findWherePasswordEquals.form" extends=".mainLayout">
+    <put name="title" value="User findWherePasswordEquals" />
+    <put name="body" value="/UserFindWherePasswordEquals.jsp" />
+  </definition>
+  <definition name=".user.findWherePasswordEquals.results" extends=".mainLayout">
+    <put name="title" value="User findWherePasswordEquals" />
+    <put name="body" value="/UserResult.jsp" />
+  </definition>
+  <definition name=".user.findWhereCreatedOnEquals.form" extends=".mainLayout">
+    <put name="title" value="User findWhereCreatedOnEquals" />
+    <put name="body" value="/UserFindWhereCreatedOnEquals.jsp" />
+  </definition>
+  <definition name=".user.findWhereCreatedOnEquals.results" extends=".mainLayout">
+    <put name="title" value="User findWhereCreatedOnEquals" />
+    <put name="body" value="/UserResult.jsp" />
+  </definition>
+  <definition name=".user.findWhereUpdatedOnEquals.form" extends=".mainLayout">
+    <put name="title" value="User findWhereUpdatedOnEquals" />
+    <put name="body" value="/UserFindWhereUpdatedOnEquals.jsp" />
+  </definition>
+  <definition name=".user.findWhereUpdatedOnEquals.results" extends=".mainLayout">
+    <put name="title" value="User findWhereUpdatedOnEquals" />
+    <put name="body" value="/UserResult.jsp" />
+  </definition>
+  <definition name=".user.findWhereLastLoggedEquals.form" extends=".mainLayout">
+    <put name="title" value="User findWhereLastLoggedEquals" />
+    <put name="body" value="/UserFindWhereLastLoggedEquals.jsp" />
+  </definition>
+  <definition name=".user.findWhereLastLoggedEquals.results" extends=".mainLayout">
+    <put name="title" value="User findWhereLastLoggedEquals" />
+    <put name="body" value="/UserResult.jsp" />
+  </definition>
+  <definition name=".currencies.index" extends=".mainLayout">
+    <put name="title" value="Currencies" />
+    <put name="body" value="/Currencies.jsp" />
+  </definition>
+  <definition name=".currencies.view" extends=".mainLayout">
+    <put name="title" value="Currencies" />
+    <put name="body" value="/CurrenciesView.jsp" />
+  </definition>
+  <definition name=".currencies.edit" extends=".mainLayout">
+    <put name="title" value="Currencies" />
+    <put name="body" value="/CurrenciesEdit.jsp" />
+  </definition>
+  <definition name=".currencies.findByPrimaryKey.form" extends=".mainLayout">
+    <put name="title" value="Currencies findByPrimaryKey" />
+    <put name="body" value="/CurrenciesFindByPrimaryKey.jsp" />
+  </definition>
+  <definition name=".currencies.findByPrimaryKey.results" extends=".mainLayout">
+    <put name="title" value="Currencies findByPrimaryKey" />
+    <put name="body" value="/CurrenciesView.jsp" />
+  </definition>
+  <definition name=".currencies.findAll.form" extends=".mainLayout">
+    <put name="title" value="Currencies findAll" />
+    <put name="body" value="/CurrenciesFindAll.jsp" />
+  </definition>
+  <definition name=".currencies.findAll.results" extends=".mainLayout">
+    <put name="title" value="Currencies findAll" />
+    <put name="body" value="/CurrenciesResult.jsp" />
+  </definition>
+  <definition name=".currencies.findWhereIdEquals.form" extends=".mainLayout">
+    <put name="title" value="Currencies findWhereIdEquals" />
+    <put name="body" value="/CurrenciesFindWhereIdEquals.jsp" />
+  </definition>
+  <definition name=".currencies.findWhereIdEquals.results" extends=".mainLayout">
+    <put name="title" value="Currencies findWhereIdEquals" />
+    <put name="body" value="/CurrenciesResult.jsp" />
+  </definition>
+  <definition name=".currencies.findWhereCodeEquals.form" extends=".mainLayout">
+    <put name="title" value="Currencies findWhereCodeEquals" />
+    <put name="body" value="/CurrenciesFindWhereCodeEquals.jsp" />
+  </definition>
+  <definition name=".currencies.findWhereCodeEquals.results" extends=".mainLayout">
+    <put name="title" value="Currencies findWhereCodeEquals" />
+    <put name="body" value="/CurrenciesResult.jsp" />
+  </definition>
+  <definition name=".currencies.findWhereCurrencyEquals.form" extends=".mainLayout">
+    <put name="title" value="Currencies findWhereCurrencyEquals" />
+    <put name="body" value="/CurrenciesFindWhereCurrencyEquals.jsp" />
+  </definition>
+  <definition name=".currencies.findWhereCurrencyEquals.results" extends=".mainLayout">
+    <put name="title" value="Currencies findWhereCurrencyEquals" />
+    <put name="body" value="/CurrenciesResult.jsp" />
+  </definition>
+  <definition name=".currencies.findWhereCountryEquals.form" extends=".mainLayout">
+    <put name="title" value="Currencies findWhereCountryEquals" />
+    <put name="body" value="/CurrenciesFindWhereCountryEquals.jsp" />
+  </definition>
+  <definition name=".currencies.findWhereCountryEquals.results" extends=".mainLayout">
+    <put name="title" value="Currencies findWhereCountryEquals" />
+    <put name="body" value="/CurrenciesResult.jsp" />
+  </definition>
+  <definition name=".friends.index" extends=".mainLayout">
+    <put name="title" value="Friends" />
+    <put name="body" value="/Friends.jsp" />
+  </definition>
+  <definition name=".friends.view" extends=".mainLayout">
+    <put name="title" value="Friends" />
+    <put name="body" value="/FriendsView.jsp" />
+  </definition>
+  <definition name=".friends.edit" extends=".mainLayout">
+    <put name="title" value="Friends" />
+    <put name="body" value="/FriendsEdit.jsp" />
+  </definition>
+  <definition name=".friends.findByPrimaryKey.form" extends=".mainLayout">
+    <put name="title" value="Friends findByPrimaryKey" />
+    <put name="body" value="/FriendsFindByPrimaryKey.jsp" />
+  </definition>
+  <definition name=".friends.findByPrimaryKey.results" extends=".mainLayout">
+    <put name="title" value="Friends findByPrimaryKey" />
+    <put name="body" value="/FriendsView.jsp" />
+  </definition>
+  <definition name=".friends.findAll.form" extends=".mainLayout">
+    <put name="title" value="Friends findAll" />
+    <put name="body" value="/FriendsFindAll.jsp" />
+  </definition>
+  <definition name=".friends.findAll.results" extends=".mainLayout">
+    <put name="title" value="Friends findAll" />
+    <put name="body" value="/FriendsResult.jsp" />
+  </definition>
+  <definition name=".friends.findByUser.form" extends=".mainLayout">
+    <put name="title" value="Friends findByUser" />
+    <put name="body" value="/FriendsFindByUser.jsp" />
+  </definition>
+  <definition name=".friends.findByUser.results" extends=".mainLayout">
+    <put name="title" value="Friends findByUser" />
+    <put name="body" value="/FriendsResult.jsp" />
+  </definition>
+  <definition name=".friends.findByUser2.form" extends=".mainLayout">
+    <put name="title" value="Friends findByUser2" />
+    <put name="body" value="/FriendsFindByUser2.jsp" />
+  </definition>
+  <definition name=".friends.findByUser2.results" extends=".mainLayout">
+    <put name="title" value="Friends findByUser2" />
+    <put name="body" value="/FriendsResult.jsp" />
+  </definition>
+  <definition name=".friends.findWhereUserIdEquals.form" extends=".mainLayout">
+    <put name="title" value="Friends findWhereUserIdEquals" />
+    <put name="body" value="/FriendsFindWhereUserIdEquals.jsp" />
+  </definition>
+  <definition name=".friends.findWhereUserIdEquals.results" extends=".mainLayout">
+    <put name="title" value="Friends findWhereUserIdEquals" />
+    <put name="body" value="/FriendsResult.jsp" />
+  </definition>
+  <definition name=".friends.findWhereFriendIdEquals.form" extends=".mainLayout">
+    <put name="title" value="Friends findWhereFriendIdEquals" />
+    <put name="body" value="/FriendsFindWhereFriendIdEquals.jsp" />
+  </definition>
+  <definition name=".friends.findWhereFriendIdEquals.results" extends=".mainLayout">
+    <put name="title" value="Friends findWhereFriendIdEquals" />
+    <put name="body" value="/FriendsResult.jsp" />
+  </definition>
+  <definition name=".geoip.index" extends=".mainLayout">
+    <put name="title" value="Geoip" />
+    <put name="body" value="/Geoip.jsp" />
+  </definition>
+  <definition name=".geoip.view" extends=".mainLayout">
+    <put name="title" value="Geoip" />
+    <put name="body" value="/GeoipView.jsp" />
+  </definition>
+  <definition name=".geoip.findAll.form" extends=".mainLayout">
+    <put name="title" value="Geoip findAll" />
+    <put name="body" value="/GeoipFindAll.jsp" />
+  </definition>
+  <definition name=".geoip.findAll.results" extends=".mainLayout">
+    <put name="title" value="Geoip findAll" />
+    <put name="body" value="/GeoipResult.jsp" />
+  </definition>
+  <definition name=".geoip.findWhereStartEquals.form" extends=".mainLayout">
+    <put name="title" value="Geoip findWhereStartEquals" />
+    <put name="body" value="/GeoipFindWhereStartEquals.jsp" />
+  </definition>
+  <definition name=".geoip.findWhereStartEquals.results" extends=".mainLayout">
+    <put name="title" value="Geoip findWhereStartEquals" />
+    <put name="body" value="/GeoipResult.jsp" />
+  </definition>
+  <definition name=".geoip.findWhereEndEquals.form" extends=".mainLayout">
+    <put name="title" value="Geoip findWhereEndEquals" />
+    <put name="body" value="/GeoipFindWhereEndEquals.jsp" />
+  </definition>
+  <definition name=".geoip.findWhereEndEquals.results" extends=".mainLayout">
+    <put name="title" value="Geoip findWhereEndEquals" />
+    <put name="body" value="/GeoipResult.jsp" />
+  </definition>
+  <definition name=".geoip.findWhereStartIntEquals.form" extends=".mainLayout">
+    <put name="title" value="Geoip findWhereStartIntEquals" />
+    <put name="body" value="/GeoipFindWhereStartIntEquals.jsp" />
+  </definition>
+  <definition name=".geoip.findWhereStartIntEquals.results" extends=".mainLayout">
+    <put name="title" value="Geoip findWhereStartIntEquals" />
+    <put name="body" value="/GeoipResult.jsp" />
+  </definition>
+  <definition name=".geoip.findWhereEndIntEquals.form" extends=".mainLayout">
+    <put name="title" value="Geoip findWhereEndIntEquals" />
+    <put name="body" value="/GeoipFindWhereEndIntEquals.jsp" />
+  </definition>
+  <definition name=".geoip.findWhereEndIntEquals.results" extends=".mainLayout">
+    <put name="title" value="Geoip findWhereEndIntEquals" />
+    <put name="body" value="/GeoipResult.jsp" />
+  </definition>
+  <definition name=".geoip.findWhereCountrySymbolEquals.form" extends=".mainLayout">
+    <put name="title" value="Geoip findWhereCountrySymbolEquals" />
+    <put name="body" value="/GeoipFindWhereCountrySymbolEquals.jsp" />
+  </definition>
+  <definition name=".geoip.findWhereCountrySymbolEquals.results" extends=".mainLayout">
+    <put name="title" value="Geoip findWhereCountrySymbolEquals" />
+    <put name="body" value="/GeoipResult.jsp" />
+  </definition>
+  <definition name=".geoip.findWhereCountryEquals.form" extends=".mainLayout">
+    <put name="title" value="Geoip findWhereCountryEquals" />
+    <put name="body" value="/GeoipFindWhereCountryEquals.jsp" />
+  </definition>
+  <definition name=".geoip.findWhereCountryEquals.results" extends=".mainLayout">
+    <put name="title" value="Geoip findWhereCountryEquals" />
+    <put name="body" value="/GeoipResult.jsp" />
+  </definition>
+  <definition name=".groups.index" extends=".mainLayout">
+    <put name="title" value="Groups" />
+    <put name="body" value="/Groups.jsp" />
+  </definition>
+  <definition name=".groups.view" extends=".mainLayout">
+    <put name="title" value="Groups" />
+    <put name="body" value="/GroupsView.jsp" />
+  </definition>
+  <definition name=".groups.edit" extends=".mainLayout">
+    <put name="title" value="Groups" />
+    <put name="body" value="/GroupsEdit.jsp" />
+  </definition>
+  <definition name=".groups.findByPrimaryKey.form" extends=".mainLayout">
+    <put name="title" value="Groups findByPrimaryKey" />
+    <put name="body" value="/GroupsFindByPrimaryKey.jsp" />
+  </definition>
+  <definition name=".groups.findByPrimaryKey.results" extends=".mainLayout">
+    <put name="title" value="Groups findByPrimaryKey" />
+    <put name="body" value="/GroupsView.jsp" />
+  </definition>
+  <definition name=".groups.findAll.form" extends=".mainLayout">
+    <put name="title" value="Groups findAll" />
+    <put name="body" value="/GroupsFindAll.jsp" />
+  </definition>
+  <definition name=".groups.findAll.results" extends=".mainLayout">
+    <put name="title" value="Groups findAll" />
+    <put name="body" value="/GroupsResult.jsp" />
+  </definition>
+  <definition name=".groups.findByUser.form" extends=".mainLayout">
+    <put name="title" value="Groups findByUser" />
+    <put name="body" value="/GroupsFindByUser.jsp" />
+  </definition>
+  <definition name=".groups.findByUser.results" extends=".mainLayout">
+    <put name="title" value="Groups findByUser" />
+    <put name="body" value="/GroupsResult.jsp" />
+  </definition>
+  <definition name=".groups.findWhereIdEquals.form" extends=".mainLayout">
+    <put name="title" value="Groups findWhereIdEquals" />
+    <put name="body" value="/GroupsFindWhereIdEquals.jsp" />
+  </definition>
+  <definition name=".groups.findWhereIdEquals.results" extends=".mainLayout">
+    <put name="title" value="Groups findWhereIdEquals" />
+    <put name="body" value="/GroupsResult.jsp" />
+  </definition>
+  <definition name=".groups.findWhereNameEquals.form" extends=".mainLayout">
+    <put name="title" value="Groups findWhereNameEquals" />
+    <put name="body" value="/GroupsFindWhereNameEquals.jsp" />
+  </definition>
+  <definition name=".groups.findWhereNameEquals.results" extends=".mainLayout">
+    <put name="title" value="Groups findWhereNameEquals" />
+    <put name="body" value="/GroupsResult.jsp" />
+  </definition>
+  <definition name=".groups.findWhereMemberIdEquals.form" extends=".mainLayout">
+    <put name="title" value="Groups findWhereMemberIdEquals" />
+    <put name="body" value="/GroupsFindWhereMemberIdEquals.jsp" />
+  </definition>
+  <definition name=".groups.findWhereMemberIdEquals.results" extends=".mainLayout">
+    <put name="title" value="Groups findWhereMemberIdEquals" />
+    <put name="body" value="/GroupsResult.jsp" />
+  </definition>
+  <definition name=".news.index" extends=".mainLayout">
+    <put name="title" value="News" />
+    <put name="body" value="/News.jsp" />
+  </definition>
+  <definition name=".news.view" extends=".mainLayout">
+    <put name="title" value="News" />
+    <put name="body" value="/NewsView.jsp" />
+  </definition>
+  <definition name=".news.edit" extends=".mainLayout">
+    <put name="title" value="News" />
+    <put name="body" value="/NewsEdit.jsp" />
+  </definition>
+  <definition name=".news.findByPrimaryKey.form" extends=".mainLayout">
+    <put name="title" value="News findByPrimaryKey" />
+    <put name="body" value="/NewsFindByPrimaryKey.jsp" />
+  </definition>
+  <definition name=".news.findByPrimaryKey.results" extends=".mainLayout">
+    <put name="title" value="News findByPrimaryKey" />
+    <put name="body" value="/NewsView.jsp" />
+  </definition>
+  <definition name=".news.findAll.form" extends=".mainLayout">
+    <put name="title" value="News findAll" />
+    <put name="body" value="/NewsFindAll.jsp" />
+  </definition>
+  <definition name=".news.findAll.results" extends=".mainLayout">
+    <put name="title" value="News findAll" />
+    <put name="body" value="/NewsResult.jsp" />
+  </definition>
+  <definition name=".news.findWhereIdEquals.form" extends=".mainLayout">
+    <put name="title" value="News findWhereIdEquals" />
+    <put name="body" value="/NewsFindWhereIdEquals.jsp" />
+  </definition>
+  <definition name=".news.findWhereIdEquals.results" extends=".mainLayout">
+    <put name="title" value="News findWhereIdEquals" />
+    <put name="body" value="/NewsResult.jsp" />
+  </definition>
+  <definition name=".news.findWhereContentEquals.form" extends=".mainLayout">
+    <put name="title" value="News findWhereContentEquals" />
+    <put name="body" value="/NewsFindWhereContentEquals.jsp" />
+  </definition>
+  <definition name=".news.findWhereContentEquals.results" extends=".mainLayout">
+    <put name="title" value="News findWhereContentEquals" />
+    <put name="body" value="/NewsResult.jsp" />
+  </definition>
+  <definition name=".news.findWhereDatedEquals.form" extends=".mainLayout">
+    <put name="title" value="News findWhereDatedEquals" />
+    <put name="body" value="/NewsFindWhereDatedEquals.jsp" />
+  </definition>
+  <definition name=".news.findWhereDatedEquals.results" extends=".mainLayout">
+    <put name="title" value="News findWhereDatedEquals" />
+    <put name="body" value="/NewsResult.jsp" />
+  </definition>
+</tiles-definitions>
+
