@@ -29,271 +29,142 @@
     <style>
       undefined
     </style>
-    <script language="javascript">
-		function toggleClass(id){
-			var id = '#' + id;
-			$('.active').removeClass('active');
-			$(id).addClass('active');
-		}
-    </script>
   </head>
   
   <body>
     <div class="navbar navbar-fixed-top navbar-inverse">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar">
-            </span>
-            <span class="icon-bar">
-            </span>
-            <span class="icon-bar">
-            </span>
-          </a><span class="container"><a class="brand" href="#"><img src="images/logo3.png" alt="logo" height="8" width="95"></a></span>
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li>
-                <a href="#">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#"><img src="images/logo2.png" alt="logo"></a>
+      <!--ul class="nav">
+        <li>
+          <a href="#">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            About
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Contact
+          </a>
+        </li>
+      </ul-->
+      <form class="navbar-form pull-right">
+        <input name="textinput1" type="email" placeholder="Email" class="span2">
+        <input name="textinput2" type="password" placeholder="Password" class="span2">
+        <button class="btn btn-success">
+          Sign in
+        </button>
+        <button class="btn btn-danger">
+          Forgot Password?
+        </button>
+      </form>
+      <form class="navbar-form pull-right"><b>Or Signup using</b>
+      	<button class="btn">Facebook</button>
+        <button class="btn">Google</button>
+        <button class="btn">Yahoo!</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="hero-unit">
+    <div>
+      <h1>
+        Hello, world!
+      </h1>
+      <p>
+        This is a template for a simple marketing or informational website. It
+        includes a large callout called the hero unit and three supporting pieces
+        of content. Use it as a starting point to create something more unique.
+      </p>
+    </div>
+    <a class="btn btn-primary" href="#">
+      Learn more »
+    </a>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <div>
+        <h2>
+          About Us
+        </h2>
+        <p>
+          MyBillr is a free service that aims to simplify the math involved in settling
+          the expenses between friends, expenses may include splitting rents, shared
+          bills, lending or borrowing money. Why waste your time in doing the complex
+          math when you can do it in just few clicks ?
+          <br>
+        </p>
       </div>
     </div>
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span3">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-pills nav-stacked">
-              <li class="nav-header">
-                Bill type
-              </li>
-              <li>
-              </li>
-              <li id="shared-bill" onclick="javascript: toggleClass('shared-bill');">
-                <a href="#">
-                  Shared Bill
-                </a>
-              </li>
-              <li id="item-bill" onclick="javascript: toggleClass('item-bill');">
-                <a href="#">
-                  Itemized Bill
-                </a>
-              </li>
-              <li id="loan" onclick="javascript: toggleClass('loan');">
-                <a href="#">
-                  Add a Loan
-                </a>
-              </li>
-              <li id="debt" onclick="javascript: toggleClass('debt');">
-                <a href="#">
-                  Add a Debt
-                </a>
-              </li>
-              <li id="shuffle" class="disabled"  onclick="javascript: toggleClass('shuffle');">
-                <a href="#">
-                  Shuffle Debts
-                </a>
-              </li>
-            </ul>
+    <div class="span4">
+      <div>
+        <h2>
+          Terms &amp; Privacy&nbsp;
+        </h2>
+        <p>
+          Privacy is a main concern when all your data is stored digitally. We ensure
+          that your data is safe with us and never distributed or revealed for any
+          kind of gain (personal, monetary etc.)
+        </p>
+        <p>
+          Check out our terms and privacy policy below.
+        </p>
+      </div>
+      <a class="btn" href="#">
+        View Terms &amp; Conditions »
+      </a>
+      <a class="btn" href="privacy.html">
+        View Privacy Policy »
+      </a>
+    </div>
+    <div class="span4">
+      <div class="ds-component" data-componentid="content4">
+        <h2>
+          <div class="ds-component" data-componentid="content4" style="font-size: 14px; font-weight: normal; line-height: 20px;">
+            <h2>
+              FAQs
+            </h2>
+            <p>
+              Any questions about the website or the team can be found in our FAQ KnowledgeBase(KB).
+              Feel free to ask a question that doesn't appear in the KB.
+            </p>
           </div>
-          <div class="well sidebar-nav">
-            <ul class="nav nav-pills nav-stacked">
-              <li class="nav-header">Friends &amp; Groups</li>
-              <li>
-              </li>
-              <li id="shared-bill" onclick="javascript: toggleClass('shared-bill');">
-                <a href="#">
-                  Add Friend
-                </a>
-              </li>
-              <li id="item-bill" onclick="javascript: toggleClass('item-bill');">
-                <a href="#">
-                  Create Group
-                </a>
-              </li>
-              <li id="loan" onclick="javascript: toggleClass('loan');">
-                <a href="#">
-                  Manage Friends
-                </a>
-              </li>
-              <li id="debt" onclick="javascript: toggleClass('debt');">
-                <a href="#">
-                  Manage Groups
-                </a>
-              </li>
-              <li id="shuffle" class="disabled"  onclick="javascript: toggleClass('shuffle');">
-                <a href="#">
-                  Shuffle Debts
-                </a>
-              </li>
-            </ul>
+          <a class="btn ds-component" href="http://www.jetstrap.com/alpha/frame#"
+          data-componentid="button4" style="font-weight: normal;">
+            View FAQs »
+          </a>
+          <span style="font-size: 14px; font-weight: normal; line-height: 20px;">
+            &nbsp;&nbsp;
+          </span>
+          <div class="ds-component" data-componentid="content4" style="font-size: 14px; font-weight: normal; line-height: 20px;">
+            <h2>
+              Support
+            </h2>
+            <p>
+              If you have concerns regarding our service, please visit our support ticket
+              center. Raise a ticket for your problem and we'll get back to you.&nbsp;
+            </p>
           </div>
-          <div class="well sidebar-nav">
-            <ul class="nav nav-pills nav-stacked">
-              <li class="nav-header">
-                Bill type
-              </li>
-              <li>
-              </li>
-              <li id="shared-bill" onclick="javascript: toggleClass('shared-bill');">
-                <a href="#">
-                  Shared Bill
-                </a>
-              </li>
-              <li id="item-bill" onclick="javascript: toggleClass('item-bill');">
-                <a href="#">
-                  Itemized Bill
-                </a>
-              </li>
-              <li id="loan" onclick="javascript: toggleClass('loan');">
-                <a href="#">
-                  Add a Loan
-                </a>
-              </li>
-              <li id="debt" onclick="javascript: toggleClass('debt');">
-                <a href="#">
-                  Add a Debt
-                </a>
-              </li>
-              <li id="shuffle" class="disabled"  onclick="javascript: toggleClass('shuffle');">
-                <a href="#">
-                  Shuffle Debts
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="span9">
-          <div class="hero-unit">
-            <div>
-              <h1>
-                Hello, world!
-              </h1>
-              <p>
-                This is a template for a simple marketing or informational website. It
-                includes a large callout called the hero unit and three supporting pieces
-                of content. Use it as a starting point to create something more unique.
-              </p>
-            </div>
-            <a class="btn btn-primary" href="#">
-              Learn more »
-            </a>
-          </div>
-          <div class="row-fluid">
-            <div class="span4">
-              <div>
-                <h2>
-                  Heading
-                </h2>
-                <p>
-                  Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus
-                  ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
-                  sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed
-                  odio dui.
-                </p>
-              </div>
-              <a class="btn" href="#">
-                View details »
-              </a>
-            </div>
-            <div class="span4">
-              <div>
-                <h2>
-                  Heading
-                </h2>
-                <p>
-                  Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus
-                  ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
-                  sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed
-                  odio dui.
-                </p>
-              </div>
-              <a class="btn" href="#">
-                View details »
-              </a>
-            </div>
-            <div class="span4">
-              <div>
-                <h2>
-                  Heading
-                </h2>
-                <p>
-                  Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus
-                  ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
-                  sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed
-                  odio dui.
-                </p>
-              </div>
-              <a class="btn" href="#">
-                View details »
-              </a>
-            </div>
-          </div>
-          <div class="row-fluid">
-            <div class="span4">
-              <div>
-                <h2>
-                  Heading
-                </h2>
-                <p>
-                  Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus
-                  ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
-                  sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed
-                  odio dui.
-                </p>
-              </div>
-              <a class="btn" href="#">
-                View details »
-              </a>
-            </div>
-            <div class="span4">
-              <div>
-                <h2>
-                  Heading
-                </h2>
-                <p>
-                  Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus
-                  ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
-                  sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed
-                  odio dui.
-                </p>
-              </div>
-              <a class="btn" href="#">
-                View details »
-              </a>
-            </div>
-            <div class="span4">
-              <div>
-                <h2>
-                  Heading
-                </h2>
-                <p>
-                  Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus
-                  ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
-                  sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed
-                  odio dui.
-                </p>
-              </div>
-              <a class="btn" href="#">
-                View details »
-              </a>
-            </div>
-          </div>
-          <hr>
-          <div>
-            © Company 2012
-          </div>
-        </div>
+          <a class="btn ds-component" href="http://www.jetstrap.com/alpha/frame#"
+          data-componentid="button4" style="font-weight: normal;">
+            Visit Support Center »
+          </a>
+          <br>
+        </h2>
       </div>
     </div>
+  </div>
+  <hr>
+  <div>
+    © MyBillr LLC 2012
+  </div>
+</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
     </script>
     <script src="assets/js/bootstrap.js">
