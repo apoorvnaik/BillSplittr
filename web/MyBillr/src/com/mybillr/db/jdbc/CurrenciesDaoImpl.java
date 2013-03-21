@@ -46,12 +46,13 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 	/** 
 	 * SQL INSERT statement for this table
 	 */
-	protected final String SQL_INSERT = "INSERT INTO " + getTableName() + " ( id, name, symbol, rate ) VALUES ( ?, ?, ?, ? )";
+	protected final String SQL_INSERT = "INSERT INTO " + getTableName() + " ( name, symbol, rate ) VALUES ( ?, ?, ?)";
 
 	/** 
 	 * SQL UPDATE statement for this table
 	 */
-	protected final String SQL_UPDATE = "UPDATE " + getTableName() + " SET id = ?, name = ?, symbol = ?, rate = ? WHERE id = ?";
+//	protected final String SQL_UPDATE = "UPDATE " + getTableName() + " SET id = ?, name = ?, symbol = ?, rate = ? WHERE id = ?";
+	protected final String SQL_UPDATE = "UPDATE " + getTableName() + " SET name = ?, symbol = ?, rate = ? WHERE id = ?";
 
 	/** 
 	 * SQL DELETE statement for this table
@@ -105,8 +106,8 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			conn = isConnSupplied ? userConn : ResourceManager.getConnection();
 		
 			stmt = conn.prepareStatement( SQL_INSERT, Statement.RETURN_GENERATED_KEYS );
-			int index = 1;
-			stmt.setInt( index++, dto.getId() );
+			int index = 2;
+//			stmt.setInt( index++, dto.getId() );
 			stmt.setString( index++, dto.getName() );
 			stmt.setString( index++, dto.getSymbol() );
 			stmt.setLong( index++, dto.getRate() );
@@ -155,8 +156,8 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 		
 			System.out.println( "Executing " + SQL_UPDATE + " with DTO: " + dto );
 			stmt = conn.prepareStatement( SQL_UPDATE );
-			int index=1;
-			stmt.setInt( index++, dto.getId() );
+			int index=2;
+//			stmt.setInt( index++, dto.getId() );
 			stmt.setString( index++, dto.getName() );
 			stmt.setString( index++, dto.getSymbol() );
 			stmt.setLong( index++, dto.getRate() );

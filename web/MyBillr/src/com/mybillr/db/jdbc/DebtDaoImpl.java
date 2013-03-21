@@ -46,12 +46,13 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 	/** 
 	 * SQL INSERT statement for this table
 	 */
-	protected final String SQL_INSERT = "INSERT INTO " + getTableName() + " ( id, owed_by, owed_to ) VALUES ( ?, ?, ? )";
+	protected final String SQL_INSERT = "INSERT INTO " + getTableName() + " ( owed_by, owed_to ) VALUES ( ?, ?)";
 
 	/** 
 	 * SQL UPDATE statement for this table
 	 */
-	protected final String SQL_UPDATE = "UPDATE " + getTableName() + " SET id = ?, owed_by = ?, owed_to = ? WHERE id = ? AND owed_by = ? AND owed_to = ?";
+//	protected final String SQL_UPDATE = "UPDATE " + getTableName() + " SET id = ?, owed_by = ?, owed_to = ? WHERE id = ? AND owed_by = ? AND owed_to = ?";
+	protected final String SQL_UPDATE = "UPDATE " + getTableName() + " SET owed_by = ?, owed_to = ? WHERE id = ? AND owed_by = ? AND owed_to = ?";
 
 	/** 
 	 * SQL DELETE statement for this table
@@ -110,8 +111,8 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			conn = isConnSupplied ? userConn : ResourceManager.getConnection();
 		
 			stmt = conn.prepareStatement( SQL_INSERT, Statement.RETURN_GENERATED_KEYS );
-			int index = 1;
-			stmt.setInt( index++, dto.getId() );
+			int index = 2;
+//			stmt.setInt( index++, dto.getId() );
 			stmt.setInt( index++, dto.getOwedBy() );
 			stmt.setInt( index++, dto.getOwedTo() );
 			System.out.println( "Executing " + SQL_INSERT + " with DTO: " + dto );
@@ -159,8 +160,8 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 		
 			System.out.println( "Executing " + SQL_UPDATE + " with DTO: " + dto );
 			stmt = conn.prepareStatement( SQL_UPDATE );
-			int index=1;
-			stmt.setInt( index++, dto.getId() );
+			int index=2;
+//			stmt.setInt( index++, dto.getId() );
 			stmt.setInt( index++, dto.getOwedBy() );
 			stmt.setInt( index++, dto.getOwedTo() );
 			stmt.setInt( 4, pk.getId() );

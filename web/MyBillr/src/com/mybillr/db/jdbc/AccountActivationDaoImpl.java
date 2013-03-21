@@ -46,12 +46,13 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 	/** 
 	 * SQL INSERT statement for this table
 	 */
-	protected final String SQL_INSERT = "INSERT INTO " + getTableName() + " ( id, user_id, activation_hash ) VALUES ( ?, ?, ? )";
+	//protected final String SQL_INSERT = "INSERT INTO " + getTableName() + " ( id, user_id, activation_hash ) VALUES ( ?, ?, ? )";
+	protected final String SQL_INSERT = "INSERT INTO " + getTableName() + " ( user_id, activation_hash ) VALUES ( ?, ? )";
 
 	/** 
 	 * SQL UPDATE statement for this table
 	 */
-	protected final String SQL_UPDATE = "UPDATE " + getTableName() + " SET id = ?, user_id = ?, activation_hash = ? WHERE id = ? AND user_id = ?";
+	protected final String SQL_UPDATE = "UPDATE " + getTableName() + " SET user_id = ?, activation_hash = ? WHERE id = ? AND user_id = ?";
 
 	/** 
 	 * SQL DELETE statement for this table
@@ -105,8 +106,8 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			conn = isConnSupplied ? userConn : ResourceManager.getConnection();
 		
 			stmt = conn.prepareStatement( SQL_INSERT, Statement.RETURN_GENERATED_KEYS );
-			int index = 1;
-			stmt.setInt( index++, dto.getId() );
+			int index = 2;
+			//stmt.setInt( index++, dto.getId() );
 			stmt.setInt( index++, dto.getUserId() );
 			stmt.setString( index++, dto.getActivationHash() );
 			System.out.println( "Executing " + SQL_INSERT + " with DTO: " + dto );
@@ -154,8 +155,8 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 		
 			System.out.println( "Executing " + SQL_UPDATE + " with DTO: " + dto );
 			stmt = conn.prepareStatement( SQL_UPDATE );
-			int index=1;
-			stmt.setInt( index++, dto.getId() );
+			int index=2;
+			//stmt.setInt( index++, dto.getId() );
 			stmt.setInt( index++, dto.getUserId() );
 			stmt.setString( index++, dto.getActivationHash() );
 			stmt.setInt( 4, pk.getId() );

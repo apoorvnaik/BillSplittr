@@ -46,12 +46,13 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 	/** 
 	 * SQL INSERT statement for this table
 	 */
-	protected final String SQL_INSERT = "INSERT INTO " + getTableName() + " ( id, sender_id, receiver_id, subject, content ) VALUES ( ?, ?, ?, ?, ? )";
+	protected final String SQL_INSERT = "INSERT INTO " + getTableName() + " ( sender_id, receiver_id, subject, content ) VALUES ( ?, ?, ?, ?)";
 
 	/** 
 	 * SQL UPDATE statement for this table
 	 */
-	protected final String SQL_UPDATE = "UPDATE " + getTableName() + " SET id = ?, sender_id = ?, receiver_id = ?, subject = ?, content = ? WHERE id = ?";
+//	protected final String SQL_UPDATE = "UPDATE " + getTableName() + " SET id = ?, sender_id = ?, receiver_id = ?, subject = ?, content = ? WHERE id = ?";
+	protected final String SQL_UPDATE = "UPDATE " + getTableName() + " SET sender_id = ?, receiver_id = ?, subject = ?, content = ? WHERE id = ?";
 
 	/** 
 	 * SQL DELETE statement for this table
@@ -110,8 +111,8 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			conn = isConnSupplied ? userConn : ResourceManager.getConnection();
 		
 			stmt = conn.prepareStatement( SQL_INSERT, Statement.RETURN_GENERATED_KEYS );
-			int index = 1;
-			stmt.setInt( index++, dto.getId() );
+			int index = 2;
+//			stmt.setInt( index++, dto.getId() );
 			stmt.setInt( index++, dto.getSenderId() );
 			stmt.setInt( index++, dto.getReceiverId() );
 			stmt.setString( index++, dto.getSubject() );
@@ -161,8 +162,8 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 		
 			System.out.println( "Executing " + SQL_UPDATE + " with DTO: " + dto );
 			stmt = conn.prepareStatement( SQL_UPDATE );
-			int index=1;
-			stmt.setInt( index++, dto.getId() );
+			int index=2;
+//			stmt.setInt( index++, dto.getId() );
 			stmt.setInt( index++, dto.getSenderId() );
 			stmt.setInt( index++, dto.getReceiverId() );
 			stmt.setString( index++, dto.getSubject() );
