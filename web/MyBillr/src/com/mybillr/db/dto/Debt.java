@@ -22,14 +22,29 @@ public class Debt implements Serializable
 	protected int id;
 
 	/** 
+	 * This attribute represents whether the attribute id has been modified since being read from the database.
+	 */
+	protected boolean idModified = false;
+
+	/** 
 	 * This attribute maps to the column owed_by in the debt table.
 	 */
 	protected int owedBy;
 
 	/** 
+	 * This attribute represents whether the attribute owedBy has been modified since being read from the database.
+	 */
+	protected boolean owedByModified = false;
+
+	/** 
 	 * This attribute maps to the column owed_to in the debt table.
 	 */
 	protected int owedTo;
+
+	/** 
+	 * This attribute represents whether the attribute owedTo has been modified since being read from the database.
+	 */
+	protected boolean owedToModified = false;
 
 	/**
 	 * Method 'Debt'
@@ -57,6 +72,23 @@ public class Debt implements Serializable
 	public void setId(int id)
 	{
 		this.id = id;
+		this.idModified = true;
+	}
+
+	/** 
+	 * Sets the value of idModified
+	 */
+	public void setIdModified(boolean idModified)
+	{
+		this.idModified = idModified;
+	}
+
+	/** 
+	 * Gets the value of idModified
+	 */
+	public boolean isIdModified()
+	{
+		return idModified;
 	}
 
 	/**
@@ -77,6 +109,23 @@ public class Debt implements Serializable
 	public void setOwedBy(int owedBy)
 	{
 		this.owedBy = owedBy;
+		this.owedByModified = true;
+	}
+
+	/** 
+	 * Sets the value of owedByModified
+	 */
+	public void setOwedByModified(boolean owedByModified)
+	{
+		this.owedByModified = owedByModified;
+	}
+
+	/** 
+	 * Gets the value of owedByModified
+	 */
+	public boolean isOwedByModified()
+	{
+		return owedByModified;
 	}
 
 	/**
@@ -97,6 +146,23 @@ public class Debt implements Serializable
 	public void setOwedTo(int owedTo)
 	{
 		this.owedTo = owedTo;
+		this.owedToModified = true;
+	}
+
+	/** 
+	 * Sets the value of owedToModified
+	 */
+	public void setOwedToModified(boolean owedToModified)
+	{
+		this.owedToModified = owedToModified;
+	}
+
+	/** 
+	 * Gets the value of owedToModified
+	 */
+	public boolean isOwedToModified()
+	{
+		return owedToModified;
 	}
 
 	/**
@@ -124,11 +190,23 @@ public class Debt implements Serializable
 			return false;
 		}
 		
+		if (idModified != _cast.idModified) {
+			return false;
+		}
+		
 		if (owedBy != _cast.owedBy) {
 			return false;
 		}
 		
+		if (owedByModified != _cast.owedByModified) {
+			return false;
+		}
+		
 		if (owedTo != _cast.owedTo) {
+			return false;
+		}
+		
+		if (owedToModified != _cast.owedToModified) {
 			return false;
 		}
 		
@@ -144,8 +222,11 @@ public class Debt implements Serializable
 	{
 		int _hashCode = 0;
 		_hashCode = 29 * _hashCode + id;
+		_hashCode = 29 * _hashCode + (idModified ? 1 : 0);
 		_hashCode = 29 * _hashCode + owedBy;
+		_hashCode = 29 * _hashCode + (owedByModified ? 1 : 0);
 		_hashCode = 29 * _hashCode + owedTo;
+		_hashCode = 29 * _hashCode + (owedToModified ? 1 : 0);
 		return _hashCode;
 	}
 

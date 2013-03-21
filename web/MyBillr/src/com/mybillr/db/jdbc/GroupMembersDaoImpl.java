@@ -14,6 +14,7 @@ import com.mybillr.db.dto.*;
 import com.mybillr.db.exceptions.*;
 import java.sql.Connection;
 import java.util.Collection;
+import org.apache.log4j.Logger;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.sql.ResultSet;
@@ -32,6 +33,8 @@ is chosen then the connection will be stored in this attribute and will be used 
 calls to this DAO, otherwise a new Connection will be allocated for each operation.
 	 */
 	protected java.sql.Connection userConn;
+
+	protected static final Logger logger = Logger.getLogger( GroupMembersDaoImpl.class );
 
 	/** 
 	 * All finder methods in this class use this SELECT constant to build their queries
@@ -99,19 +102,65 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			// get the user-specified connection or get a connection from the ResourceManager
 			conn = isConnSupplied ? userConn : ResourceManager.getConnection();
 		
-			stmt = conn.prepareStatement( SQL_INSERT );
+			StringBuffer sql = new StringBuffer();
+			StringBuffer values = new StringBuffer();
+			sql.append( "INSERT INTO " + getTableName() + " (" );
+			int modifiedCount = 0;
+			if (dto.isGroupIdModified()) {
+				if (modifiedCount>0) {
+					sql.append( ", " );
+					values.append( ", " );
+				}
+		
+				sql.append( "group_id" );
+				values.append( "?" );
+				modifiedCount++;
+			}
+		
+			if (dto.isUserIdModified()) {
+				if (modifiedCount>0) {
+					sql.append( ", " );
+					values.append( ", " );
+				}
+		
+				sql.append( "user_id" );
+				values.append( "?" );
+				modifiedCount++;
+			}
+		
+			if (modifiedCount==0) {
+				// nothing to insert
+				throw new IllegalStateException( "Nothing to insert" );
+			}
+		
+			sql.append( ") VALUES (" );
+			sql.append( values );
+			sql.append( ")" );
+			stmt = conn.prepareStatement( sql.toString() );
 			int index = 1;
-			stmt.setInt( index++, dto.getGroupId() );
-			stmt.setInt( index++, dto.getUserId() );
-			System.out.println( "Executing " + SQL_INSERT + " with DTO: " + dto );
+			if (dto.isGroupIdModified()) {
+				stmt.setInt( index++, dto.getGroupId() );
+			}
+		
+			if (dto.isUserIdModified()) {
+				stmt.setInt( index++, dto.getUserId() );
+			}
+		
+			if (logger.isDebugEnabled()) {
+				logger.debug( "Executing " + sql.toString() + " with values: " + dto);
+			}
+		
 			int rows = stmt.executeUpdate();
 			long t2 = System.currentTimeMillis();
-			System.out.println( rows + " rows affected (" + (t2-t1) + " ms)" );
+			if (logger.isDebugEnabled()) {
+				logger.debug( rows + " rows affected (" + (t2-t1) + " ms)");
+			}
+		
 			reset(dto);
 			return dto.createPk();
 		}
 		catch (Exception _e) {
-			_e.printStackTrace();
+			logger.error( "Exception: " + _e.getMessage(), _e );
 			throw new GroupMembersDaoException( "Exception: " + _e.getMessage(), _e );
 		}
 		finally {
@@ -139,20 +188,59 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			// get the user-specified connection or get a connection from the ResourceManager
 			conn = isConnSupplied ? userConn : ResourceManager.getConnection();
 		
-			System.out.println( "Executing " + SQL_UPDATE + " with DTO: " + dto );
-			stmt = conn.prepareStatement( SQL_UPDATE );
-			int index=1;
-			stmt.setInt( index++, dto.getGroupId() );
-			stmt.setInt( index++, dto.getUserId() );
-			stmt.setInt( 3, pk.getGroupId() );
-			stmt.setInt( 4, pk.getUserId() );
+			StringBuffer sql = new StringBuffer();
+			sql.append( "UPDATE " + getTableName() + " SET " );
+			boolean modified = false;
+			if (dto.isGroupIdModified()) {
+				if (modified) {
+					sql.append( ", " );
+				}
+		
+				sql.append( "group_id=?" );
+				modified=true;
+			}
+		
+			if (dto.isUserIdModified()) {
+				if (modified) {
+					sql.append( ", " );
+				}
+		
+				sql.append( "user_id=?" );
+				modified=true;
+			}
+		
+			if (!modified) {
+				// nothing to update
+				return;
+			}
+		
+			sql.append( " WHERE group_id=? AND user_id=?" );
+			if (logger.isDebugEnabled()) {
+				logger.debug( "Executing " + sql.toString() + " with values: " + dto);
+			}
+		
+			stmt = conn.prepareStatement( sql.toString() );
+			int index = 1;
+			if (dto.isGroupIdModified()) {
+				stmt.setInt( index++, dto.getGroupId() );
+			}
+		
+			if (dto.isUserIdModified()) {
+				stmt.setInt( index++, dto.getUserId() );
+			}
+		
+			stmt.setInt( index++, pk.getGroupId() );
+			stmt.setInt( index++, pk.getUserId() );
 			int rows = stmt.executeUpdate();
 			reset(dto);
 			long t2 = System.currentTimeMillis();
-			System.out.println( rows + " rows affected (" + (t2-t1) + " ms)" );
+			if (logger.isDebugEnabled()) {
+				logger.debug( rows + " rows affected (" + (t2-t1) + " ms)");
+			}
+		
 		}
 		catch (Exception _e) {
-			_e.printStackTrace();
+			logger.error( "Exception: " + _e.getMessage(), _e );
 			throw new GroupMembersDaoException( "Exception: " + _e.getMessage(), _e );
 		}
 		finally {
@@ -180,16 +268,22 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			// get the user-specified connection or get a connection from the ResourceManager
 			conn = isConnSupplied ? userConn : ResourceManager.getConnection();
 		
-			System.out.println( "Executing " + SQL_DELETE + " with PK: " + pk );
+			if (logger.isDebugEnabled()) {
+				logger.debug( "Executing " + SQL_DELETE + " with PK: " + pk);
+			}
+		
 			stmt = conn.prepareStatement( SQL_DELETE );
 			stmt.setInt( 1, pk.getGroupId() );
 			stmt.setInt( 2, pk.getUserId() );
 			int rows = stmt.executeUpdate();
 			long t2 = System.currentTimeMillis();
-			System.out.println( rows + " rows affected (" + (t2-t1) + " ms)" );
+			if (logger.isDebugEnabled()) {
+				logger.debug( rows + " rows affected (" + (t2-t1) + " ms)");
+			}
+		
 		}
 		catch (Exception _e) {
-			_e.printStackTrace();
+			logger.error( "Exception: " + _e.getMessage(), _e );
 			throw new GroupMembersDaoException( "Exception: " + _e.getMessage(), _e );
 		}
 		finally {
@@ -300,7 +394,7 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 	 */
 	public String getTableName()
 	{
-		return "group_members";
+		return "mybillr.group_members";
 	}
 
 	/** 
@@ -342,6 +436,7 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 	{
 		dto.setGroupId( rs.getInt( COLUMN_GROUP_ID ) );
 		dto.setUserId( rs.getInt( COLUMN_USER_ID ) );
+		reset(dto);
 	}
 
 	/** 
@@ -349,6 +444,8 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 	 */
 	protected void reset(GroupMembers dto)
 	{
+		dto.setGroupIdModified( false );
+		dto.setUserIdModified( false );
 	}
 
 	/** 
@@ -370,7 +467,10 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			final String SQL = sql;
 		
 		
-			System.out.println( "Executing " + SQL );
+			if (logger.isDebugEnabled()) {
+				logger.debug( "Executing " + SQL);
+			}
+		
 			// prepare statement
 			stmt = conn.prepareStatement( SQL );
 			stmt.setMaxRows( maxRows );
@@ -387,7 +487,7 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			return fetchMultiResults(rs);
 		}
 		catch (Exception _e) {
-			_e.printStackTrace();
+			logger.error( "Exception: " + _e.getMessage(), _e );
 			throw new GroupMembersDaoException( "Exception: " + _e.getMessage(), _e );
 		}
 		finally {
@@ -420,7 +520,10 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			final String SQL = SQL_SELECT + " WHERE " + sql;
 		
 		
-			System.out.println( "Executing " + SQL );
+			if (logger.isDebugEnabled()) {
+				logger.debug( "Executing " + SQL);
+			}
+		
 			// prepare statement
 			stmt = conn.prepareStatement( SQL );
 			stmt.setMaxRows( maxRows );
@@ -437,7 +540,7 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			return fetchMultiResults(rs);
 		}
 		catch (Exception _e) {
-			_e.printStackTrace();
+			logger.error( "Exception: " + _e.getMessage(), _e );
 			throw new GroupMembersDaoException( "Exception: " + _e.getMessage(), _e );
 		}
 		finally {

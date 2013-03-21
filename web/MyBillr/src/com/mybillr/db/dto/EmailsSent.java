@@ -22,9 +22,19 @@ public class EmailsSent implements Serializable
 	protected int id;
 
 	/** 
+	 * This attribute represents whether the attribute id has been modified since being read from the database.
+	 */
+	protected boolean idModified = false;
+
+	/** 
 	 * This attribute maps to the column sender_id in the emails_sent table.
 	 */
 	protected int senderId;
+
+	/** 
+	 * This attribute represents whether the attribute senderId has been modified since being read from the database.
+	 */
+	protected boolean senderIdModified = false;
 
 	/** 
 	 * This attribute maps to the column receiver_id in the emails_sent table.
@@ -32,14 +42,29 @@ public class EmailsSent implements Serializable
 	protected int receiverId;
 
 	/** 
+	 * This attribute represents whether the attribute receiverId has been modified since being read from the database.
+	 */
+	protected boolean receiverIdModified = false;
+
+	/** 
 	 * This attribute maps to the column subject in the emails_sent table.
 	 */
 	protected String subject;
 
 	/** 
+	 * This attribute represents whether the attribute subject has been modified since being read from the database.
+	 */
+	protected boolean subjectModified = false;
+
+	/** 
 	 * This attribute maps to the column content in the emails_sent table.
 	 */
 	protected String content;
+
+	/** 
+	 * This attribute represents whether the attribute content has been modified since being read from the database.
+	 */
+	protected boolean contentModified = false;
 
 	/**
 	 * Method 'EmailsSent'
@@ -67,6 +92,23 @@ public class EmailsSent implements Serializable
 	public void setId(int id)
 	{
 		this.id = id;
+		this.idModified = true;
+	}
+
+	/** 
+	 * Sets the value of idModified
+	 */
+	public void setIdModified(boolean idModified)
+	{
+		this.idModified = idModified;
+	}
+
+	/** 
+	 * Gets the value of idModified
+	 */
+	public boolean isIdModified()
+	{
+		return idModified;
 	}
 
 	/**
@@ -87,6 +129,23 @@ public class EmailsSent implements Serializable
 	public void setSenderId(int senderId)
 	{
 		this.senderId = senderId;
+		this.senderIdModified = true;
+	}
+
+	/** 
+	 * Sets the value of senderIdModified
+	 */
+	public void setSenderIdModified(boolean senderIdModified)
+	{
+		this.senderIdModified = senderIdModified;
+	}
+
+	/** 
+	 * Gets the value of senderIdModified
+	 */
+	public boolean isSenderIdModified()
+	{
+		return senderIdModified;
 	}
 
 	/**
@@ -107,6 +166,23 @@ public class EmailsSent implements Serializable
 	public void setReceiverId(int receiverId)
 	{
 		this.receiverId = receiverId;
+		this.receiverIdModified = true;
+	}
+
+	/** 
+	 * Sets the value of receiverIdModified
+	 */
+	public void setReceiverIdModified(boolean receiverIdModified)
+	{
+		this.receiverIdModified = receiverIdModified;
+	}
+
+	/** 
+	 * Gets the value of receiverIdModified
+	 */
+	public boolean isReceiverIdModified()
+	{
+		return receiverIdModified;
 	}
 
 	/**
@@ -127,6 +203,23 @@ public class EmailsSent implements Serializable
 	public void setSubject(String subject)
 	{
 		this.subject = subject;
+		this.subjectModified = true;
+	}
+
+	/** 
+	 * Sets the value of subjectModified
+	 */
+	public void setSubjectModified(boolean subjectModified)
+	{
+		this.subjectModified = subjectModified;
+	}
+
+	/** 
+	 * Gets the value of subjectModified
+	 */
+	public boolean isSubjectModified()
+	{
+		return subjectModified;
 	}
 
 	/**
@@ -147,6 +240,23 @@ public class EmailsSent implements Serializable
 	public void setContent(String content)
 	{
 		this.content = content;
+		this.contentModified = true;
+	}
+
+	/** 
+	 * Sets the value of contentModified
+	 */
+	public void setContentModified(boolean contentModified)
+	{
+		this.contentModified = contentModified;
+	}
+
+	/** 
+	 * Gets the value of contentModified
+	 */
+	public boolean isContentModified()
+	{
+		return contentModified;
 	}
 
 	/**
@@ -174,7 +284,15 @@ public class EmailsSent implements Serializable
 			return false;
 		}
 		
+		if (idModified != _cast.idModified) {
+			return false;
+		}
+		
 		if (senderId != _cast.senderId) {
+			return false;
+		}
+		
+		if (senderIdModified != _cast.senderIdModified) {
 			return false;
 		}
 		
@@ -182,11 +300,23 @@ public class EmailsSent implements Serializable
 			return false;
 		}
 		
+		if (receiverIdModified != _cast.receiverIdModified) {
+			return false;
+		}
+		
 		if (subject == null ? _cast.subject != subject : !subject.equals( _cast.subject )) {
 			return false;
 		}
 		
+		if (subjectModified != _cast.subjectModified) {
+			return false;
+		}
+		
 		if (content == null ? _cast.content != content : !content.equals( _cast.content )) {
+			return false;
+		}
+		
+		if (contentModified != _cast.contentModified) {
 			return false;
 		}
 		
@@ -202,16 +332,21 @@ public class EmailsSent implements Serializable
 	{
 		int _hashCode = 0;
 		_hashCode = 29 * _hashCode + id;
+		_hashCode = 29 * _hashCode + (idModified ? 1 : 0);
 		_hashCode = 29 * _hashCode + senderId;
+		_hashCode = 29 * _hashCode + (senderIdModified ? 1 : 0);
 		_hashCode = 29 * _hashCode + receiverId;
+		_hashCode = 29 * _hashCode + (receiverIdModified ? 1 : 0);
 		if (subject != null) {
 			_hashCode = 29 * _hashCode + subject.hashCode();
 		}
 		
+		_hashCode = 29 * _hashCode + (subjectModified ? 1 : 0);
 		if (content != null) {
 			_hashCode = 29 * _hashCode + content.hashCode();
 		}
 		
+		_hashCode = 29 * _hashCode + (contentModified ? 1 : 0);
 		return _hashCode;
 	}
 

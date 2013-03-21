@@ -22,9 +22,19 @@ public class BillPayee implements Serializable
 	protected int billId;
 
 	/** 
+	 * This attribute represents whether the attribute billId has been modified since being read from the database.
+	 */
+	protected boolean billIdModified = false;
+
+	/** 
 	 * This attribute maps to the column user_id in the bill_payee table.
 	 */
 	protected int userId;
+
+	/** 
+	 * This attribute represents whether the attribute userId has been modified since being read from the database.
+	 */
+	protected boolean userIdModified = false;
 
 	/** 
 	 * This attribute maps to the column share in the bill_payee table.
@@ -32,9 +42,19 @@ public class BillPayee implements Serializable
 	protected long share;
 
 	/** 
+	 * This attribute represents whether the attribute share has been modified since being read from the database.
+	 */
+	protected boolean shareModified = false;
+
+	/** 
 	 * This attribute maps to the column amount in the bill_payee table.
 	 */
 	protected long amount;
+
+	/** 
+	 * This attribute represents whether the attribute amount has been modified since being read from the database.
+	 */
+	protected boolean amountModified = false;
 
 	/**
 	 * Method 'BillPayee'
@@ -62,6 +82,23 @@ public class BillPayee implements Serializable
 	public void setBillId(int billId)
 	{
 		this.billId = billId;
+		this.billIdModified = true;
+	}
+
+	/** 
+	 * Sets the value of billIdModified
+	 */
+	public void setBillIdModified(boolean billIdModified)
+	{
+		this.billIdModified = billIdModified;
+	}
+
+	/** 
+	 * Gets the value of billIdModified
+	 */
+	public boolean isBillIdModified()
+	{
+		return billIdModified;
 	}
 
 	/**
@@ -82,6 +119,23 @@ public class BillPayee implements Serializable
 	public void setUserId(int userId)
 	{
 		this.userId = userId;
+		this.userIdModified = true;
+	}
+
+	/** 
+	 * Sets the value of userIdModified
+	 */
+	public void setUserIdModified(boolean userIdModified)
+	{
+		this.userIdModified = userIdModified;
+	}
+
+	/** 
+	 * Gets the value of userIdModified
+	 */
+	public boolean isUserIdModified()
+	{
+		return userIdModified;
 	}
 
 	/**
@@ -102,6 +156,23 @@ public class BillPayee implements Serializable
 	public void setShare(long share)
 	{
 		this.share = share;
+		this.shareModified = true;
+	}
+
+	/** 
+	 * Sets the value of shareModified
+	 */
+	public void setShareModified(boolean shareModified)
+	{
+		this.shareModified = shareModified;
+	}
+
+	/** 
+	 * Gets the value of shareModified
+	 */
+	public boolean isShareModified()
+	{
+		return shareModified;
 	}
 
 	/**
@@ -122,6 +193,23 @@ public class BillPayee implements Serializable
 	public void setAmount(long amount)
 	{
 		this.amount = amount;
+		this.amountModified = true;
+	}
+
+	/** 
+	 * Sets the value of amountModified
+	 */
+	public void setAmountModified(boolean amountModified)
+	{
+		this.amountModified = amountModified;
+	}
+
+	/** 
+	 * Gets the value of amountModified
+	 */
+	public boolean isAmountModified()
+	{
+		return amountModified;
 	}
 
 	/**
@@ -149,7 +237,15 @@ public class BillPayee implements Serializable
 			return false;
 		}
 		
+		if (billIdModified != _cast.billIdModified) {
+			return false;
+		}
+		
 		if (userId != _cast.userId) {
+			return false;
+		}
+		
+		if (userIdModified != _cast.userIdModified) {
 			return false;
 		}
 		
@@ -157,7 +253,15 @@ public class BillPayee implements Serializable
 			return false;
 		}
 		
+		if (shareModified != _cast.shareModified) {
+			return false;
+		}
+		
 		if (amount != _cast.amount) {
+			return false;
+		}
+		
+		if (amountModified != _cast.amountModified) {
 			return false;
 		}
 		
@@ -173,9 +277,13 @@ public class BillPayee implements Serializable
 	{
 		int _hashCode = 0;
 		_hashCode = 29 * _hashCode + billId;
+		_hashCode = 29 * _hashCode + (billIdModified ? 1 : 0);
 		_hashCode = 29 * _hashCode + userId;
+		_hashCode = 29 * _hashCode + (userIdModified ? 1 : 0);
 		_hashCode = 29 * _hashCode + (int) (share ^ (share >>> 32));
+		_hashCode = 29 * _hashCode + (shareModified ? 1 : 0);
 		_hashCode = 29 * _hashCode + (int) (amount ^ (amount >>> 32));
+		_hashCode = 29 * _hashCode + (amountModified ? 1 : 0);
 		return _hashCode;
 	}
 

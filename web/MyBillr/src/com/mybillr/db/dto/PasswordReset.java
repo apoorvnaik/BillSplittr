@@ -22,14 +22,29 @@ public class PasswordReset implements Serializable
 	protected int id;
 
 	/** 
+	 * This attribute represents whether the attribute id has been modified since being read from the database.
+	 */
+	protected boolean idModified = false;
+
+	/** 
 	 * This attribute maps to the column user_id in the password_reset table.
 	 */
 	protected int userId;
 
 	/** 
+	 * This attribute represents whether the attribute userId has been modified since being read from the database.
+	 */
+	protected boolean userIdModified = false;
+
+	/** 
 	 * This attribute maps to the column reset_hash in the password_reset table.
 	 */
 	protected String resetHash;
+
+	/** 
+	 * This attribute represents whether the attribute resetHash has been modified since being read from the database.
+	 */
+	protected boolean resetHashModified = false;
 
 	/**
 	 * Method 'PasswordReset'
@@ -57,6 +72,23 @@ public class PasswordReset implements Serializable
 	public void setId(int id)
 	{
 		this.id = id;
+		this.idModified = true;
+	}
+
+	/** 
+	 * Sets the value of idModified
+	 */
+	public void setIdModified(boolean idModified)
+	{
+		this.idModified = idModified;
+	}
+
+	/** 
+	 * Gets the value of idModified
+	 */
+	public boolean isIdModified()
+	{
+		return idModified;
 	}
 
 	/**
@@ -77,6 +109,23 @@ public class PasswordReset implements Serializable
 	public void setUserId(int userId)
 	{
 		this.userId = userId;
+		this.userIdModified = true;
+	}
+
+	/** 
+	 * Sets the value of userIdModified
+	 */
+	public void setUserIdModified(boolean userIdModified)
+	{
+		this.userIdModified = userIdModified;
+	}
+
+	/** 
+	 * Gets the value of userIdModified
+	 */
+	public boolean isUserIdModified()
+	{
+		return userIdModified;
 	}
 
 	/**
@@ -97,6 +146,23 @@ public class PasswordReset implements Serializable
 	public void setResetHash(String resetHash)
 	{
 		this.resetHash = resetHash;
+		this.resetHashModified = true;
+	}
+
+	/** 
+	 * Sets the value of resetHashModified
+	 */
+	public void setResetHashModified(boolean resetHashModified)
+	{
+		this.resetHashModified = resetHashModified;
+	}
+
+	/** 
+	 * Gets the value of resetHashModified
+	 */
+	public boolean isResetHashModified()
+	{
+		return resetHashModified;
 	}
 
 	/**
@@ -124,11 +190,23 @@ public class PasswordReset implements Serializable
 			return false;
 		}
 		
+		if (idModified != _cast.idModified) {
+			return false;
+		}
+		
 		if (userId != _cast.userId) {
 			return false;
 		}
 		
+		if (userIdModified != _cast.userIdModified) {
+			return false;
+		}
+		
 		if (resetHash == null ? _cast.resetHash != resetHash : !resetHash.equals( _cast.resetHash )) {
+			return false;
+		}
+		
+		if (resetHashModified != _cast.resetHashModified) {
 			return false;
 		}
 		
@@ -144,11 +222,14 @@ public class PasswordReset implements Serializable
 	{
 		int _hashCode = 0;
 		_hashCode = 29 * _hashCode + id;
+		_hashCode = 29 * _hashCode + (idModified ? 1 : 0);
 		_hashCode = 29 * _hashCode + userId;
+		_hashCode = 29 * _hashCode + (userIdModified ? 1 : 0);
 		if (resetHash != null) {
 			_hashCode = 29 * _hashCode + resetHash.hashCode();
 		}
 		
+		_hashCode = 29 * _hashCode + (resetHashModified ? 1 : 0);
 		return _hashCode;
 	}
 

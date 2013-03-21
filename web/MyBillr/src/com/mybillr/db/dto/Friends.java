@@ -22,9 +22,19 @@ public class Friends implements Serializable
 	protected int userId;
 
 	/** 
+	 * This attribute represents whether the attribute userId has been modified since being read from the database.
+	 */
+	protected boolean userIdModified = false;
+
+	/** 
 	 * This attribute maps to the column friends_with in the friends table.
 	 */
 	protected int friendsWith;
+
+	/** 
+	 * This attribute represents whether the attribute friendsWith has been modified since being read from the database.
+	 */
+	protected boolean friendsWithModified = false;
 
 	/**
 	 * Method 'Friends'
@@ -52,6 +62,23 @@ public class Friends implements Serializable
 	public void setUserId(int userId)
 	{
 		this.userId = userId;
+		this.userIdModified = true;
+	}
+
+	/** 
+	 * Sets the value of userIdModified
+	 */
+	public void setUserIdModified(boolean userIdModified)
+	{
+		this.userIdModified = userIdModified;
+	}
+
+	/** 
+	 * Gets the value of userIdModified
+	 */
+	public boolean isUserIdModified()
+	{
+		return userIdModified;
 	}
 
 	/**
@@ -72,6 +99,23 @@ public class Friends implements Serializable
 	public void setFriendsWith(int friendsWith)
 	{
 		this.friendsWith = friendsWith;
+		this.friendsWithModified = true;
+	}
+
+	/** 
+	 * Sets the value of friendsWithModified
+	 */
+	public void setFriendsWithModified(boolean friendsWithModified)
+	{
+		this.friendsWithModified = friendsWithModified;
+	}
+
+	/** 
+	 * Gets the value of friendsWithModified
+	 */
+	public boolean isFriendsWithModified()
+	{
+		return friendsWithModified;
 	}
 
 	/**
@@ -99,7 +143,15 @@ public class Friends implements Serializable
 			return false;
 		}
 		
+		if (userIdModified != _cast.userIdModified) {
+			return false;
+		}
+		
 		if (friendsWith != _cast.friendsWith) {
+			return false;
+		}
+		
+		if (friendsWithModified != _cast.friendsWithModified) {
 			return false;
 		}
 		
@@ -115,7 +167,9 @@ public class Friends implements Serializable
 	{
 		int _hashCode = 0;
 		_hashCode = 29 * _hashCode + userId;
+		_hashCode = 29 * _hashCode + (userIdModified ? 1 : 0);
 		_hashCode = 29 * _hashCode + friendsWith;
+		_hashCode = 29 * _hashCode + (friendsWithModified ? 1 : 0);
 		return _hashCode;
 	}
 

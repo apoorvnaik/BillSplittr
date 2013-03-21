@@ -22,14 +22,29 @@ public class News implements Serializable
 	protected int id;
 
 	/** 
+	 * This attribute represents whether the attribute id has been modified since being read from the database.
+	 */
+	protected boolean idModified = false;
+
+	/** 
 	 * This attribute maps to the column title in the news table.
 	 */
 	protected String title;
 
 	/** 
+	 * This attribute represents whether the attribute title has been modified since being read from the database.
+	 */
+	protected boolean titleModified = false;
+
+	/** 
 	 * This attribute maps to the column content in the news table.
 	 */
 	protected String content;
+
+	/** 
+	 * This attribute represents whether the attribute content has been modified since being read from the database.
+	 */
+	protected boolean contentModified = false;
 
 	/**
 	 * Method 'News'
@@ -57,6 +72,23 @@ public class News implements Serializable
 	public void setId(int id)
 	{
 		this.id = id;
+		this.idModified = true;
+	}
+
+	/** 
+	 * Sets the value of idModified
+	 */
+	public void setIdModified(boolean idModified)
+	{
+		this.idModified = idModified;
+	}
+
+	/** 
+	 * Gets the value of idModified
+	 */
+	public boolean isIdModified()
+	{
+		return idModified;
 	}
 
 	/**
@@ -77,6 +109,23 @@ public class News implements Serializable
 	public void setTitle(String title)
 	{
 		this.title = title;
+		this.titleModified = true;
+	}
+
+	/** 
+	 * Sets the value of titleModified
+	 */
+	public void setTitleModified(boolean titleModified)
+	{
+		this.titleModified = titleModified;
+	}
+
+	/** 
+	 * Gets the value of titleModified
+	 */
+	public boolean isTitleModified()
+	{
+		return titleModified;
 	}
 
 	/**
@@ -97,6 +146,23 @@ public class News implements Serializable
 	public void setContent(String content)
 	{
 		this.content = content;
+		this.contentModified = true;
+	}
+
+	/** 
+	 * Sets the value of contentModified
+	 */
+	public void setContentModified(boolean contentModified)
+	{
+		this.contentModified = contentModified;
+	}
+
+	/** 
+	 * Gets the value of contentModified
+	 */
+	public boolean isContentModified()
+	{
+		return contentModified;
 	}
 
 	/**
@@ -124,11 +190,23 @@ public class News implements Serializable
 			return false;
 		}
 		
+		if (idModified != _cast.idModified) {
+			return false;
+		}
+		
 		if (title == null ? _cast.title != title : !title.equals( _cast.title )) {
 			return false;
 		}
 		
+		if (titleModified != _cast.titleModified) {
+			return false;
+		}
+		
 		if (content == null ? _cast.content != content : !content.equals( _cast.content )) {
+			return false;
+		}
+		
+		if (contentModified != _cast.contentModified) {
 			return false;
 		}
 		
@@ -144,14 +222,17 @@ public class News implements Serializable
 	{
 		int _hashCode = 0;
 		_hashCode = 29 * _hashCode + id;
+		_hashCode = 29 * _hashCode + (idModified ? 1 : 0);
 		if (title != null) {
 			_hashCode = 29 * _hashCode + title.hashCode();
 		}
 		
+		_hashCode = 29 * _hashCode + (titleModified ? 1 : 0);
 		if (content != null) {
 			_hashCode = 29 * _hashCode + content.hashCode();
 		}
 		
+		_hashCode = 29 * _hashCode + (contentModified ? 1 : 0);
 		return _hashCode;
 	}
 

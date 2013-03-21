@@ -22,9 +22,19 @@ public class Currencies implements Serializable
 	protected int id;
 
 	/** 
+	 * This attribute represents whether the attribute id has been modified since being read from the database.
+	 */
+	protected boolean idModified = false;
+
+	/** 
 	 * This attribute maps to the column name in the currencies table.
 	 */
 	protected String name;
+
+	/** 
+	 * This attribute represents whether the attribute name has been modified since being read from the database.
+	 */
+	protected boolean nameModified = false;
 
 	/** 
 	 * This attribute maps to the column symbol in the currencies table.
@@ -32,9 +42,19 @@ public class Currencies implements Serializable
 	protected String symbol;
 
 	/** 
+	 * This attribute represents whether the attribute symbol has been modified since being read from the database.
+	 */
+	protected boolean symbolModified = false;
+
+	/** 
 	 * This attribute maps to the column rate in the currencies table.
 	 */
 	protected long rate;
+
+	/** 
+	 * This attribute represents whether the attribute rate has been modified since being read from the database.
+	 */
+	protected boolean rateModified = false;
 
 	/**
 	 * Method 'Currencies'
@@ -62,6 +82,23 @@ public class Currencies implements Serializable
 	public void setId(int id)
 	{
 		this.id = id;
+		this.idModified = true;
+	}
+
+	/** 
+	 * Sets the value of idModified
+	 */
+	public void setIdModified(boolean idModified)
+	{
+		this.idModified = idModified;
+	}
+
+	/** 
+	 * Gets the value of idModified
+	 */
+	public boolean isIdModified()
+	{
+		return idModified;
 	}
 
 	/**
@@ -82,6 +119,23 @@ public class Currencies implements Serializable
 	public void setName(String name)
 	{
 		this.name = name;
+		this.nameModified = true;
+	}
+
+	/** 
+	 * Sets the value of nameModified
+	 */
+	public void setNameModified(boolean nameModified)
+	{
+		this.nameModified = nameModified;
+	}
+
+	/** 
+	 * Gets the value of nameModified
+	 */
+	public boolean isNameModified()
+	{
+		return nameModified;
 	}
 
 	/**
@@ -102,6 +156,23 @@ public class Currencies implements Serializable
 	public void setSymbol(String symbol)
 	{
 		this.symbol = symbol;
+		this.symbolModified = true;
+	}
+
+	/** 
+	 * Sets the value of symbolModified
+	 */
+	public void setSymbolModified(boolean symbolModified)
+	{
+		this.symbolModified = symbolModified;
+	}
+
+	/** 
+	 * Gets the value of symbolModified
+	 */
+	public boolean isSymbolModified()
+	{
+		return symbolModified;
 	}
 
 	/**
@@ -122,6 +193,23 @@ public class Currencies implements Serializable
 	public void setRate(long rate)
 	{
 		this.rate = rate;
+		this.rateModified = true;
+	}
+
+	/** 
+	 * Sets the value of rateModified
+	 */
+	public void setRateModified(boolean rateModified)
+	{
+		this.rateModified = rateModified;
+	}
+
+	/** 
+	 * Gets the value of rateModified
+	 */
+	public boolean isRateModified()
+	{
+		return rateModified;
 	}
 
 	/**
@@ -149,7 +237,15 @@ public class Currencies implements Serializable
 			return false;
 		}
 		
+		if (idModified != _cast.idModified) {
+			return false;
+		}
+		
 		if (name == null ? _cast.name != name : !name.equals( _cast.name )) {
+			return false;
+		}
+		
+		if (nameModified != _cast.nameModified) {
 			return false;
 		}
 		
@@ -157,7 +253,15 @@ public class Currencies implements Serializable
 			return false;
 		}
 		
+		if (symbolModified != _cast.symbolModified) {
+			return false;
+		}
+		
 		if (rate != _cast.rate) {
+			return false;
+		}
+		
+		if (rateModified != _cast.rateModified) {
 			return false;
 		}
 		
@@ -173,15 +277,19 @@ public class Currencies implements Serializable
 	{
 		int _hashCode = 0;
 		_hashCode = 29 * _hashCode + id;
+		_hashCode = 29 * _hashCode + (idModified ? 1 : 0);
 		if (name != null) {
 			_hashCode = 29 * _hashCode + name.hashCode();
 		}
 		
+		_hashCode = 29 * _hashCode + (nameModified ? 1 : 0);
 		if (symbol != null) {
 			_hashCode = 29 * _hashCode + symbol.hashCode();
 		}
 		
+		_hashCode = 29 * _hashCode + (symbolModified ? 1 : 0);
 		_hashCode = 29 * _hashCode + (int) (rate ^ (rate >>> 32));
+		_hashCode = 29 * _hashCode + (rateModified ? 1 : 0);
 		return _hashCode;
 	}
 

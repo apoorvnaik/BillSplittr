@@ -14,6 +14,7 @@ import com.mybillr.db.dto.*;
 import com.mybillr.db.exceptions.*;
 import java.sql.Connection;
 import java.util.Collection;
+import org.apache.log4j.Logger;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.sql.ResultSet;
@@ -32,6 +33,8 @@ is chosen then the connection will be stored in this attribute and will be used 
 calls to this DAO, otherwise a new Connection will be allocated for each operation.
 	 */
 	protected java.sql.Connection userConn;
+
+	protected static final Logger logger = Logger.getLogger( BillPayeeDaoImpl.class );
 
 	/** 
 	 * All finder methods in this class use this SELECT constant to build their queries
@@ -109,21 +112,95 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			// get the user-specified connection or get a connection from the ResourceManager
 			conn = isConnSupplied ? userConn : ResourceManager.getConnection();
 		
-			stmt = conn.prepareStatement( SQL_INSERT );
+			StringBuffer sql = new StringBuffer();
+			StringBuffer values = new StringBuffer();
+			sql.append( "INSERT INTO " + getTableName() + " (" );
+			int modifiedCount = 0;
+			if (dto.isBillIdModified()) {
+				if (modifiedCount>0) {
+					sql.append( ", " );
+					values.append( ", " );
+				}
+		
+				sql.append( "bill_id" );
+				values.append( "?" );
+				modifiedCount++;
+			}
+		
+			if (dto.isUserIdModified()) {
+				if (modifiedCount>0) {
+					sql.append( ", " );
+					values.append( ", " );
+				}
+		
+				sql.append( "user_id" );
+				values.append( "?" );
+				modifiedCount++;
+			}
+		
+			if (dto.isShareModified()) {
+				if (modifiedCount>0) {
+					sql.append( ", " );
+					values.append( ", " );
+				}
+		
+				sql.append( "share" );
+				values.append( "?" );
+				modifiedCount++;
+			}
+		
+			if (dto.isAmountModified()) {
+				if (modifiedCount>0) {
+					sql.append( ", " );
+					values.append( ", " );
+				}
+		
+				sql.append( "amount" );
+				values.append( "?" );
+				modifiedCount++;
+			}
+		
+			if (modifiedCount==0) {
+				// nothing to insert
+				throw new IllegalStateException( "Nothing to insert" );
+			}
+		
+			sql.append( ") VALUES (" );
+			sql.append( values );
+			sql.append( ")" );
+			stmt = conn.prepareStatement( sql.toString() );
 			int index = 1;
-			stmt.setInt( index++, dto.getBillId() );
-			stmt.setInt( index++, dto.getUserId() );
-			stmt.setLong( index++, dto.getShare() );
-			stmt.setLong( index++, dto.getAmount() );
-			System.out.println( "Executing " + SQL_INSERT + " with DTO: " + dto );
+			if (dto.isBillIdModified()) {
+				stmt.setInt( index++, dto.getBillId() );
+			}
+		
+			if (dto.isUserIdModified()) {
+				stmt.setInt( index++, dto.getUserId() );
+			}
+		
+			if (dto.isShareModified()) {
+				stmt.setLong( index++, dto.getShare() );
+			}
+		
+			if (dto.isAmountModified()) {
+				stmt.setLong( index++, dto.getAmount() );
+			}
+		
+			if (logger.isDebugEnabled()) {
+				logger.debug( "Executing " + sql.toString() + " with values: " + dto);
+			}
+		
 			int rows = stmt.executeUpdate();
 			long t2 = System.currentTimeMillis();
-			System.out.println( rows + " rows affected (" + (t2-t1) + " ms)" );
+			if (logger.isDebugEnabled()) {
+				logger.debug( rows + " rows affected (" + (t2-t1) + " ms)");
+			}
+		
 			reset(dto);
 			return dto.createPk();
 		}
 		catch (Exception _e) {
-			_e.printStackTrace();
+			logger.error( "Exception: " + _e.getMessage(), _e );
 			throw new BillPayeeDaoException( "Exception: " + _e.getMessage(), _e );
 		}
 		finally {
@@ -151,22 +228,85 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			// get the user-specified connection or get a connection from the ResourceManager
 			conn = isConnSupplied ? userConn : ResourceManager.getConnection();
 		
-			System.out.println( "Executing " + SQL_UPDATE + " with DTO: " + dto );
-			stmt = conn.prepareStatement( SQL_UPDATE );
-			int index=1;
-			stmt.setInt( index++, dto.getBillId() );
-			stmt.setInt( index++, dto.getUserId() );
-			stmt.setLong( index++, dto.getShare() );
-			stmt.setLong( index++, dto.getAmount() );
-			stmt.setInt( 5, pk.getBillId() );
-			stmt.setInt( 6, pk.getUserId() );
+			StringBuffer sql = new StringBuffer();
+			sql.append( "UPDATE " + getTableName() + " SET " );
+			boolean modified = false;
+			if (dto.isBillIdModified()) {
+				if (modified) {
+					sql.append( ", " );
+				}
+		
+				sql.append( "bill_id=?" );
+				modified=true;
+			}
+		
+			if (dto.isUserIdModified()) {
+				if (modified) {
+					sql.append( ", " );
+				}
+		
+				sql.append( "user_id=?" );
+				modified=true;
+			}
+		
+			if (dto.isShareModified()) {
+				if (modified) {
+					sql.append( ", " );
+				}
+		
+				sql.append( "share=?" );
+				modified=true;
+			}
+		
+			if (dto.isAmountModified()) {
+				if (modified) {
+					sql.append( ", " );
+				}
+		
+				sql.append( "amount=?" );
+				modified=true;
+			}
+		
+			if (!modified) {
+				// nothing to update
+				return;
+			}
+		
+			sql.append( " WHERE bill_id=? AND user_id=?" );
+			if (logger.isDebugEnabled()) {
+				logger.debug( "Executing " + sql.toString() + " with values: " + dto);
+			}
+		
+			stmt = conn.prepareStatement( sql.toString() );
+			int index = 1;
+			if (dto.isBillIdModified()) {
+				stmt.setInt( index++, dto.getBillId() );
+			}
+		
+			if (dto.isUserIdModified()) {
+				stmt.setInt( index++, dto.getUserId() );
+			}
+		
+			if (dto.isShareModified()) {
+				stmt.setLong( index++, dto.getShare() );
+			}
+		
+			if (dto.isAmountModified()) {
+				stmt.setLong( index++, dto.getAmount() );
+			}
+		
+			stmt.setInt( index++, pk.getBillId() );
+			stmt.setInt( index++, pk.getUserId() );
 			int rows = stmt.executeUpdate();
 			reset(dto);
 			long t2 = System.currentTimeMillis();
-			System.out.println( rows + " rows affected (" + (t2-t1) + " ms)" );
+			if (logger.isDebugEnabled()) {
+				logger.debug( rows + " rows affected (" + (t2-t1) + " ms)");
+			}
+		
 		}
 		catch (Exception _e) {
-			_e.printStackTrace();
+			logger.error( "Exception: " + _e.getMessage(), _e );
 			throw new BillPayeeDaoException( "Exception: " + _e.getMessage(), _e );
 		}
 		finally {
@@ -194,16 +334,22 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			// get the user-specified connection or get a connection from the ResourceManager
 			conn = isConnSupplied ? userConn : ResourceManager.getConnection();
 		
-			System.out.println( "Executing " + SQL_DELETE + " with PK: " + pk );
+			if (logger.isDebugEnabled()) {
+				logger.debug( "Executing " + SQL_DELETE + " with PK: " + pk);
+			}
+		
 			stmt = conn.prepareStatement( SQL_DELETE );
 			stmt.setInt( 1, pk.getBillId() );
 			stmt.setInt( 2, pk.getUserId() );
 			int rows = stmt.executeUpdate();
 			long t2 = System.currentTimeMillis();
-			System.out.println( rows + " rows affected (" + (t2-t1) + " ms)" );
+			if (logger.isDebugEnabled()) {
+				logger.debug( rows + " rows affected (" + (t2-t1) + " ms)");
+			}
+		
 		}
 		catch (Exception _e) {
-			_e.printStackTrace();
+			logger.error( "Exception: " + _e.getMessage(), _e );
 			throw new BillPayeeDaoException( "Exception: " + _e.getMessage(), _e );
 		}
 		finally {
@@ -330,7 +476,7 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 	 */
 	public String getTableName()
 	{
-		return "bill_payee";
+		return "mybillr.bill_payee";
 	}
 
 	/** 
@@ -374,6 +520,7 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 		dto.setUserId( rs.getInt( COLUMN_USER_ID ) );
 		dto.setShare( rs.getLong( COLUMN_SHARE ) );
 		dto.setAmount( rs.getLong( COLUMN_AMOUNT ) );
+		reset(dto);
 	}
 
 	/** 
@@ -381,6 +528,10 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 	 */
 	protected void reset(BillPayee dto)
 	{
+		dto.setBillIdModified( false );
+		dto.setUserIdModified( false );
+		dto.setShareModified( false );
+		dto.setAmountModified( false );
 	}
 
 	/** 
@@ -402,7 +553,10 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			final String SQL = sql;
 		
 		
-			System.out.println( "Executing " + SQL );
+			if (logger.isDebugEnabled()) {
+				logger.debug( "Executing " + SQL);
+			}
+		
 			// prepare statement
 			stmt = conn.prepareStatement( SQL );
 			stmt.setMaxRows( maxRows );
@@ -419,7 +573,7 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			return fetchMultiResults(rs);
 		}
 		catch (Exception _e) {
-			_e.printStackTrace();
+			logger.error( "Exception: " + _e.getMessage(), _e );
 			throw new BillPayeeDaoException( "Exception: " + _e.getMessage(), _e );
 		}
 		finally {
@@ -452,7 +606,10 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			final String SQL = SQL_SELECT + " WHERE " + sql;
 		
 		
-			System.out.println( "Executing " + SQL );
+			if (logger.isDebugEnabled()) {
+				logger.debug( "Executing " + SQL);
+			}
+		
 			// prepare statement
 			stmt = conn.prepareStatement( SQL );
 			stmt.setMaxRows( maxRows );
@@ -469,7 +626,7 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			return fetchMultiResults(rs);
 		}
 		catch (Exception _e) {
-			_e.printStackTrace();
+			logger.error( "Exception: " + _e.getMessage(), _e );
 			throw new BillPayeeDaoException( "Exception: " + _e.getMessage(), _e );
 		}
 		finally {

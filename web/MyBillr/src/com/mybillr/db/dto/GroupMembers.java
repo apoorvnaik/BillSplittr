@@ -22,9 +22,19 @@ public class GroupMembers implements Serializable
 	protected int groupId;
 
 	/** 
+	 * This attribute represents whether the attribute groupId has been modified since being read from the database.
+	 */
+	protected boolean groupIdModified = false;
+
+	/** 
 	 * This attribute maps to the column user_id in the group_members table.
 	 */
 	protected int userId;
+
+	/** 
+	 * This attribute represents whether the attribute userId has been modified since being read from the database.
+	 */
+	protected boolean userIdModified = false;
 
 	/**
 	 * Method 'GroupMembers'
@@ -52,6 +62,23 @@ public class GroupMembers implements Serializable
 	public void setGroupId(int groupId)
 	{
 		this.groupId = groupId;
+		this.groupIdModified = true;
+	}
+
+	/** 
+	 * Sets the value of groupIdModified
+	 */
+	public void setGroupIdModified(boolean groupIdModified)
+	{
+		this.groupIdModified = groupIdModified;
+	}
+
+	/** 
+	 * Gets the value of groupIdModified
+	 */
+	public boolean isGroupIdModified()
+	{
+		return groupIdModified;
 	}
 
 	/**
@@ -72,6 +99,23 @@ public class GroupMembers implements Serializable
 	public void setUserId(int userId)
 	{
 		this.userId = userId;
+		this.userIdModified = true;
+	}
+
+	/** 
+	 * Sets the value of userIdModified
+	 */
+	public void setUserIdModified(boolean userIdModified)
+	{
+		this.userIdModified = userIdModified;
+	}
+
+	/** 
+	 * Gets the value of userIdModified
+	 */
+	public boolean isUserIdModified()
+	{
+		return userIdModified;
 	}
 
 	/**
@@ -99,7 +143,15 @@ public class GroupMembers implements Serializable
 			return false;
 		}
 		
+		if (groupIdModified != _cast.groupIdModified) {
+			return false;
+		}
+		
 		if (userId != _cast.userId) {
+			return false;
+		}
+		
+		if (userIdModified != _cast.userIdModified) {
 			return false;
 		}
 		
@@ -115,7 +167,9 @@ public class GroupMembers implements Serializable
 	{
 		int _hashCode = 0;
 		_hashCode = 29 * _hashCode + groupId;
+		_hashCode = 29 * _hashCode + (groupIdModified ? 1 : 0);
 		_hashCode = 29 * _hashCode + userId;
+		_hashCode = 29 * _hashCode + (userIdModified ? 1 : 0);
 		return _hashCode;
 	}
 

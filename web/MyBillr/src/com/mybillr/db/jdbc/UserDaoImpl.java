@@ -14,6 +14,7 @@ import com.mybillr.db.dto.*;
 import com.mybillr.db.exceptions.*;
 import java.sql.Connection;
 import java.util.Collection;
+import org.apache.log4j.Logger;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.sql.ResultSet;
@@ -33,6 +34,8 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 	 */
 	protected java.sql.Connection userConn;
 
+	protected static final Logger logger = Logger.getLogger( UserDaoImpl.class );
+
 	/** 
 	 * All finder methods in this class use this SELECT constant to build their queries
 	 */
@@ -46,13 +49,12 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 	/** 
 	 * SQL INSERT statement for this table
 	 */
-	protected final String SQL_INSERT = "INSERT INTO " + getTableName() + " ( email, salt, password, active ) VALUES ( ?, ?, ?, ? )";
+	protected final String SQL_INSERT = "INSERT INTO " + getTableName() + " ( id, email, salt, password, active ) VALUES ( ?, ?, ?, ?, ? )";
 
 	/** 
 	 * SQL UPDATE statement for this table
 	 */
-//	protected final String SQL_UPDATE = "UPDATE " + getTableName() + " SET id = ?, email = ?, salt = ?, password = ?, active = ? WHERE id = ? AND email = ?";
-	protected final String SQL_UPDATE = "UPDATE " + getTableName() + " SET id email = ?, salt = ?, password = ?, active = ? WHERE id = ? AND email = ?";
+	protected final String SQL_UPDATE = "UPDATE " + getTableName() + " SET id = ?, email = ?, salt = ?, password = ?, active = ? WHERE id = ? AND email = ?";
 
 	/** 
 	 * SQL DELETE statement for this table
@@ -115,17 +117,105 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			// get the user-specified connection or get a connection from the ResourceManager
 			conn = isConnSupplied ? userConn : ResourceManager.getConnection();
 		
-			stmt = conn.prepareStatement( SQL_INSERT, Statement.RETURN_GENERATED_KEYS );
-			int index = 2;
-//			stmt.setInt( index++, dto.getId() );
-			stmt.setString( index++, dto.getEmail() );
-			stmt.setString( index++, dto.getSalt() );
-			stmt.setString( index++, dto.getPassword() );
-			stmt.setShort( index++, dto.getActive() );
-			System.out.println( "Executing " + SQL_INSERT + " with DTO: " + dto );
+			StringBuffer sql = new StringBuffer();
+			StringBuffer values = new StringBuffer();
+			sql.append( "INSERT INTO " + getTableName() + " (" );
+			int modifiedCount = 0;
+			if (dto.isIdModified()) {
+				if (modifiedCount>0) {
+					sql.append( ", " );
+					values.append( ", " );
+				}
+		
+				sql.append( "id" );
+				values.append( "?" );
+				modifiedCount++;
+			}
+		
+			if (dto.isEmailModified()) {
+				if (modifiedCount>0) {
+					sql.append( ", " );
+					values.append( ", " );
+				}
+		
+				sql.append( "email" );
+				values.append( "?" );
+				modifiedCount++;
+			}
+		
+			if (dto.isSaltModified()) {
+				if (modifiedCount>0) {
+					sql.append( ", " );
+					values.append( ", " );
+				}
+		
+				sql.append( "salt" );
+				values.append( "?" );
+				modifiedCount++;
+			}
+		
+			if (dto.isPasswordModified()) {
+				if (modifiedCount>0) {
+					sql.append( ", " );
+					values.append( ", " );
+				}
+		
+				sql.append( "password" );
+				values.append( "?" );
+				modifiedCount++;
+			}
+		
+			if (dto.isActiveModified()) {
+				if (modifiedCount>0) {
+					sql.append( ", " );
+					values.append( ", " );
+				}
+		
+				sql.append( "active" );
+				values.append( "?" );
+				modifiedCount++;
+			}
+		
+			if (modifiedCount==0) {
+				// nothing to insert
+				throw new IllegalStateException( "Nothing to insert" );
+			}
+		
+			sql.append( ") VALUES (" );
+			sql.append( values );
+			sql.append( ")" );
+			stmt = conn.prepareStatement( sql.toString(), Statement.RETURN_GENERATED_KEYS );
+			int index = 1;
+			if (dto.isIdModified()) {
+				stmt.setInt( index++, dto.getId() );
+			}
+		
+			if (dto.isEmailModified()) {
+				stmt.setString( index++, dto.getEmail() );
+			}
+		
+			if (dto.isSaltModified()) {
+				stmt.setString( index++, dto.getSalt() );
+			}
+		
+			if (dto.isPasswordModified()) {
+				stmt.setString( index++, dto.getPassword() );
+			}
+		
+			if (dto.isActiveModified()) {
+				stmt.setShort( index++, dto.getActive() );
+			}
+		
+			if (logger.isDebugEnabled()) {
+				logger.debug( "Executing " + sql.toString() + " with values: " + dto);
+			}
+		
 			int rows = stmt.executeUpdate();
 			long t2 = System.currentTimeMillis();
-			System.out.println( rows + " rows affected (" + (t2-t1) + " ms)" );
+			if (logger.isDebugEnabled()) {
+				logger.debug( rows + " rows affected (" + (t2-t1) + " ms)");
+			}
+		
 		
 			// retrieve values from auto-increment columns
 			rs = stmt.getGeneratedKeys();
@@ -137,7 +227,7 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			return dto.createPk();
 		}
 		catch (Exception _e) {
-			_e.printStackTrace();
+			logger.error( "Exception: " + _e.getMessage(), _e );
 			throw new UserDaoException( "Exception: " + _e.getMessage(), _e );
 		}
 		finally {
@@ -165,23 +255,98 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			// get the user-specified connection or get a connection from the ResourceManager
 			conn = isConnSupplied ? userConn : ResourceManager.getConnection();
 		
-			System.out.println( "Executing " + SQL_UPDATE + " with DTO: " + dto );
-			stmt = conn.prepareStatement( SQL_UPDATE );
-			int index=2;
-//			stmt.setInt( index++, dto.getId() );
-			stmt.setString( index++, dto.getEmail() );
-			stmt.setString( index++, dto.getSalt() );
-			stmt.setString( index++, dto.getPassword() );
-			stmt.setShort( index++, dto.getActive() );
-			stmt.setInt( 6, pk.getId() );
-			stmt.setString( 7, pk.getEmail() );
+			StringBuffer sql = new StringBuffer();
+			sql.append( "UPDATE " + getTableName() + " SET " );
+			boolean modified = false;
+			if (dto.isIdModified()) {
+				if (modified) {
+					sql.append( ", " );
+				}
+		
+				sql.append( "id=?" );
+				modified=true;
+			}
+		
+			if (dto.isEmailModified()) {
+				if (modified) {
+					sql.append( ", " );
+				}
+		
+				sql.append( "email=?" );
+				modified=true;
+			}
+		
+			if (dto.isSaltModified()) {
+				if (modified) {
+					sql.append( ", " );
+				}
+		
+				sql.append( "salt=?" );
+				modified=true;
+			}
+		
+			if (dto.isPasswordModified()) {
+				if (modified) {
+					sql.append( ", " );
+				}
+		
+				sql.append( "password=?" );
+				modified=true;
+			}
+		
+			if (dto.isActiveModified()) {
+				if (modified) {
+					sql.append( ", " );
+				}
+		
+				sql.append( "active=?" );
+				modified=true;
+			}
+		
+			if (!modified) {
+				// nothing to update
+				return;
+			}
+		
+			sql.append( " WHERE id=? AND email=?" );
+			if (logger.isDebugEnabled()) {
+				logger.debug( "Executing " + sql.toString() + " with values: " + dto);
+			}
+		
+			stmt = conn.prepareStatement( sql.toString() );
+			int index = 1;
+			if (dto.isIdModified()) {
+				stmt.setInt( index++, dto.getId() );
+			}
+		
+			if (dto.isEmailModified()) {
+				stmt.setString( index++, dto.getEmail() );
+			}
+		
+			if (dto.isSaltModified()) {
+				stmt.setString( index++, dto.getSalt() );
+			}
+		
+			if (dto.isPasswordModified()) {
+				stmt.setString( index++, dto.getPassword() );
+			}
+		
+			if (dto.isActiveModified()) {
+				stmt.setShort( index++, dto.getActive() );
+			}
+		
+			stmt.setInt( index++, pk.getId() );
+			stmt.setString( index++, pk.getEmail() );
 			int rows = stmt.executeUpdate();
 			reset(dto);
 			long t2 = System.currentTimeMillis();
-			System.out.println( rows + " rows affected (" + (t2-t1) + " ms)" );
+			if (logger.isDebugEnabled()) {
+				logger.debug( rows + " rows affected (" + (t2-t1) + " ms)");
+			}
+		
 		}
 		catch (Exception _e) {
-			_e.printStackTrace();
+			logger.error( "Exception: " + _e.getMessage(), _e );
 			throw new UserDaoException( "Exception: " + _e.getMessage(), _e );
 		}
 		finally {
@@ -209,16 +374,22 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			// get the user-specified connection or get a connection from the ResourceManager
 			conn = isConnSupplied ? userConn : ResourceManager.getConnection();
 		
-			System.out.println( "Executing " + SQL_DELETE + " with PK: " + pk );
+			if (logger.isDebugEnabled()) {
+				logger.debug( "Executing " + SQL_DELETE + " with PK: " + pk);
+			}
+		
 			stmt = conn.prepareStatement( SQL_DELETE );
 			stmt.setInt( 1, pk.getId() );
 			stmt.setString( 2, pk.getEmail() );
 			int rows = stmt.executeUpdate();
 			long t2 = System.currentTimeMillis();
-			System.out.println( rows + " rows affected (" + (t2-t1) + " ms)" );
+			if (logger.isDebugEnabled()) {
+				logger.debug( rows + " rows affected (" + (t2-t1) + " ms)");
+			}
+		
 		}
 		catch (Exception _e) {
-			_e.printStackTrace();
+			logger.error( "Exception: " + _e.getMessage(), _e );
 			throw new UserDaoException( "Exception: " + _e.getMessage(), _e );
 		}
 		finally {
@@ -337,7 +508,7 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 	 */
 	public String getTableName()
 	{
-		return "user";
+		return "mybillr.user";
 	}
 
 	/** 
@@ -382,6 +553,7 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 		dto.setSalt( rs.getString( COLUMN_SALT ) );
 		dto.setPassword( rs.getString( COLUMN_PASSWORD ) );
 		dto.setActive( rs.getShort( COLUMN_ACTIVE ) );
+		reset(dto);
 	}
 
 	/** 
@@ -389,6 +561,11 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 	 */
 	protected void reset(User dto)
 	{
+		dto.setIdModified( false );
+		dto.setEmailModified( false );
+		dto.setSaltModified( false );
+		dto.setPasswordModified( false );
+		dto.setActiveModified( false );
 	}
 
 	/** 
@@ -410,7 +587,10 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			final String SQL = sql;
 		
 		
-			System.out.println( "Executing " + SQL );
+			if (logger.isDebugEnabled()) {
+				logger.debug( "Executing " + SQL);
+			}
+		
 			// prepare statement
 			stmt = conn.prepareStatement( SQL );
 			stmt.setMaxRows( maxRows );
@@ -427,7 +607,7 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			return fetchMultiResults(rs);
 		}
 		catch (Exception _e) {
-			_e.printStackTrace();
+			logger.error( "Exception: " + _e.getMessage(), _e );
 			throw new UserDaoException( "Exception: " + _e.getMessage(), _e );
 		}
 		finally {
@@ -460,7 +640,10 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			final String SQL = SQL_SELECT + " WHERE " + sql;
 		
 		
-			System.out.println( "Executing " + SQL );
+			if (logger.isDebugEnabled()) {
+				logger.debug( "Executing " + SQL);
+			}
+		
 			// prepare statement
 			stmt = conn.prepareStatement( SQL );
 			stmt.setMaxRows( maxRows );
@@ -477,7 +660,7 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			return fetchMultiResults(rs);
 		}
 		catch (Exception _e) {
-			_e.printStackTrace();
+			logger.error( "Exception: " + _e.getMessage(), _e );
 			throw new UserDaoException( "Exception: " + _e.getMessage(), _e );
 		}
 		finally {

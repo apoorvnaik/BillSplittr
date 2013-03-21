@@ -22,14 +22,29 @@ public class AccountActivation implements Serializable
 	protected int id;
 
 	/** 
+	 * This attribute represents whether the attribute id has been modified since being read from the database.
+	 */
+	protected boolean idModified = false;
+
+	/** 
 	 * This attribute maps to the column user_id in the account_activation table.
 	 */
 	protected int userId;
 
 	/** 
+	 * This attribute represents whether the attribute userId has been modified since being read from the database.
+	 */
+	protected boolean userIdModified = false;
+
+	/** 
 	 * This attribute maps to the column activation_hash in the account_activation table.
 	 */
 	protected String activationHash;
+
+	/** 
+	 * This attribute represents whether the attribute activationHash has been modified since being read from the database.
+	 */
+	protected boolean activationHashModified = false;
 
 	/**
 	 * Method 'AccountActivation'
@@ -57,6 +72,23 @@ public class AccountActivation implements Serializable
 	public void setId(int id)
 	{
 		this.id = id;
+		this.idModified = true;
+	}
+
+	/** 
+	 * Sets the value of idModified
+	 */
+	public void setIdModified(boolean idModified)
+	{
+		this.idModified = idModified;
+	}
+
+	/** 
+	 * Gets the value of idModified
+	 */
+	public boolean isIdModified()
+	{
+		return idModified;
 	}
 
 	/**
@@ -77,6 +109,23 @@ public class AccountActivation implements Serializable
 	public void setUserId(int userId)
 	{
 		this.userId = userId;
+		this.userIdModified = true;
+	}
+
+	/** 
+	 * Sets the value of userIdModified
+	 */
+	public void setUserIdModified(boolean userIdModified)
+	{
+		this.userIdModified = userIdModified;
+	}
+
+	/** 
+	 * Gets the value of userIdModified
+	 */
+	public boolean isUserIdModified()
+	{
+		return userIdModified;
 	}
 
 	/**
@@ -97,6 +146,23 @@ public class AccountActivation implements Serializable
 	public void setActivationHash(String activationHash)
 	{
 		this.activationHash = activationHash;
+		this.activationHashModified = true;
+	}
+
+	/** 
+	 * Sets the value of activationHashModified
+	 */
+	public void setActivationHashModified(boolean activationHashModified)
+	{
+		this.activationHashModified = activationHashModified;
+	}
+
+	/** 
+	 * Gets the value of activationHashModified
+	 */
+	public boolean isActivationHashModified()
+	{
+		return activationHashModified;
 	}
 
 	/**
@@ -124,11 +190,23 @@ public class AccountActivation implements Serializable
 			return false;
 		}
 		
+		if (idModified != _cast.idModified) {
+			return false;
+		}
+		
 		if (userId != _cast.userId) {
 			return false;
 		}
 		
+		if (userIdModified != _cast.userIdModified) {
+			return false;
+		}
+		
 		if (activationHash == null ? _cast.activationHash != activationHash : !activationHash.equals( _cast.activationHash )) {
+			return false;
+		}
+		
+		if (activationHashModified != _cast.activationHashModified) {
 			return false;
 		}
 		
@@ -144,11 +222,14 @@ public class AccountActivation implements Serializable
 	{
 		int _hashCode = 0;
 		_hashCode = 29 * _hashCode + id;
+		_hashCode = 29 * _hashCode + (idModified ? 1 : 0);
 		_hashCode = 29 * _hashCode + userId;
+		_hashCode = 29 * _hashCode + (userIdModified ? 1 : 0);
 		if (activationHash != null) {
 			_hashCode = 29 * _hashCode + activationHash.hashCode();
 		}
 		
+		_hashCode = 29 * _hashCode + (activationHashModified ? 1 : 0);
 		return _hashCode;
 	}
 

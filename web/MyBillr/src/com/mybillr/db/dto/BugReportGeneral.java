@@ -22,9 +22,19 @@ public class BugReportGeneral implements Serializable
 	protected int id;
 
 	/** 
+	 * This attribute represents whether the attribute id has been modified since being read from the database.
+	 */
+	protected boolean idModified = false;
+
+	/** 
 	 * This attribute maps to the column reported_by in the bug_report_general table.
 	 */
 	protected String reportedBy;
+
+	/** 
+	 * This attribute represents whether the attribute reportedBy has been modified since being read from the database.
+	 */
+	protected boolean reportedByModified = false;
 
 	/** 
 	 * This attribute maps to the column title in the bug_report_general table.
@@ -32,9 +42,19 @@ public class BugReportGeneral implements Serializable
 	protected String title;
 
 	/** 
+	 * This attribute represents whether the attribute title has been modified since being read from the database.
+	 */
+	protected boolean titleModified = false;
+
+	/** 
 	 * This attribute maps to the column bug in the bug_report_general table.
 	 */
 	protected String bug;
+
+	/** 
+	 * This attribute represents whether the attribute bug has been modified since being read from the database.
+	 */
+	protected boolean bugModified = false;
 
 	/**
 	 * Method 'BugReportGeneral'
@@ -62,6 +82,23 @@ public class BugReportGeneral implements Serializable
 	public void setId(int id)
 	{
 		this.id = id;
+		this.idModified = true;
+	}
+
+	/** 
+	 * Sets the value of idModified
+	 */
+	public void setIdModified(boolean idModified)
+	{
+		this.idModified = idModified;
+	}
+
+	/** 
+	 * Gets the value of idModified
+	 */
+	public boolean isIdModified()
+	{
+		return idModified;
 	}
 
 	/**
@@ -82,6 +119,23 @@ public class BugReportGeneral implements Serializable
 	public void setReportedBy(String reportedBy)
 	{
 		this.reportedBy = reportedBy;
+		this.reportedByModified = true;
+	}
+
+	/** 
+	 * Sets the value of reportedByModified
+	 */
+	public void setReportedByModified(boolean reportedByModified)
+	{
+		this.reportedByModified = reportedByModified;
+	}
+
+	/** 
+	 * Gets the value of reportedByModified
+	 */
+	public boolean isReportedByModified()
+	{
+		return reportedByModified;
 	}
 
 	/**
@@ -102,6 +156,23 @@ public class BugReportGeneral implements Serializable
 	public void setTitle(String title)
 	{
 		this.title = title;
+		this.titleModified = true;
+	}
+
+	/** 
+	 * Sets the value of titleModified
+	 */
+	public void setTitleModified(boolean titleModified)
+	{
+		this.titleModified = titleModified;
+	}
+
+	/** 
+	 * Gets the value of titleModified
+	 */
+	public boolean isTitleModified()
+	{
+		return titleModified;
 	}
 
 	/**
@@ -122,6 +193,23 @@ public class BugReportGeneral implements Serializable
 	public void setBug(String bug)
 	{
 		this.bug = bug;
+		this.bugModified = true;
+	}
+
+	/** 
+	 * Sets the value of bugModified
+	 */
+	public void setBugModified(boolean bugModified)
+	{
+		this.bugModified = bugModified;
+	}
+
+	/** 
+	 * Gets the value of bugModified
+	 */
+	public boolean isBugModified()
+	{
+		return bugModified;
 	}
 
 	/**
@@ -149,7 +237,15 @@ public class BugReportGeneral implements Serializable
 			return false;
 		}
 		
+		if (idModified != _cast.idModified) {
+			return false;
+		}
+		
 		if (reportedBy == null ? _cast.reportedBy != reportedBy : !reportedBy.equals( _cast.reportedBy )) {
+			return false;
+		}
+		
+		if (reportedByModified != _cast.reportedByModified) {
 			return false;
 		}
 		
@@ -157,7 +253,15 @@ public class BugReportGeneral implements Serializable
 			return false;
 		}
 		
+		if (titleModified != _cast.titleModified) {
+			return false;
+		}
+		
 		if (bug == null ? _cast.bug != bug : !bug.equals( _cast.bug )) {
+			return false;
+		}
+		
+		if (bugModified != _cast.bugModified) {
 			return false;
 		}
 		
@@ -173,18 +277,22 @@ public class BugReportGeneral implements Serializable
 	{
 		int _hashCode = 0;
 		_hashCode = 29 * _hashCode + id;
+		_hashCode = 29 * _hashCode + (idModified ? 1 : 0);
 		if (reportedBy != null) {
 			_hashCode = 29 * _hashCode + reportedBy.hashCode();
 		}
 		
+		_hashCode = 29 * _hashCode + (reportedByModified ? 1 : 0);
 		if (title != null) {
 			_hashCode = 29 * _hashCode + title.hashCode();
 		}
 		
+		_hashCode = 29 * _hashCode + (titleModified ? 1 : 0);
 		if (bug != null) {
 			_hashCode = 29 * _hashCode + bug.hashCode();
 		}
 		
+		_hashCode = 29 * _hashCode + (bugModified ? 1 : 0);
 		return _hashCode;
 	}
 

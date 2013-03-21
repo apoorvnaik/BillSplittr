@@ -22,9 +22,19 @@ public class User implements Serializable
 	protected int id;
 
 	/** 
+	 * This attribute represents whether the attribute id has been modified since being read from the database.
+	 */
+	protected boolean idModified = false;
+
+	/** 
 	 * This attribute maps to the column email in the user table.
 	 */
 	protected String email;
+
+	/** 
+	 * This attribute represents whether the attribute email has been modified since being read from the database.
+	 */
+	protected boolean emailModified = false;
 
 	/** 
 	 * This attribute maps to the column salt in the user table.
@@ -32,14 +42,29 @@ public class User implements Serializable
 	protected String salt;
 
 	/** 
+	 * This attribute represents whether the attribute salt has been modified since being read from the database.
+	 */
+	protected boolean saltModified = false;
+
+	/** 
 	 * This attribute maps to the column password in the user table.
 	 */
 	protected String password;
 
 	/** 
+	 * This attribute represents whether the attribute password has been modified since being read from the database.
+	 */
+	protected boolean passwordModified = false;
+
+	/** 
 	 * This attribute maps to the column active in the user table.
 	 */
 	protected short active;
+
+	/** 
+	 * This attribute represents whether the attribute active has been modified since being read from the database.
+	 */
+	protected boolean activeModified = false;
 
 	/**
 	 * Method 'User'
@@ -67,6 +92,23 @@ public class User implements Serializable
 	public void setId(int id)
 	{
 		this.id = id;
+		this.idModified = true;
+	}
+
+	/** 
+	 * Sets the value of idModified
+	 */
+	public void setIdModified(boolean idModified)
+	{
+		this.idModified = idModified;
+	}
+
+	/** 
+	 * Gets the value of idModified
+	 */
+	public boolean isIdModified()
+	{
+		return idModified;
 	}
 
 	/**
@@ -87,6 +129,23 @@ public class User implements Serializable
 	public void setEmail(String email)
 	{
 		this.email = email;
+		this.emailModified = true;
+	}
+
+	/** 
+	 * Sets the value of emailModified
+	 */
+	public void setEmailModified(boolean emailModified)
+	{
+		this.emailModified = emailModified;
+	}
+
+	/** 
+	 * Gets the value of emailModified
+	 */
+	public boolean isEmailModified()
+	{
+		return emailModified;
 	}
 
 	/**
@@ -107,6 +166,23 @@ public class User implements Serializable
 	public void setSalt(String salt)
 	{
 		this.salt = salt;
+		this.saltModified = true;
+	}
+
+	/** 
+	 * Sets the value of saltModified
+	 */
+	public void setSaltModified(boolean saltModified)
+	{
+		this.saltModified = saltModified;
+	}
+
+	/** 
+	 * Gets the value of saltModified
+	 */
+	public boolean isSaltModified()
+	{
+		return saltModified;
 	}
 
 	/**
@@ -127,6 +203,23 @@ public class User implements Serializable
 	public void setPassword(String password)
 	{
 		this.password = password;
+		this.passwordModified = true;
+	}
+
+	/** 
+	 * Sets the value of passwordModified
+	 */
+	public void setPasswordModified(boolean passwordModified)
+	{
+		this.passwordModified = passwordModified;
+	}
+
+	/** 
+	 * Gets the value of passwordModified
+	 */
+	public boolean isPasswordModified()
+	{
+		return passwordModified;
 	}
 
 	/**
@@ -147,6 +240,23 @@ public class User implements Serializable
 	public void setActive(short active)
 	{
 		this.active = active;
+		this.activeModified = true;
+	}
+
+	/** 
+	 * Sets the value of activeModified
+	 */
+	public void setActiveModified(boolean activeModified)
+	{
+		this.activeModified = activeModified;
+	}
+
+	/** 
+	 * Gets the value of activeModified
+	 */
+	public boolean isActiveModified()
+	{
+		return activeModified;
 	}
 
 	/**
@@ -174,7 +284,15 @@ public class User implements Serializable
 			return false;
 		}
 		
+		if (idModified != _cast.idModified) {
+			return false;
+		}
+		
 		if (email == null ? _cast.email != email : !email.equals( _cast.email )) {
+			return false;
+		}
+		
+		if (emailModified != _cast.emailModified) {
 			return false;
 		}
 		
@@ -182,11 +300,23 @@ public class User implements Serializable
 			return false;
 		}
 		
+		if (saltModified != _cast.saltModified) {
+			return false;
+		}
+		
 		if (password == null ? _cast.password != password : !password.equals( _cast.password )) {
 			return false;
 		}
 		
+		if (passwordModified != _cast.passwordModified) {
+			return false;
+		}
+		
 		if (active != _cast.active) {
+			return false;
+		}
+		
+		if (activeModified != _cast.activeModified) {
 			return false;
 		}
 		
@@ -202,19 +332,24 @@ public class User implements Serializable
 	{
 		int _hashCode = 0;
 		_hashCode = 29 * _hashCode + id;
+		_hashCode = 29 * _hashCode + (idModified ? 1 : 0);
 		if (email != null) {
 			_hashCode = 29 * _hashCode + email.hashCode();
 		}
 		
+		_hashCode = 29 * _hashCode + (emailModified ? 1 : 0);
 		if (salt != null) {
 			_hashCode = 29 * _hashCode + salt.hashCode();
 		}
 		
+		_hashCode = 29 * _hashCode + (saltModified ? 1 : 0);
 		if (password != null) {
 			_hashCode = 29 * _hashCode + password.hashCode();
 		}
 		
+		_hashCode = 29 * _hashCode + (passwordModified ? 1 : 0);
 		_hashCode = 29 * _hashCode + (int) active;
+		_hashCode = 29 * _hashCode + (activeModified ? 1 : 0);
 		return _hashCode;
 	}
 

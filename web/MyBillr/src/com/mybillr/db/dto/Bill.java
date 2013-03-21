@@ -22,14 +22,29 @@ public class Bill implements Serializable
 	protected int id;
 
 	/** 
+	 * This attribute represents whether the attribute id has been modified since being read from the database.
+	 */
+	protected boolean idModified = false;
+
+	/** 
 	 * This attribute maps to the column name in the bill table.
 	 */
 	protected String name;
 
 	/** 
+	 * This attribute represents whether the attribute name has been modified since being read from the database.
+	 */
+	protected boolean nameModified = false;
+
+	/** 
 	 * This attribute maps to the column total in the bill table.
 	 */
 	protected long total;
+
+	/** 
+	 * This attribute represents whether the attribute total has been modified since being read from the database.
+	 */
+	protected boolean totalModified = false;
 
 	/**
 	 * Method 'Bill'
@@ -57,6 +72,23 @@ public class Bill implements Serializable
 	public void setId(int id)
 	{
 		this.id = id;
+		this.idModified = true;
+	}
+
+	/** 
+	 * Sets the value of idModified
+	 */
+	public void setIdModified(boolean idModified)
+	{
+		this.idModified = idModified;
+	}
+
+	/** 
+	 * Gets the value of idModified
+	 */
+	public boolean isIdModified()
+	{
+		return idModified;
 	}
 
 	/**
@@ -77,6 +109,23 @@ public class Bill implements Serializable
 	public void setName(String name)
 	{
 		this.name = name;
+		this.nameModified = true;
+	}
+
+	/** 
+	 * Sets the value of nameModified
+	 */
+	public void setNameModified(boolean nameModified)
+	{
+		this.nameModified = nameModified;
+	}
+
+	/** 
+	 * Gets the value of nameModified
+	 */
+	public boolean isNameModified()
+	{
+		return nameModified;
 	}
 
 	/**
@@ -97,6 +146,23 @@ public class Bill implements Serializable
 	public void setTotal(long total)
 	{
 		this.total = total;
+		this.totalModified = true;
+	}
+
+	/** 
+	 * Sets the value of totalModified
+	 */
+	public void setTotalModified(boolean totalModified)
+	{
+		this.totalModified = totalModified;
+	}
+
+	/** 
+	 * Gets the value of totalModified
+	 */
+	public boolean isTotalModified()
+	{
+		return totalModified;
 	}
 
 	/**
@@ -124,11 +190,23 @@ public class Bill implements Serializable
 			return false;
 		}
 		
+		if (idModified != _cast.idModified) {
+			return false;
+		}
+		
 		if (name == null ? _cast.name != name : !name.equals( _cast.name )) {
 			return false;
 		}
 		
+		if (nameModified != _cast.nameModified) {
+			return false;
+		}
+		
 		if (total != _cast.total) {
+			return false;
+		}
+		
+		if (totalModified != _cast.totalModified) {
 			return false;
 		}
 		
@@ -144,11 +222,14 @@ public class Bill implements Serializable
 	{
 		int _hashCode = 0;
 		_hashCode = 29 * _hashCode + id;
+		_hashCode = 29 * _hashCode + (idModified ? 1 : 0);
 		if (name != null) {
 			_hashCode = 29 * _hashCode + name.hashCode();
 		}
 		
+		_hashCode = 29 * _hashCode + (nameModified ? 1 : 0);
 		_hashCode = 29 * _hashCode + (int) (total ^ (total >>> 32));
+		_hashCode = 29 * _hashCode + (totalModified ? 1 : 0);
 		return _hashCode;
 	}
 
