@@ -1,0 +1,226 @@
+body {
+ margin: 0px;
+ padding-top: 0px;
+}
+
+#banner {
+ margin-top: 0px;
+ padding-top: 0px;
+}
+
+#projectLogo {
+ font-size: xx-large;
+ font-weight: bold;
+}
+
+#lastPublished {
+ font-size: small;
+}
+
+.navSection {
+ margin-bottom: 2px;
+ padding: 8px;
+}
+
+.navSectionHead {
+ font-weight: bold;
+ font-size: x-small;
+}
+
+.navLink {
+ padding-top: 2px;
+ padding-bottom: 2px;
+ font-size: small;
+}
+
+.section {
+ padding: 4px;
+}
+
+.sectionTitle {
+ padding: 4px;
+}
+
+.subsection {
+}
+
+.subsectionTitle {
+ padding: 4px;
+}
+
+#leftColumn {
+ width: 15%;
+}
+
+#navBox {
+}
+
+#rightColun {
+
+}
+
+#contentBox {
+
+}
+
+#footer {
+ font-size: small;
+}
+
+#breadcrumbs {
+font-size: small;
+margin: 0pt;
+}
+
+#source {
+margin-right: 7px;
+margin-left: 7px;
+margin-top: 1em;
+}
+
+img.handle {
+border: 0;
+padding-right: 2px;
+}
+
+#poweredBy {
+ border: 1px solid black;
+}
+
+
+body {
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link.selfref, a:visited.selfref {
+  color: blue; !important;
+}
+
+a:link, a:visited {
+  color: blue;
+}
+
+a:active, a:hover {
+  color: #990000;
+}
+
+#breadcrumbs {
+  border-top: 1px solid #aaaaaa;
+  border-bottom: 1px solid #aaaaaa;
+  background-color: #cccccc;
+}
+
+.navSection {
+  background-color: #eeeeee;
+}
+
+.navSectionHead {
+  border-bottom: 1px solid #aaaaaa;
+  padding-bottom: 2px;
+}
+
+.navLink {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: small;
+  padding-left: 2px;
+}
+
+.section {
+}
+
+.sectionTitle {
+  padding: 10px;
+  border: 1px solid #999999;
+  color: #990000;
+  background-color: #dddddd;
+}
+
+.subsection {
+  padding-left: 20px;
+}
+
+.subsectionTitle {
+  padding: 6px;
+  border: 1px solid #999999;
+  color: #990000;
+  background-color: #eeeeee;
+}
+
+p {
+  font-size: small;
+  line-height: 1.3em;
+}
+
+ul, ol {
+  margin-left: 20px;
+  font-size: smaller;
+}
+
+li {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+#leftColumn {
+  border-right: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+  background-color: #eeeeee;
+}
+
+#navBox {
+}
+
+#rightColun {
+
+}
+
+#contentBox {
+
+}
+
+table.bodyTable {
+  width: 100%;
+}
+
+table.bodyTable th, table.bodyTable td {
+  font-size: smaller;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+table.bodyTable th {
+  color: white;
+  background-color: #bbb;
+  text-align: left;
+}
+
+table.bodyTable td {
+}
+
+table.bodyTable tr.a {
+  background-color: #dddddd;
+}
+
+table.bodyTable tr.b {
+  background-color: #eeeeee;
+}
+
+.source {
+  padding: 12px;
+  margin: 12px;
+  border: 1px solid #999999;
+}
+
+.source pre {
+  margin: 0px;
+  padding: 0px;
+}
+
