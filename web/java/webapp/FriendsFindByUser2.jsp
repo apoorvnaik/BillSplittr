@@ -2,9 +2,9 @@
 <form action="FriendsFindByUser2Results.do" method="POST">
 <table>
 <tr>
-<td>friendId</td>
+<td>friendsWith</td>
 <td>
-<input type="text" name="friendId">
+<input type="text" name="friendsWith">
 </td>
 </tr>
 </table>

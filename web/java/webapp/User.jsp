@@ -23,22 +23,7 @@
 </div>
 <div class="navLink">
 <small>
-<a href="UserFindWhereFnameEquals.do">FindWhereFnameEquals</a><br>
-</small>
-</div>
-<div class="navLink">
-<small>
-<a href="UserFindWhereLnameEquals.do">FindWhereLnameEquals</a><br>
-</small>
-</div>
-<div class="navLink">
-<small>
 <a href="UserFindWhereEmailEquals.do">FindWhereEmailEquals</a><br>
-</small>
-</div>
-<div class="navLink">
-<small>
-<a href="UserFindWherePhoneEquals.do">FindWherePhoneEquals</a><br>
 </small>
 </div>
 <div class="navLink">
@@ -53,17 +38,7 @@
 </div>
 <div class="navLink">
 <small>
-<a href="UserFindWhereCreatedOnEquals.do">FindWhereCreatedOnEquals</a><br>
-</small>
-</div>
-<div class="navLink">
-<small>
-<a href="UserFindWhereUpdatedOnEquals.do">FindWhereUpdatedOnEquals</a><br>
-</small>
-</div>
-<div class="navLink">
-<small>
-<a href="UserFindWhereLastLoggedEquals.do">FindWhereLastLoggedEquals</a><br>
+<a href="UserFindWhereActiveEquals.do">FindWhereActiveEquals</a><br>
 </small>
 </div>
 </div>

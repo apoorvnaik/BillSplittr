@@ -2,47 +2,27 @@
 <div class="navSectionHead">Tables</div>
 <div class="navLink">
 <small>
-<a href="BugReport.do">BugReport</a><br>
+<a href="AccountActivation.do">AccountActivation</a><br>
 </small>
 </div>
 <div class="navLink">
 <small>
-<a href="EmailSent.do">EmailSent</a><br>
+<a href="Bill.do">Bill</a><br>
 </small>
 </div>
 <div class="navLink">
 <small>
-<a href="ItemShare.do">ItemShare</a><br>
+<a href="BillDetails.do">BillDetails</a><br>
 </small>
 </div>
 <div class="navLink">
 <small>
-<a href="ItemizedBill.do">ItemizedBill</a><br>
+<a href="BillPayee.do">BillPayee</a><br>
 </small>
 </div>
 <div class="navLink">
 <small>
-<a href="Items.do">Items</a><br>
-</small>
-</div>
-<div class="navLink">
-<small>
-<a href="Ledger.do">Ledger</a><br>
-</small>
-</div>
-<div class="navLink">
-<small>
-<a href="SharedBill.do">SharedBill</a><br>
-</small>
-</div>
-<div class="navLink">
-<small>
-<a href="User.do">User</a><br>
-</small>
-</div>
-<div class="navLink">
-<small>
-<a href="Currencies.do">Currencies</a><br>
+<a href="Debt.do">Debt</a><br>
 </small>
 </div>
 <div class="navLink">
@@ -52,17 +32,47 @@
 </div>
 <div class="navLink">
 <small>
-<a href="Geoip.do">Geoip</a><br>
+<a href="Group.do">Group</a><br>
 </small>
 </div>
 <div class="navLink">
 <small>
-<a href="Groups.do">Groups</a><br>
+<a href="GroupMembers.do">GroupMembers</a><br>
+</small>
+</div>
+<div class="navLink">
+<small>
+<a href="PasswordReset.do">PasswordReset</a><br>
+</small>
+</div>
+<div class="navLink">
+<small>
+<a href="User.do">User</a><br>
+</small>
+</div>
+<div class="navLink">
+<small>
+<a href="BugReportGeneral.do">BugReportGeneral</a><br>
+</small>
+</div>
+<div class="navLink">
+<small>
+<a href="BugReportUser.do">BugReportUser</a><br>
+</small>
+</div>
+<div class="navLink">
+<small>
+<a href="EmailsSent.do">EmailsSent</a><br>
 </small>
 </div>
 <div class="navLink">
 <small>
 <a href="News.do">News</a><br>
+</small>
+</div>
+<div class="navLink">
+<small>
+<a href="Table1.do">Table1</a><br>
 </small>
 </div>
 <div class="navSectionHead">Views</div>

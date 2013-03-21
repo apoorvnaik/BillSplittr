@@ -9,20 +9,8 @@
 <td><bean:write name="User" property="id" /></td>
 </tr>
 <tr>
-<td>fname:</td>
-<td><bean:write name="User" property="fname" /></td>
-</tr>
-<tr>
-<td>lname:</td>
-<td><bean:write name="User" property="lname" /></td>
-</tr>
-<tr>
 <td>email:</td>
 <td><bean:write name="User" property="email" /></td>
-</tr>
-<tr>
-<td>phone:</td>
-<td><bean:write name="User" property="phone" /></td>
 </tr>
 <tr>
 <td>salt:</td>
@@ -33,21 +21,14 @@
 <td><bean:write name="User" property="password" /></td>
 </tr>
 <tr>
-<td>createdOn:</td>
-<td><bean:write name="User" property="createdOn" /></td>
-</tr>
-<tr>
-<td>updatedOn:</td>
-<td><bean:write name="User" property="updatedOn" /></td>
-</tr>
-<tr>
-<td>lastLogged:</td>
-<td><bean:write name="User" property="lastLogged" /></td>
+<td>active:</td>
+<td><bean:write name="User" property="active" /></td>
 </tr>
 </table>
 <html:form action="UserFindByPrimaryKeyResults.do" >
 <input type="hidden" name="crudMethod" value="update" />
 <html:hidden property="id" />
+<html:hidden property="email" />
 <input type="submit" value="Edit"/>
 </html:form>
 <hr>

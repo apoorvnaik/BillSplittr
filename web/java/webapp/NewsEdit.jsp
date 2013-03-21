@@ -11,12 +11,12 @@
 <td><html:text property="id" readonly="false"size="30" /></td>
 </tr>
 <tr>
-<td>content:</td>
-<td><html:text property="content" readonly="false"size="30" /></td>
+<td>title:</td>
+<td><html:text property="title" readonly="false"size="30" /></td>
 </tr>
 <tr>
-<td>dated:</td>
-<td><html:text property="dated" readonly="false"size="30" /></td>
+<td>content:</td>
+<td><html:text property="content" readonly="false"size="30" /></td>
 </tr>
 </table>
 <html:submit/>

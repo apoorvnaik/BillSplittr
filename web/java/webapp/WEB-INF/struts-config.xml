@@ -117,112 +117,118 @@
                 type="java.lang.String"/>
 
     end sample -->
-    <form-bean name="BugReport" type="com.mybillr.app.struts.forms.BugReportForm" />
-    <form-bean name="BugReportFindByPrimaryKey" type="com.mybillr.app.struts.forms.BugReportFindByPrimaryKeyForm" />
-    <form-bean name="BugReportFindAll" type="com.mybillr.app.struts.forms.BugReportFindAllForm" />
-    <form-bean name="BugReportFindByUser" type="com.mybillr.app.struts.forms.BugReportFindByUserForm" />
-    <form-bean name="BugReportFindWhereIdEquals" type="com.mybillr.app.struts.forms.BugReportFindWhereIdEqualsForm" />
-    <form-bean name="BugReportFindWhereTitleEquals" type="com.mybillr.app.struts.forms.BugReportFindWhereTitleEqualsForm" />
-    <form-bean name="BugReportFindWhereUserIdEquals" type="com.mybillr.app.struts.forms.BugReportFindWhereUserIdEqualsForm" />
-    <form-bean name="BugReportFindWhereMessageEquals" type="com.mybillr.app.struts.forms.BugReportFindWhereMessageEqualsForm" />
-    <form-bean name="BugReportFindWhereReportedOnEquals" type="com.mybillr.app.struts.forms.BugReportFindWhereReportedOnEqualsForm" />
-    <form-bean name="EmailSent" type="com.mybillr.app.struts.forms.EmailSentForm" />
-    <form-bean name="EmailSentFindByPrimaryKey" type="com.mybillr.app.struts.forms.EmailSentFindByPrimaryKeyForm" />
-    <form-bean name="EmailSentFindAll" type="com.mybillr.app.struts.forms.EmailSentFindAllForm" />
-    <form-bean name="EmailSentFindWhereIdEquals" type="com.mybillr.app.struts.forms.EmailSentFindWhereIdEqualsForm" />
-    <form-bean name="EmailSentFindWhereFromEquals" type="com.mybillr.app.struts.forms.EmailSentFindWhereFromEqualsForm" />
-    <form-bean name="EmailSentFindWhereToEquals" type="com.mybillr.app.struts.forms.EmailSentFindWhereToEqualsForm" />
-    <form-bean name="EmailSentFindWhereSubjectEquals" type="com.mybillr.app.struts.forms.EmailSentFindWhereSubjectEqualsForm" />
-    <form-bean name="EmailSentFindWhereMessageEquals" type="com.mybillr.app.struts.forms.EmailSentFindWhereMessageEqualsForm" />
-    <form-bean name="EmailSentFindWhereSentOnEquals" type="com.mybillr.app.struts.forms.EmailSentFindWhereSentOnEqualsForm" />
-    <form-bean name="ItemShare" type="com.mybillr.app.struts.forms.ItemShareForm" />
-    <form-bean name="ItemShareFindByPrimaryKey" type="com.mybillr.app.struts.forms.ItemShareFindByPrimaryKeyForm" />
-    <form-bean name="ItemShareFindAll" type="com.mybillr.app.struts.forms.ItemShareFindAllForm" />
-    <form-bean name="ItemShareFindByItems" type="com.mybillr.app.struts.forms.ItemShareFindByItemsForm" />
-    <form-bean name="ItemShareFindByUser" type="com.mybillr.app.struts.forms.ItemShareFindByUserForm" />
-    <form-bean name="ItemShareFindWhereIdEquals" type="com.mybillr.app.struts.forms.ItemShareFindWhereIdEqualsForm" />
-    <form-bean name="ItemShareFindWhereItemIdEquals" type="com.mybillr.app.struts.forms.ItemShareFindWhereItemIdEqualsForm" />
-    <form-bean name="ItemShareFindWhereUserIdEquals" type="com.mybillr.app.struts.forms.ItemShareFindWhereUserIdEqualsForm" />
-    <form-bean name="ItemShareFindWhereShareEquals" type="com.mybillr.app.struts.forms.ItemShareFindWhereShareEqualsForm" />
-    <form-bean name="ItemizedBill" type="com.mybillr.app.struts.forms.ItemizedBillForm" />
-    <form-bean name="ItemizedBillFindByPrimaryKey" type="com.mybillr.app.struts.forms.ItemizedBillFindByPrimaryKeyForm" />
-    <form-bean name="ItemizedBillFindAll" type="com.mybillr.app.struts.forms.ItemizedBillFindAllForm" />
-    <form-bean name="ItemizedBillFindWhereIdEquals" type="com.mybillr.app.struts.forms.ItemizedBillFindWhereIdEqualsForm" />
-    <form-bean name="ItemizedBillFindWherePaidByEquals" type="com.mybillr.app.struts.forms.ItemizedBillFindWherePaidByEqualsForm" />
-    <form-bean name="ItemizedBillFindWhereItemsEquals" type="com.mybillr.app.struts.forms.ItemizedBillFindWhereItemsEqualsForm" />
-    <form-bean name="Items" type="com.mybillr.app.struts.forms.ItemsForm" />
-    <form-bean name="ItemsFindByPrimaryKey" type="com.mybillr.app.struts.forms.ItemsFindByPrimaryKeyForm" />
-    <form-bean name="ItemsFindAll" type="com.mybillr.app.struts.forms.ItemsFindAllForm" />
-    <form-bean name="ItemsFindWhereIdEquals" type="com.mybillr.app.struts.forms.ItemsFindWhereIdEqualsForm" />
-    <form-bean name="ItemsFindWhereNameEquals" type="com.mybillr.app.struts.forms.ItemsFindWhereNameEqualsForm" />
-    <form-bean name="ItemsFindWhereParticipantEquals" type="com.mybillr.app.struts.forms.ItemsFindWhereParticipantEqualsForm" />
-    <form-bean name="ItemsFindWherePriceEquals" type="com.mybillr.app.struts.forms.ItemsFindWherePriceEqualsForm" />
-    <form-bean name="Ledger" type="com.mybillr.app.struts.forms.LedgerForm" />
-    <form-bean name="LedgerFindByPrimaryKey" type="com.mybillr.app.struts.forms.LedgerFindByPrimaryKeyForm" />
-    <form-bean name="LedgerFindAll" type="com.mybillr.app.struts.forms.LedgerFindAllForm" />
-    <form-bean name="LedgerFindByUser" type="com.mybillr.app.struts.forms.LedgerFindByUserForm" />
-    <form-bean name="LedgerFindByUser2" type="com.mybillr.app.struts.forms.LedgerFindByUser2Form" />
-    <form-bean name="LedgerFindWhereIdEquals" type="com.mybillr.app.struts.forms.LedgerFindWhereIdEqualsForm" />
-    <form-bean name="LedgerFindWhereOwedByEquals" type="com.mybillr.app.struts.forms.LedgerFindWhereOwedByEqualsForm" />
-    <form-bean name="LedgerFindWhereOwesToEquals" type="com.mybillr.app.struts.forms.LedgerFindWhereOwesToEqualsForm" />
-    <form-bean name="LedgerFindWhereAmountEquals" type="com.mybillr.app.struts.forms.LedgerFindWhereAmountEqualsForm" />
-    <form-bean name="LedgerFindWhereCurrencyEquals" type="com.mybillr.app.struts.forms.LedgerFindWhereCurrencyEqualsForm" />
-    <form-bean name="SharedBill" type="com.mybillr.app.struts.forms.SharedBillForm" />
-    <form-bean name="SharedBillFindByPrimaryKey" type="com.mybillr.app.struts.forms.SharedBillFindByPrimaryKeyForm" />
-    <form-bean name="SharedBillFindAll" type="com.mybillr.app.struts.forms.SharedBillFindAllForm" />
-    <form-bean name="SharedBillFindWhereIdEquals" type="com.mybillr.app.struts.forms.SharedBillFindWhereIdEqualsForm" />
-    <form-bean name="SharedBillFindWhereTitleEquals" type="com.mybillr.app.struts.forms.SharedBillFindWhereTitleEqualsForm" />
-    <form-bean name="SharedBillFindWhereParticipantsEquals" type="com.mybillr.app.struts.forms.SharedBillFindWhereParticipantsEqualsForm" />
-    <form-bean name="SharedBillFindWherePaidByEquals" type="com.mybillr.app.struts.forms.SharedBillFindWherePaidByEqualsForm" />
-    <form-bean name="SharedBillFindWhereItemsEquals" type="com.mybillr.app.struts.forms.SharedBillFindWhereItemsEqualsForm" />
-    <form-bean name="User" type="com.mybillr.app.struts.forms.UserForm" />
-    <form-bean name="UserFindByPrimaryKey" type="com.mybillr.app.struts.forms.UserFindByPrimaryKeyForm" />
-    <form-bean name="UserFindAll" type="com.mybillr.app.struts.forms.UserFindAllForm" />
-    <form-bean name="UserFindWhereIdEquals" type="com.mybillr.app.struts.forms.UserFindWhereIdEqualsForm" />
-    <form-bean name="UserFindWhereFnameEquals" type="com.mybillr.app.struts.forms.UserFindWhereFnameEqualsForm" />
-    <form-bean name="UserFindWhereLnameEquals" type="com.mybillr.app.struts.forms.UserFindWhereLnameEqualsForm" />
-    <form-bean name="UserFindWhereEmailEquals" type="com.mybillr.app.struts.forms.UserFindWhereEmailEqualsForm" />
-    <form-bean name="UserFindWherePhoneEquals" type="com.mybillr.app.struts.forms.UserFindWherePhoneEqualsForm" />
-    <form-bean name="UserFindWhereSaltEquals" type="com.mybillr.app.struts.forms.UserFindWhereSaltEqualsForm" />
-    <form-bean name="UserFindWherePasswordEquals" type="com.mybillr.app.struts.forms.UserFindWherePasswordEqualsForm" />
-    <form-bean name="UserFindWhereCreatedOnEquals" type="com.mybillr.app.struts.forms.UserFindWhereCreatedOnEqualsForm" />
-    <form-bean name="UserFindWhereUpdatedOnEquals" type="com.mybillr.app.struts.forms.UserFindWhereUpdatedOnEqualsForm" />
-    <form-bean name="UserFindWhereLastLoggedEquals" type="com.mybillr.app.struts.forms.UserFindWhereLastLoggedEqualsForm" />
-    <form-bean name="Currencies" type="com.mybillr.app.struts.forms.CurrenciesForm" />
-    <form-bean name="CurrenciesFindByPrimaryKey" type="com.mybillr.app.struts.forms.CurrenciesFindByPrimaryKeyForm" />
-    <form-bean name="CurrenciesFindAll" type="com.mybillr.app.struts.forms.CurrenciesFindAllForm" />
-    <form-bean name="CurrenciesFindWhereIdEquals" type="com.mybillr.app.struts.forms.CurrenciesFindWhereIdEqualsForm" />
-    <form-bean name="CurrenciesFindWhereCodeEquals" type="com.mybillr.app.struts.forms.CurrenciesFindWhereCodeEqualsForm" />
-    <form-bean name="CurrenciesFindWhereCurrencyEquals" type="com.mybillr.app.struts.forms.CurrenciesFindWhereCurrencyEqualsForm" />
-    <form-bean name="CurrenciesFindWhereCountryEquals" type="com.mybillr.app.struts.forms.CurrenciesFindWhereCountryEqualsForm" />
-    <form-bean name="Friends" type="com.mybillr.app.struts.forms.FriendsForm" />
-    <form-bean name="FriendsFindByPrimaryKey" type="com.mybillr.app.struts.forms.FriendsFindByPrimaryKeyForm" />
-    <form-bean name="FriendsFindAll" type="com.mybillr.app.struts.forms.FriendsFindAllForm" />
-    <form-bean name="FriendsFindByUser" type="com.mybillr.app.struts.forms.FriendsFindByUserForm" />
-    <form-bean name="FriendsFindByUser2" type="com.mybillr.app.struts.forms.FriendsFindByUser2Form" />
-    <form-bean name="FriendsFindWhereUserIdEquals" type="com.mybillr.app.struts.forms.FriendsFindWhereUserIdEqualsForm" />
-    <form-bean name="FriendsFindWhereFriendIdEquals" type="com.mybillr.app.struts.forms.FriendsFindWhereFriendIdEqualsForm" />
-    <form-bean name="Geoip" type="com.mybillr.app.struts.forms.GeoipForm" />
-    <form-bean name="GeoipFindAll" type="com.mybillr.app.struts.forms.GeoipFindAllForm" />
-    <form-bean name="GeoipFindWhereStartEquals" type="com.mybillr.app.struts.forms.GeoipFindWhereStartEqualsForm" />
-    <form-bean name="GeoipFindWhereEndEquals" type="com.mybillr.app.struts.forms.GeoipFindWhereEndEqualsForm" />
-    <form-bean name="GeoipFindWhereStartIntEquals" type="com.mybillr.app.struts.forms.GeoipFindWhereStartIntEqualsForm" />
-    <form-bean name="GeoipFindWhereEndIntEquals" type="com.mybillr.app.struts.forms.GeoipFindWhereEndIntEqualsForm" />
-    <form-bean name="GeoipFindWhereCountrySymbolEquals" type="com.mybillr.app.struts.forms.GeoipFindWhereCountrySymbolEqualsForm" />
-    <form-bean name="GeoipFindWhereCountryEquals" type="com.mybillr.app.struts.forms.GeoipFindWhereCountryEqualsForm" />
-    <form-bean name="Groups" type="com.mybillr.app.struts.forms.GroupsForm" />
-    <form-bean name="GroupsFindByPrimaryKey" type="com.mybillr.app.struts.forms.GroupsFindByPrimaryKeyForm" />
-    <form-bean name="GroupsFindAll" type="com.mybillr.app.struts.forms.GroupsFindAllForm" />
-    <form-bean name="GroupsFindByUser" type="com.mybillr.app.struts.forms.GroupsFindByUserForm" />
-    <form-bean name="GroupsFindWhereIdEquals" type="com.mybillr.app.struts.forms.GroupsFindWhereIdEqualsForm" />
-    <form-bean name="GroupsFindWhereNameEquals" type="com.mybillr.app.struts.forms.GroupsFindWhereNameEqualsForm" />
-    <form-bean name="GroupsFindWhereMemberIdEquals" type="com.mybillr.app.struts.forms.GroupsFindWhereMemberIdEqualsForm" />
-    <form-bean name="News" type="com.mybillr.app.struts.forms.NewsForm" />
-    <form-bean name="NewsFindByPrimaryKey" type="com.mybillr.app.struts.forms.NewsFindByPrimaryKeyForm" />
-    <form-bean name="NewsFindAll" type="com.mybillr.app.struts.forms.NewsFindAllForm" />
-    <form-bean name="NewsFindWhereIdEquals" type="com.mybillr.app.struts.forms.NewsFindWhereIdEqualsForm" />
-    <form-bean name="NewsFindWhereContentEquals" type="com.mybillr.app.struts.forms.NewsFindWhereContentEqualsForm" />
-    <form-bean name="NewsFindWhereDatedEquals" type="com.mybillr.app.struts.forms.NewsFindWhereDatedEqualsForm" />
+    <form-bean name="AccountActivation" type="com.mybillr.db.struts.forms.AccountActivationForm" />
+    <form-bean name="AccountActivationFindByPrimaryKey" type="com.mybillr.db.struts.forms.AccountActivationFindByPrimaryKeyForm" />
+    <form-bean name="AccountActivationFindAll" type="com.mybillr.db.struts.forms.AccountActivationFindAllForm" />
+    <form-bean name="AccountActivationFindByUser" type="com.mybillr.db.struts.forms.AccountActivationFindByUserForm" />
+    <form-bean name="AccountActivationFindWhereIdEquals" type="com.mybillr.db.struts.forms.AccountActivationFindWhereIdEqualsForm" />
+    <form-bean name="AccountActivationFindWhereUserIdEquals" type="com.mybillr.db.struts.forms.AccountActivationFindWhereUserIdEqualsForm" />
+    <form-bean name="AccountActivationFindWhereActivationHashEquals" type="com.mybillr.db.struts.forms.AccountActivationFindWhereActivationHashEqualsForm" />
+    <form-bean name="Bill" type="com.mybillr.db.struts.forms.BillForm" />
+    <form-bean name="BillFindByPrimaryKey" type="com.mybillr.db.struts.forms.BillFindByPrimaryKeyForm" />
+    <form-bean name="BillFindAll" type="com.mybillr.db.struts.forms.BillFindAllForm" />
+    <form-bean name="BillFindWhereIdEquals" type="com.mybillr.db.struts.forms.BillFindWhereIdEqualsForm" />
+    <form-bean name="BillFindWhereNameEquals" type="com.mybillr.db.struts.forms.BillFindWhereNameEqualsForm" />
+    <form-bean name="BillFindWhereTotalEquals" type="com.mybillr.db.struts.forms.BillFindWhereTotalEqualsForm" />
+    <form-bean name="BillDetails" type="com.mybillr.db.struts.forms.BillDetailsForm" />
+    <form-bean name="BillDetailsFindByPrimaryKey" type="com.mybillr.db.struts.forms.BillDetailsFindByPrimaryKeyForm" />
+    <form-bean name="BillDetailsFindAll" type="com.mybillr.db.struts.forms.BillDetailsFindAllForm" />
+    <form-bean name="BillDetailsFindByBill" type="com.mybillr.db.struts.forms.BillDetailsFindByBillForm" />
+    <form-bean name="BillDetailsFindByUser" type="com.mybillr.db.struts.forms.BillDetailsFindByUserForm" />
+    <form-bean name="BillDetailsFindWhereBillIdEquals" type="com.mybillr.db.struts.forms.BillDetailsFindWhereBillIdEqualsForm" />
+    <form-bean name="BillDetailsFindWhereUserIdEquals" type="com.mybillr.db.struts.forms.BillDetailsFindWhereUserIdEqualsForm" />
+    <form-bean name="BillDetailsFindWhereItemNameEquals" type="com.mybillr.db.struts.forms.BillDetailsFindWhereItemNameEqualsForm" />
+    <form-bean name="BillDetailsFindWhereShareEquals" type="com.mybillr.db.struts.forms.BillDetailsFindWhereShareEqualsForm" />
+    <form-bean name="BillDetailsFindWhereAmountEquals" type="com.mybillr.db.struts.forms.BillDetailsFindWhereAmountEqualsForm" />
+    <form-bean name="BillPayee" type="com.mybillr.db.struts.forms.BillPayeeForm" />
+    <form-bean name="BillPayeeFindByPrimaryKey" type="com.mybillr.db.struts.forms.BillPayeeFindByPrimaryKeyForm" />
+    <form-bean name="BillPayeeFindAll" type="com.mybillr.db.struts.forms.BillPayeeFindAllForm" />
+    <form-bean name="BillPayeeFindByBill" type="com.mybillr.db.struts.forms.BillPayeeFindByBillForm" />
+    <form-bean name="BillPayeeFindByUser" type="com.mybillr.db.struts.forms.BillPayeeFindByUserForm" />
+    <form-bean name="BillPayeeFindWhereBillIdEquals" type="com.mybillr.db.struts.forms.BillPayeeFindWhereBillIdEqualsForm" />
+    <form-bean name="BillPayeeFindWhereUserIdEquals" type="com.mybillr.db.struts.forms.BillPayeeFindWhereUserIdEqualsForm" />
+    <form-bean name="BillPayeeFindWhereShareEquals" type="com.mybillr.db.struts.forms.BillPayeeFindWhereShareEqualsForm" />
+    <form-bean name="BillPayeeFindWhereAmountEquals" type="com.mybillr.db.struts.forms.BillPayeeFindWhereAmountEqualsForm" />
+    <form-bean name="Debt" type="com.mybillr.db.struts.forms.DebtForm" />
+    <form-bean name="DebtFindByPrimaryKey" type="com.mybillr.db.struts.forms.DebtFindByPrimaryKeyForm" />
+    <form-bean name="DebtFindAll" type="com.mybillr.db.struts.forms.DebtFindAllForm" />
+    <form-bean name="DebtFindByUser" type="com.mybillr.db.struts.forms.DebtFindByUserForm" />
+    <form-bean name="DebtFindByUser2" type="com.mybillr.db.struts.forms.DebtFindByUser2Form" />
+    <form-bean name="DebtFindWhereIdEquals" type="com.mybillr.db.struts.forms.DebtFindWhereIdEqualsForm" />
+    <form-bean name="DebtFindWhereOwedByEquals" type="com.mybillr.db.struts.forms.DebtFindWhereOwedByEqualsForm" />
+    <form-bean name="DebtFindWhereOwedToEquals" type="com.mybillr.db.struts.forms.DebtFindWhereOwedToEqualsForm" />
+    <form-bean name="Friends" type="com.mybillr.db.struts.forms.FriendsForm" />
+    <form-bean name="FriendsFindByPrimaryKey" type="com.mybillr.db.struts.forms.FriendsFindByPrimaryKeyForm" />
+    <form-bean name="FriendsFindAll" type="com.mybillr.db.struts.forms.FriendsFindAllForm" />
+    <form-bean name="FriendsFindByUser" type="com.mybillr.db.struts.forms.FriendsFindByUserForm" />
+    <form-bean name="FriendsFindByUser2" type="com.mybillr.db.struts.forms.FriendsFindByUser2Form" />
+    <form-bean name="FriendsFindWhereUserIdEquals" type="com.mybillr.db.struts.forms.FriendsFindWhereUserIdEqualsForm" />
+    <form-bean name="FriendsFindWhereFriendsWithEquals" type="com.mybillr.db.struts.forms.FriendsFindWhereFriendsWithEqualsForm" />
+    <form-bean name="Group" type="com.mybillr.db.struts.forms.GroupForm" />
+    <form-bean name="GroupFindByPrimaryKey" type="com.mybillr.db.struts.forms.GroupFindByPrimaryKeyForm" />
+    <form-bean name="GroupFindAll" type="com.mybillr.db.struts.forms.GroupFindAllForm" />
+    <form-bean name="GroupFindWhereIdEquals" type="com.mybillr.db.struts.forms.GroupFindWhereIdEqualsForm" />
+    <form-bean name="GroupFindWhereNameEquals" type="com.mybillr.db.struts.forms.GroupFindWhereNameEqualsForm" />
+    <form-bean name="GroupMembers" type="com.mybillr.db.struts.forms.GroupMembersForm" />
+    <form-bean name="GroupMembersFindByPrimaryKey" type="com.mybillr.db.struts.forms.GroupMembersFindByPrimaryKeyForm" />
+    <form-bean name="GroupMembersFindAll" type="com.mybillr.db.struts.forms.GroupMembersFindAllForm" />
+    <form-bean name="GroupMembersFindByGroup" type="com.mybillr.db.struts.forms.GroupMembersFindByGroupForm" />
+    <form-bean name="GroupMembersFindByUser" type="com.mybillr.db.struts.forms.GroupMembersFindByUserForm" />
+    <form-bean name="GroupMembersFindWhereGroupIdEquals" type="com.mybillr.db.struts.forms.GroupMembersFindWhereGroupIdEqualsForm" />
+    <form-bean name="GroupMembersFindWhereUserIdEquals" type="com.mybillr.db.struts.forms.GroupMembersFindWhereUserIdEqualsForm" />
+    <form-bean name="PasswordReset" type="com.mybillr.db.struts.forms.PasswordResetForm" />
+    <form-bean name="PasswordResetFindByPrimaryKey" type="com.mybillr.db.struts.forms.PasswordResetFindByPrimaryKeyForm" />
+    <form-bean name="PasswordResetFindAll" type="com.mybillr.db.struts.forms.PasswordResetFindAllForm" />
+    <form-bean name="PasswordResetFindByUser" type="com.mybillr.db.struts.forms.PasswordResetFindByUserForm" />
+    <form-bean name="PasswordResetFindWhereIdEquals" type="com.mybillr.db.struts.forms.PasswordResetFindWhereIdEqualsForm" />
+    <form-bean name="PasswordResetFindWhereUserIdEquals" type="com.mybillr.db.struts.forms.PasswordResetFindWhereUserIdEqualsForm" />
+    <form-bean name="PasswordResetFindWhereResetHashEquals" type="com.mybillr.db.struts.forms.PasswordResetFindWhereResetHashEqualsForm" />
+    <form-bean name="User" type="com.mybillr.db.struts.forms.UserForm" />
+    <form-bean name="UserFindByPrimaryKey" type="com.mybillr.db.struts.forms.UserFindByPrimaryKeyForm" />
+    <form-bean name="UserFindAll" type="com.mybillr.db.struts.forms.UserFindAllForm" />
+    <form-bean name="UserFindWhereIdEquals" type="com.mybillr.db.struts.forms.UserFindWhereIdEqualsForm" />
+    <form-bean name="UserFindWhereEmailEquals" type="com.mybillr.db.struts.forms.UserFindWhereEmailEqualsForm" />
+    <form-bean name="UserFindWhereSaltEquals" type="com.mybillr.db.struts.forms.UserFindWhereSaltEqualsForm" />
+    <form-bean name="UserFindWherePasswordEquals" type="com.mybillr.db.struts.forms.UserFindWherePasswordEqualsForm" />
+    <form-bean name="UserFindWhereActiveEquals" type="com.mybillr.db.struts.forms.UserFindWhereActiveEqualsForm" />
+    <form-bean name="BugReportGeneral" type="com.mybillr.db.struts.forms.BugReportGeneralForm" />
+    <form-bean name="BugReportGeneralFindByPrimaryKey" type="com.mybillr.db.struts.forms.BugReportGeneralFindByPrimaryKeyForm" />
+    <form-bean name="BugReportGeneralFindAll" type="com.mybillr.db.struts.forms.BugReportGeneralFindAllForm" />
+    <form-bean name="BugReportGeneralFindWhereIdEquals" type="com.mybillr.db.struts.forms.BugReportGeneralFindWhereIdEqualsForm" />
+    <form-bean name="BugReportGeneralFindWhereReportedByEquals" type="com.mybillr.db.struts.forms.BugReportGeneralFindWhereReportedByEqualsForm" />
+    <form-bean name="BugReportGeneralFindWhereTitleEquals" type="com.mybillr.db.struts.forms.BugReportGeneralFindWhereTitleEqualsForm" />
+    <form-bean name="BugReportGeneralFindWhereBugEquals" type="com.mybillr.db.struts.forms.BugReportGeneralFindWhereBugEqualsForm" />
+    <form-bean name="BugReportUser" type="com.mybillr.db.struts.forms.BugReportUserForm" />
+    <form-bean name="BugReportUserFindByPrimaryKey" type="com.mybillr.db.struts.forms.BugReportUserFindByPrimaryKeyForm" />
+    <form-bean name="BugReportUserFindAll" type="com.mybillr.db.struts.forms.BugReportUserFindAllForm" />
+    <form-bean name="BugReportUserFindByUser" type="com.mybillr.db.struts.forms.BugReportUserFindByUserForm" />
+    <form-bean name="BugReportUserFindWhereIdEquals" type="com.mybillr.db.struts.forms.BugReportUserFindWhereIdEqualsForm" />
+    <form-bean name="BugReportUserFindWhereReportedByEquals" type="com.mybillr.db.struts.forms.BugReportUserFindWhereReportedByEqualsForm" />
+    <form-bean name="BugReportUserFindWhereTitleEquals" type="com.mybillr.db.struts.forms.BugReportUserFindWhereTitleEqualsForm" />
+    <form-bean name="BugReportUserFindWhereBugEquals" type="com.mybillr.db.struts.forms.BugReportUserFindWhereBugEqualsForm" />
+    <form-bean name="EmailsSent" type="com.mybillr.db.struts.forms.EmailsSentForm" />
+    <form-bean name="EmailsSentFindByPrimaryKey" type="com.mybillr.db.struts.forms.EmailsSentFindByPrimaryKeyForm" />
+    <form-bean name="EmailsSentFindAll" type="com.mybillr.db.struts.forms.EmailsSentFindAllForm" />
+    <form-bean name="EmailsSentFindByUser" type="com.mybillr.db.struts.forms.EmailsSentFindByUserForm" />
+    <form-bean name="EmailsSentFindByUser2" type="com.mybillr.db.struts.forms.EmailsSentFindByUser2Form" />
+    <form-bean name="EmailsSentFindWhereIdEquals" type="com.mybillr.db.struts.forms.EmailsSentFindWhereIdEqualsForm" />
+    <form-bean name="EmailsSentFindWhereSenderIdEquals" type="com.mybillr.db.struts.forms.EmailsSentFindWhereSenderIdEqualsForm" />
+    <form-bean name="EmailsSentFindWhereReceiverIdEquals" type="com.mybillr.db.struts.forms.EmailsSentFindWhereReceiverIdEqualsForm" />
+    <form-bean name="EmailsSentFindWhereSubjectEquals" type="com.mybillr.db.struts.forms.EmailsSentFindWhereSubjectEqualsForm" />
+    <form-bean name="EmailsSentFindWhereContentEquals" type="com.mybillr.db.struts.forms.EmailsSentFindWhereContentEqualsForm" />
+    <form-bean name="News" type="com.mybillr.db.struts.forms.NewsForm" />
+    <form-bean name="NewsFindByPrimaryKey" type="com.mybillr.db.struts.forms.NewsFindByPrimaryKeyForm" />
+    <form-bean name="NewsFindAll" type="com.mybillr.db.struts.forms.NewsFindAllForm" />
+    <form-bean name="NewsFindWhereIdEquals" type="com.mybillr.db.struts.forms.NewsFindWhereIdEqualsForm" />
+    <form-bean name="NewsFindWhereTitleEquals" type="com.mybillr.db.struts.forms.NewsFindWhereTitleEqualsForm" />
+    <form-bean name="NewsFindWhereContentEquals" type="com.mybillr.db.struts.forms.NewsFindWhereContentEqualsForm" />
+    <form-bean name="Table1" type="com.mybillr.db.struts.forms.Table1Form" />
+    <form-bean name="Table1FindByPrimaryKey" type="com.mybillr.db.struts.forms.Table1FindByPrimaryKeyForm" />
+    <form-bean name="Table1FindAll" type="com.mybillr.db.struts.forms.Table1FindAllForm" />
+    <form-bean name="Table1FindWhereIdEquals" type="com.mybillr.db.struts.forms.Table1FindWhereIdEqualsForm" />
+    <form-bean name="Table1FindWhereNameEquals" type="com.mybillr.db.struts.forms.Table1FindWhereNameEqualsForm" />
+    <form-bean name="Table1FindWhereSymbolEquals" type="com.mybillr.db.struts.forms.Table1FindWhereSymbolEqualsForm" />
+    <form-bean name="Table1FindWhereRateEquals" type="com.mybillr.db.struts.forms.Table1FindWhereRateEqualsForm" />
   </form-beans>
   <!-- ================================= Global Exception Definitions -->
   <global-exceptions>
@@ -280,658 +286,715 @@
 
 
     end samples -->
-    <action path="/BugReport" parameter=".bugReport.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
-    <action path="/BugReportInsert" name="BugReport" validate="false" type="com.mybillr.app.struts.actions.BugReportInsertAction">
-      <forward name="success" path=".bugReport.edit" />
-    </action>
-    <action path="/BugReportUpdate" name="BugReport" validate="false" type="com.mybillr.app.struts.actions.BugReportUpdateAction">
-      <forward name="success" path=".bugReport.edit" />
-    </action>
-    <action path="/BugReportDelete" name="BugReport" validate="false" type="com.mybillr.app.struts.actions.BugReportDeleteAction">
-      <forward name="success" path=".bugReport.edit" />
-    </action>
-    <action path="/BugReportSave" name="BugReport" type="com.mybillr.app.struts.actions.BugReportSaveAction" input=".bugReport.edit">
-      <forward name="success" path=".bugReport.index" />
-      <forward name="failure" path=".bugReport.edit" />
-    </action>
-    <action path="/BugReportFindByPrimaryKey" forward=".bugReport.findByPrimaryKey.form" />
-    <action path="/BugReportFindByPrimaryKeyResults" name="BugReportFindByPrimaryKey" validate="false" type="com.mybillr.app.struts.actions.BugReportFindByPrimaryKeyAction">
-      <forward name="view" path=".bugReport.view" />
-      <forward name="update" path=".bugReport.edit" />
-      <forward name="failure" path=".bugReport.findByPrimaryKey.form" />
-    </action>
-    <action path="/BugReportFindAll" forward=".bugReport.findAll.form" />
-    <action path="/BugReportFindAllResults" name="BugReportFindAll" validate="false" type="com.mybillr.app.struts.actions.BugReportFindAllAction">
-      <forward name="success" path=".bugReport.findAll.results" />
-      <forward name="failure" path=".bugReport.findAll.form" />
-    </action>
-    <action path="/BugReportFindByUser" forward=".bugReport.findByUser.form" />
-    <action path="/BugReportFindByUserResults" name="BugReportFindByUser" validate="false" type="com.mybillr.app.struts.actions.BugReportFindByUserAction">
-      <forward name="success" path=".bugReport.findByUser.results" />
-      <forward name="failure" path=".bugReport.findByUser.form" />
-    </action>
-    <action path="/BugReportFindWhereIdEquals" forward=".bugReport.findWhereIdEquals.form" />
-    <action path="/BugReportFindWhereIdEqualsResults" name="BugReportFindWhereIdEquals" validate="false" type="com.mybillr.app.struts.actions.BugReportFindWhereIdEqualsAction">
-      <forward name="success" path=".bugReport.findWhereIdEquals.results" />
-      <forward name="failure" path=".bugReport.findWhereIdEquals.form" />
-    </action>
-    <action path="/BugReportFindWhereTitleEquals" forward=".bugReport.findWhereTitleEquals.form" />
-    <action path="/BugReportFindWhereTitleEqualsResults" name="BugReportFindWhereTitleEquals" validate="false" type="com.mybillr.app.struts.actions.BugReportFindWhereTitleEqualsAction">
-      <forward name="success" path=".bugReport.findWhereTitleEquals.results" />
-      <forward name="failure" path=".bugReport.findWhereTitleEquals.form" />
-    </action>
-    <action path="/BugReportFindWhereUserIdEquals" forward=".bugReport.findWhereUserIdEquals.form" />
-    <action path="/BugReportFindWhereUserIdEqualsResults" name="BugReportFindWhereUserIdEquals" validate="false" type="com.mybillr.app.struts.actions.BugReportFindWhereUserIdEqualsAction">
-      <forward name="success" path=".bugReport.findWhereUserIdEquals.results" />
-      <forward name="failure" path=".bugReport.findWhereUserIdEquals.form" />
-    </action>
-    <action path="/BugReportFindWhereMessageEquals" forward=".bugReport.findWhereMessageEquals.form" />
-    <action path="/BugReportFindWhereMessageEqualsResults" name="BugReportFindWhereMessageEquals" validate="false" type="com.mybillr.app.struts.actions.BugReportFindWhereMessageEqualsAction">
-      <forward name="success" path=".bugReport.findWhereMessageEquals.results" />
-      <forward name="failure" path=".bugReport.findWhereMessageEquals.form" />
-    </action>
-    <action path="/BugReportFindWhereReportedOnEquals" forward=".bugReport.findWhereReportedOnEquals.form" />
-    <action path="/BugReportFindWhereReportedOnEqualsResults" name="BugReportFindWhereReportedOnEquals" validate="false" type="com.mybillr.app.struts.actions.BugReportFindWhereReportedOnEqualsAction">
-      <forward name="success" path=".bugReport.findWhereReportedOnEquals.results" />
-      <forward name="failure" path=".bugReport.findWhereReportedOnEquals.form" />
-    </action>
-    <action path="/EmailSent" parameter=".emailSent.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
-    <action path="/EmailSentInsert" name="EmailSent" validate="false" type="com.mybillr.app.struts.actions.EmailSentInsertAction">
-      <forward name="success" path=".emailSent.edit" />
-    </action>
-    <action path="/EmailSentUpdate" name="EmailSent" validate="false" type="com.mybillr.app.struts.actions.EmailSentUpdateAction">
-      <forward name="success" path=".emailSent.edit" />
-    </action>
-    <action path="/EmailSentDelete" name="EmailSent" validate="false" type="com.mybillr.app.struts.actions.EmailSentDeleteAction">
-      <forward name="success" path=".emailSent.edit" />
-    </action>
-    <action path="/EmailSentSave" name="EmailSent" type="com.mybillr.app.struts.actions.EmailSentSaveAction" input=".emailSent.edit">
-      <forward name="success" path=".emailSent.index" />
-      <forward name="failure" path=".emailSent.edit" />
-    </action>
-    <action path="/EmailSentFindByPrimaryKey" forward=".emailSent.findByPrimaryKey.form" />
-    <action path="/EmailSentFindByPrimaryKeyResults" name="EmailSentFindByPrimaryKey" validate="false" type="com.mybillr.app.struts.actions.EmailSentFindByPrimaryKeyAction">
-      <forward name="view" path=".emailSent.view" />
-      <forward name="update" path=".emailSent.edit" />
-      <forward name="failure" path=".emailSent.findByPrimaryKey.form" />
-    </action>
-    <action path="/EmailSentFindAll" forward=".emailSent.findAll.form" />
-    <action path="/EmailSentFindAllResults" name="EmailSentFindAll" validate="false" type="com.mybillr.app.struts.actions.EmailSentFindAllAction">
-      <forward name="success" path=".emailSent.findAll.results" />
-      <forward name="failure" path=".emailSent.findAll.form" />
-    </action>
-    <action path="/EmailSentFindWhereIdEquals" forward=".emailSent.findWhereIdEquals.form" />
-    <action path="/EmailSentFindWhereIdEqualsResults" name="EmailSentFindWhereIdEquals" validate="false" type="com.mybillr.app.struts.actions.EmailSentFindWhereIdEqualsAction">
-      <forward name="success" path=".emailSent.findWhereIdEquals.results" />
-      <forward name="failure" path=".emailSent.findWhereIdEquals.form" />
-    </action>
-    <action path="/EmailSentFindWhereFromEquals" forward=".emailSent.findWhereFromEquals.form" />
-    <action path="/EmailSentFindWhereFromEqualsResults" name="EmailSentFindWhereFromEquals" validate="false" type="com.mybillr.app.struts.actions.EmailSentFindWhereFromEqualsAction">
-      <forward name="success" path=".emailSent.findWhereFromEquals.results" />
-      <forward name="failure" path=".emailSent.findWhereFromEquals.form" />
-    </action>
-    <action path="/EmailSentFindWhereToEquals" forward=".emailSent.findWhereToEquals.form" />
-    <action path="/EmailSentFindWhereToEqualsResults" name="EmailSentFindWhereToEquals" validate="false" type="com.mybillr.app.struts.actions.EmailSentFindWhereToEqualsAction">
-      <forward name="success" path=".emailSent.findWhereToEquals.results" />
-      <forward name="failure" path=".emailSent.findWhereToEquals.form" />
-    </action>
-    <action path="/EmailSentFindWhereSubjectEquals" forward=".emailSent.findWhereSubjectEquals.form" />
-    <action path="/EmailSentFindWhereSubjectEqualsResults" name="EmailSentFindWhereSubjectEquals" validate="false" type="com.mybillr.app.struts.actions.EmailSentFindWhereSubjectEqualsAction">
-      <forward name="success" path=".emailSent.findWhereSubjectEquals.results" />
-      <forward name="failure" path=".emailSent.findWhereSubjectEquals.form" />
-    </action>
-    <action path="/EmailSentFindWhereMessageEquals" forward=".emailSent.findWhereMessageEquals.form" />
-    <action path="/EmailSentFindWhereMessageEqualsResults" name="EmailSentFindWhereMessageEquals" validate="false" type="com.mybillr.app.struts.actions.EmailSentFindWhereMessageEqualsAction">
-      <forward name="success" path=".emailSent.findWhereMessageEquals.results" />
-      <forward name="failure" path=".emailSent.findWhereMessageEquals.form" />
-    </action>
-    <action path="/EmailSentFindWhereSentOnEquals" forward=".emailSent.findWhereSentOnEquals.form" />
-    <action path="/EmailSentFindWhereSentOnEqualsResults" name="EmailSentFindWhereSentOnEquals" validate="false" type="com.mybillr.app.struts.actions.EmailSentFindWhereSentOnEqualsAction">
-      <forward name="success" path=".emailSent.findWhereSentOnEquals.results" />
-      <forward name="failure" path=".emailSent.findWhereSentOnEquals.form" />
-    </action>
-    <action path="/ItemShare" parameter=".itemShare.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
-    <action path="/ItemShareInsert" name="ItemShare" validate="false" type="com.mybillr.app.struts.actions.ItemShareInsertAction">
-      <forward name="success" path=".itemShare.edit" />
-    </action>
-    <action path="/ItemShareUpdate" name="ItemShare" validate="false" type="com.mybillr.app.struts.actions.ItemShareUpdateAction">
-      <forward name="success" path=".itemShare.edit" />
-    </action>
-    <action path="/ItemShareDelete" name="ItemShare" validate="false" type="com.mybillr.app.struts.actions.ItemShareDeleteAction">
-      <forward name="success" path=".itemShare.edit" />
-    </action>
-    <action path="/ItemShareSave" name="ItemShare" type="com.mybillr.app.struts.actions.ItemShareSaveAction" input=".itemShare.edit">
-      <forward name="success" path=".itemShare.index" />
-      <forward name="failure" path=".itemShare.edit" />
-    </action>
-    <action path="/ItemShareFindByPrimaryKey" forward=".itemShare.findByPrimaryKey.form" />
-    <action path="/ItemShareFindByPrimaryKeyResults" name="ItemShareFindByPrimaryKey" validate="false" type="com.mybillr.app.struts.actions.ItemShareFindByPrimaryKeyAction">
-      <forward name="view" path=".itemShare.view" />
-      <forward name="update" path=".itemShare.edit" />
-      <forward name="failure" path=".itemShare.findByPrimaryKey.form" />
-    </action>
-    <action path="/ItemShareFindAll" forward=".itemShare.findAll.form" />
-    <action path="/ItemShareFindAllResults" name="ItemShareFindAll" validate="false" type="com.mybillr.app.struts.actions.ItemShareFindAllAction">
-      <forward name="success" path=".itemShare.findAll.results" />
-      <forward name="failure" path=".itemShare.findAll.form" />
-    </action>
-    <action path="/ItemShareFindByItems" forward=".itemShare.findByItems.form" />
-    <action path="/ItemShareFindByItemsResults" name="ItemShareFindByItems" validate="false" type="com.mybillr.app.struts.actions.ItemShareFindByItemsAction">
-      <forward name="success" path=".itemShare.findByItems.results" />
-      <forward name="failure" path=".itemShare.findByItems.form" />
-    </action>
-    <action path="/ItemShareFindByUser" forward=".itemShare.findByUser.form" />
-    <action path="/ItemShareFindByUserResults" name="ItemShareFindByUser" validate="false" type="com.mybillr.app.struts.actions.ItemShareFindByUserAction">
-      <forward name="success" path=".itemShare.findByUser.results" />
-      <forward name="failure" path=".itemShare.findByUser.form" />
-    </action>
-    <action path="/ItemShareFindWhereIdEquals" forward=".itemShare.findWhereIdEquals.form" />
-    <action path="/ItemShareFindWhereIdEqualsResults" name="ItemShareFindWhereIdEquals" validate="false" type="com.mybillr.app.struts.actions.ItemShareFindWhereIdEqualsAction">
-      <forward name="success" path=".itemShare.findWhereIdEquals.results" />
-      <forward name="failure" path=".itemShare.findWhereIdEquals.form" />
-    </action>
-    <action path="/ItemShareFindWhereItemIdEquals" forward=".itemShare.findWhereItemIdEquals.form" />
-    <action path="/ItemShareFindWhereItemIdEqualsResults" name="ItemShareFindWhereItemIdEquals" validate="false" type="com.mybillr.app.struts.actions.ItemShareFindWhereItemIdEqualsAction">
-      <forward name="success" path=".itemShare.findWhereItemIdEquals.results" />
-      <forward name="failure" path=".itemShare.findWhereItemIdEquals.form" />
-    </action>
-    <action path="/ItemShareFindWhereUserIdEquals" forward=".itemShare.findWhereUserIdEquals.form" />
-    <action path="/ItemShareFindWhereUserIdEqualsResults" name="ItemShareFindWhereUserIdEquals" validate="false" type="com.mybillr.app.struts.actions.ItemShareFindWhereUserIdEqualsAction">
-      <forward name="success" path=".itemShare.findWhereUserIdEquals.results" />
-      <forward name="failure" path=".itemShare.findWhereUserIdEquals.form" />
-    </action>
-    <action path="/ItemShareFindWhereShareEquals" forward=".itemShare.findWhereShareEquals.form" />
-    <action path="/ItemShareFindWhereShareEqualsResults" name="ItemShareFindWhereShareEquals" validate="false" type="com.mybillr.app.struts.actions.ItemShareFindWhereShareEqualsAction">
-      <forward name="success" path=".itemShare.findWhereShareEquals.results" />
-      <forward name="failure" path=".itemShare.findWhereShareEquals.form" />
-    </action>
-    <action path="/ItemizedBill" parameter=".itemizedBill.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
-    <action path="/ItemizedBillInsert" name="ItemizedBill" validate="false" type="com.mybillr.app.struts.actions.ItemizedBillInsertAction">
-      <forward name="success" path=".itemizedBill.edit" />
-    </action>
-    <action path="/ItemizedBillUpdate" name="ItemizedBill" validate="false" type="com.mybillr.app.struts.actions.ItemizedBillUpdateAction">
-      <forward name="success" path=".itemizedBill.edit" />
-    </action>
-    <action path="/ItemizedBillDelete" name="ItemizedBill" validate="false" type="com.mybillr.app.struts.actions.ItemizedBillDeleteAction">
-      <forward name="success" path=".itemizedBill.edit" />
-    </action>
-    <action path="/ItemizedBillSave" name="ItemizedBill" type="com.mybillr.app.struts.actions.ItemizedBillSaveAction" input=".itemizedBill.edit">
-      <forward name="success" path=".itemizedBill.index" />
-      <forward name="failure" path=".itemizedBill.edit" />
-    </action>
-    <action path="/ItemizedBillFindByPrimaryKey" forward=".itemizedBill.findByPrimaryKey.form" />
-    <action path="/ItemizedBillFindByPrimaryKeyResults" name="ItemizedBillFindByPrimaryKey" validate="false" type="com.mybillr.app.struts.actions.ItemizedBillFindByPrimaryKeyAction">
-      <forward name="view" path=".itemizedBill.view" />
-      <forward name="update" path=".itemizedBill.edit" />
-      <forward name="failure" path=".itemizedBill.findByPrimaryKey.form" />
-    </action>
-    <action path="/ItemizedBillFindAll" forward=".itemizedBill.findAll.form" />
-    <action path="/ItemizedBillFindAllResults" name="ItemizedBillFindAll" validate="false" type="com.mybillr.app.struts.actions.ItemizedBillFindAllAction">
-      <forward name="success" path=".itemizedBill.findAll.results" />
-      <forward name="failure" path=".itemizedBill.findAll.form" />
-    </action>
-    <action path="/ItemizedBillFindWhereIdEquals" forward=".itemizedBill.findWhereIdEquals.form" />
-    <action path="/ItemizedBillFindWhereIdEqualsResults" name="ItemizedBillFindWhereIdEquals" validate="false" type="com.mybillr.app.struts.actions.ItemizedBillFindWhereIdEqualsAction">
-      <forward name="success" path=".itemizedBill.findWhereIdEquals.results" />
-      <forward name="failure" path=".itemizedBill.findWhereIdEquals.form" />
-    </action>
-    <action path="/ItemizedBillFindWherePaidByEquals" forward=".itemizedBill.findWherePaidByEquals.form" />
-    <action path="/ItemizedBillFindWherePaidByEqualsResults" name="ItemizedBillFindWherePaidByEquals" validate="false" type="com.mybillr.app.struts.actions.ItemizedBillFindWherePaidByEqualsAction">
-      <forward name="success" path=".itemizedBill.findWherePaidByEquals.results" />
-      <forward name="failure" path=".itemizedBill.findWherePaidByEquals.form" />
-    </action>
-    <action path="/ItemizedBillFindWhereItemsEquals" forward=".itemizedBill.findWhereItemsEquals.form" />
-    <action path="/ItemizedBillFindWhereItemsEqualsResults" name="ItemizedBillFindWhereItemsEquals" validate="false" type="com.mybillr.app.struts.actions.ItemizedBillFindWhereItemsEqualsAction">
-      <forward name="success" path=".itemizedBill.findWhereItemsEquals.results" />
-      <forward name="failure" path=".itemizedBill.findWhereItemsEquals.form" />
-    </action>
-    <action path="/Items" parameter=".items.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
-    <action path="/ItemsInsert" name="Items" validate="false" type="com.mybillr.app.struts.actions.ItemsInsertAction">
-      <forward name="success" path=".items.edit" />
-    </action>
-    <action path="/ItemsUpdate" name="Items" validate="false" type="com.mybillr.app.struts.actions.ItemsUpdateAction">
-      <forward name="success" path=".items.edit" />
-    </action>
-    <action path="/ItemsDelete" name="Items" validate="false" type="com.mybillr.app.struts.actions.ItemsDeleteAction">
-      <forward name="success" path=".items.edit" />
-    </action>
-    <action path="/ItemsSave" name="Items" type="com.mybillr.app.struts.actions.ItemsSaveAction" input=".items.edit">
-      <forward name="success" path=".items.index" />
-      <forward name="failure" path=".items.edit" />
-    </action>
-    <action path="/ItemsFindByPrimaryKey" forward=".items.findByPrimaryKey.form" />
-    <action path="/ItemsFindByPrimaryKeyResults" name="ItemsFindByPrimaryKey" validate="false" type="com.mybillr.app.struts.actions.ItemsFindByPrimaryKeyAction">
-      <forward name="view" path=".items.view" />
-      <forward name="update" path=".items.edit" />
-      <forward name="failure" path=".items.findByPrimaryKey.form" />
-    </action>
-    <action path="/ItemsFindAll" forward=".items.findAll.form" />
-    <action path="/ItemsFindAllResults" name="ItemsFindAll" validate="false" type="com.mybillr.app.struts.actions.ItemsFindAllAction">
-      <forward name="success" path=".items.findAll.results" />
-      <forward name="failure" path=".items.findAll.form" />
-    </action>
-    <action path="/ItemsFindWhereIdEquals" forward=".items.findWhereIdEquals.form" />
-    <action path="/ItemsFindWhereIdEqualsResults" name="ItemsFindWhereIdEquals" validate="false" type="com.mybillr.app.struts.actions.ItemsFindWhereIdEqualsAction">
-      <forward name="success" path=".items.findWhereIdEquals.results" />
-      <forward name="failure" path=".items.findWhereIdEquals.form" />
-    </action>
-    <action path="/ItemsFindWhereNameEquals" forward=".items.findWhereNameEquals.form" />
-    <action path="/ItemsFindWhereNameEqualsResults" name="ItemsFindWhereNameEquals" validate="false" type="com.mybillr.app.struts.actions.ItemsFindWhereNameEqualsAction">
-      <forward name="success" path=".items.findWhereNameEquals.results" />
-      <forward name="failure" path=".items.findWhereNameEquals.form" />
-    </action>
-    <action path="/ItemsFindWhereParticipantEquals" forward=".items.findWhereParticipantEquals.form" />
-    <action path="/ItemsFindWhereParticipantEqualsResults" name="ItemsFindWhereParticipantEquals" validate="false" type="com.mybillr.app.struts.actions.ItemsFindWhereParticipantEqualsAction">
-      <forward name="success" path=".items.findWhereParticipantEquals.results" />
-      <forward name="failure" path=".items.findWhereParticipantEquals.form" />
-    </action>
-    <action path="/ItemsFindWherePriceEquals" forward=".items.findWherePriceEquals.form" />
-    <action path="/ItemsFindWherePriceEqualsResults" name="ItemsFindWherePriceEquals" validate="false" type="com.mybillr.app.struts.actions.ItemsFindWherePriceEqualsAction">
-      <forward name="success" path=".items.findWherePriceEquals.results" />
-      <forward name="failure" path=".items.findWherePriceEquals.form" />
-    </action>
-    <action path="/Ledger" parameter=".ledger.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
-    <action path="/LedgerInsert" name="Ledger" validate="false" type="com.mybillr.app.struts.actions.LedgerInsertAction">
-      <forward name="success" path=".ledger.edit" />
-    </action>
-    <action path="/LedgerUpdate" name="Ledger" validate="false" type="com.mybillr.app.struts.actions.LedgerUpdateAction">
-      <forward name="success" path=".ledger.edit" />
-    </action>
-    <action path="/LedgerDelete" name="Ledger" validate="false" type="com.mybillr.app.struts.actions.LedgerDeleteAction">
-      <forward name="success" path=".ledger.edit" />
-    </action>
-    <action path="/LedgerSave" name="Ledger" type="com.mybillr.app.struts.actions.LedgerSaveAction" input=".ledger.edit">
-      <forward name="success" path=".ledger.index" />
-      <forward name="failure" path=".ledger.edit" />
-    </action>
-    <action path="/LedgerFindByPrimaryKey" forward=".ledger.findByPrimaryKey.form" />
-    <action path="/LedgerFindByPrimaryKeyResults" name="LedgerFindByPrimaryKey" validate="false" type="com.mybillr.app.struts.actions.LedgerFindByPrimaryKeyAction">
-      <forward name="view" path=".ledger.view" />
-      <forward name="update" path=".ledger.edit" />
-      <forward name="failure" path=".ledger.findByPrimaryKey.form" />
-    </action>
-    <action path="/LedgerFindAll" forward=".ledger.findAll.form" />
-    <action path="/LedgerFindAllResults" name="LedgerFindAll" validate="false" type="com.mybillr.app.struts.actions.LedgerFindAllAction">
-      <forward name="success" path=".ledger.findAll.results" />
-      <forward name="failure" path=".ledger.findAll.form" />
-    </action>
-    <action path="/LedgerFindByUser" forward=".ledger.findByUser.form" />
-    <action path="/LedgerFindByUserResults" name="LedgerFindByUser" validate="false" type="com.mybillr.app.struts.actions.LedgerFindByUserAction">
-      <forward name="success" path=".ledger.findByUser.results" />
-      <forward name="failure" path=".ledger.findByUser.form" />
-    </action>
-    <action path="/LedgerFindByUser2" forward=".ledger.findByUser2.form" />
-    <action path="/LedgerFindByUser2Results" name="LedgerFindByUser2" validate="false" type="com.mybillr.app.struts.actions.LedgerFindByUser2Action">
-      <forward name="success" path=".ledger.findByUser2.results" />
-      <forward name="failure" path=".ledger.findByUser2.form" />
-    </action>
-    <action path="/LedgerFindWhereIdEquals" forward=".ledger.findWhereIdEquals.form" />
-    <action path="/LedgerFindWhereIdEqualsResults" name="LedgerFindWhereIdEquals" validate="false" type="com.mybillr.app.struts.actions.LedgerFindWhereIdEqualsAction">
-      <forward name="success" path=".ledger.findWhereIdEquals.results" />
-      <forward name="failure" path=".ledger.findWhereIdEquals.form" />
-    </action>
-    <action path="/LedgerFindWhereOwedByEquals" forward=".ledger.findWhereOwedByEquals.form" />
-    <action path="/LedgerFindWhereOwedByEqualsResults" name="LedgerFindWhereOwedByEquals" validate="false" type="com.mybillr.app.struts.actions.LedgerFindWhereOwedByEqualsAction">
-      <forward name="success" path=".ledger.findWhereOwedByEquals.results" />
-      <forward name="failure" path=".ledger.findWhereOwedByEquals.form" />
-    </action>
-    <action path="/LedgerFindWhereOwesToEquals" forward=".ledger.findWhereOwesToEquals.form" />
-    <action path="/LedgerFindWhereOwesToEqualsResults" name="LedgerFindWhereOwesToEquals" validate="false" type="com.mybillr.app.struts.actions.LedgerFindWhereOwesToEqualsAction">
-      <forward name="success" path=".ledger.findWhereOwesToEquals.results" />
-      <forward name="failure" path=".ledger.findWhereOwesToEquals.form" />
-    </action>
-    <action path="/LedgerFindWhereAmountEquals" forward=".ledger.findWhereAmountEquals.form" />
-    <action path="/LedgerFindWhereAmountEqualsResults" name="LedgerFindWhereAmountEquals" validate="false" type="com.mybillr.app.struts.actions.LedgerFindWhereAmountEqualsAction">
-      <forward name="success" path=".ledger.findWhereAmountEquals.results" />
-      <forward name="failure" path=".ledger.findWhereAmountEquals.form" />
-    </action>
-    <action path="/LedgerFindWhereCurrencyEquals" forward=".ledger.findWhereCurrencyEquals.form" />
-    <action path="/LedgerFindWhereCurrencyEqualsResults" name="LedgerFindWhereCurrencyEquals" validate="false" type="com.mybillr.app.struts.actions.LedgerFindWhereCurrencyEqualsAction">
-      <forward name="success" path=".ledger.findWhereCurrencyEquals.results" />
-      <forward name="failure" path=".ledger.findWhereCurrencyEquals.form" />
-    </action>
-    <action path="/SharedBill" parameter=".sharedBill.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
-    <action path="/SharedBillInsert" name="SharedBill" validate="false" type="com.mybillr.app.struts.actions.SharedBillInsertAction">
-      <forward name="success" path=".sharedBill.edit" />
-    </action>
-    <action path="/SharedBillUpdate" name="SharedBill" validate="false" type="com.mybillr.app.struts.actions.SharedBillUpdateAction">
-      <forward name="success" path=".sharedBill.edit" />
-    </action>
-    <action path="/SharedBillDelete" name="SharedBill" validate="false" type="com.mybillr.app.struts.actions.SharedBillDeleteAction">
-      <forward name="success" path=".sharedBill.edit" />
-    </action>
-    <action path="/SharedBillSave" name="SharedBill" type="com.mybillr.app.struts.actions.SharedBillSaveAction" input=".sharedBill.edit">
-      <forward name="success" path=".sharedBill.index" />
-      <forward name="failure" path=".sharedBill.edit" />
-    </action>
-    <action path="/SharedBillFindByPrimaryKey" forward=".sharedBill.findByPrimaryKey.form" />
-    <action path="/SharedBillFindByPrimaryKeyResults" name="SharedBillFindByPrimaryKey" validate="false" type="com.mybillr.app.struts.actions.SharedBillFindByPrimaryKeyAction">
-      <forward name="view" path=".sharedBill.view" />
-      <forward name="update" path=".sharedBill.edit" />
-      <forward name="failure" path=".sharedBill.findByPrimaryKey.form" />
-    </action>
-    <action path="/SharedBillFindAll" forward=".sharedBill.findAll.form" />
-    <action path="/SharedBillFindAllResults" name="SharedBillFindAll" validate="false" type="com.mybillr.app.struts.actions.SharedBillFindAllAction">
-      <forward name="success" path=".sharedBill.findAll.results" />
-      <forward name="failure" path=".sharedBill.findAll.form" />
-    </action>
-    <action path="/SharedBillFindWhereIdEquals" forward=".sharedBill.findWhereIdEquals.form" />
-    <action path="/SharedBillFindWhereIdEqualsResults" name="SharedBillFindWhereIdEquals" validate="false" type="com.mybillr.app.struts.actions.SharedBillFindWhereIdEqualsAction">
-      <forward name="success" path=".sharedBill.findWhereIdEquals.results" />
-      <forward name="failure" path=".sharedBill.findWhereIdEquals.form" />
-    </action>
-    <action path="/SharedBillFindWhereTitleEquals" forward=".sharedBill.findWhereTitleEquals.form" />
-    <action path="/SharedBillFindWhereTitleEqualsResults" name="SharedBillFindWhereTitleEquals" validate="false" type="com.mybillr.app.struts.actions.SharedBillFindWhereTitleEqualsAction">
-      <forward name="success" path=".sharedBill.findWhereTitleEquals.results" />
-      <forward name="failure" path=".sharedBill.findWhereTitleEquals.form" />
-    </action>
-    <action path="/SharedBillFindWhereParticipantsEquals" forward=".sharedBill.findWhereParticipantsEquals.form" />
-    <action path="/SharedBillFindWhereParticipantsEqualsResults" name="SharedBillFindWhereParticipantsEquals" validate="false" type="com.mybillr.app.struts.actions.SharedBillFindWhereParticipantsEqualsAction">
-      <forward name="success" path=".sharedBill.findWhereParticipantsEquals.results" />
-      <forward name="failure" path=".sharedBill.findWhereParticipantsEquals.form" />
-    </action>
-    <action path="/SharedBillFindWherePaidByEquals" forward=".sharedBill.findWherePaidByEquals.form" />
-    <action path="/SharedBillFindWherePaidByEqualsResults" name="SharedBillFindWherePaidByEquals" validate="false" type="com.mybillr.app.struts.actions.SharedBillFindWherePaidByEqualsAction">
-      <forward name="success" path=".sharedBill.findWherePaidByEquals.results" />
-      <forward name="failure" path=".sharedBill.findWherePaidByEquals.form" />
-    </action>
-    <action path="/SharedBillFindWhereItemsEquals" forward=".sharedBill.findWhereItemsEquals.form" />
-    <action path="/SharedBillFindWhereItemsEqualsResults" name="SharedBillFindWhereItemsEquals" validate="false" type="com.mybillr.app.struts.actions.SharedBillFindWhereItemsEqualsAction">
-      <forward name="success" path=".sharedBill.findWhereItemsEquals.results" />
-      <forward name="failure" path=".sharedBill.findWhereItemsEquals.form" />
-    </action>
-    <action path="/User" parameter=".user.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
-    <action path="/UserInsert" name="User" validate="false" type="com.mybillr.app.struts.actions.UserInsertAction">
-      <forward name="success" path=".user.edit" />
-    </action>
-    <action path="/UserUpdate" name="User" validate="false" type="com.mybillr.app.struts.actions.UserUpdateAction">
-      <forward name="success" path=".user.edit" />
-    </action>
-    <action path="/UserDelete" name="User" validate="false" type="com.mybillr.app.struts.actions.UserDeleteAction">
-      <forward name="success" path=".user.edit" />
-    </action>
-    <action path="/UserSave" name="User" type="com.mybillr.app.struts.actions.UserSaveAction" input=".user.edit">
-      <forward name="success" path=".user.index" />
-      <forward name="failure" path=".user.edit" />
-    </action>
-    <action path="/UserFindByPrimaryKey" forward=".user.findByPrimaryKey.form" />
-    <action path="/UserFindByPrimaryKeyResults" name="UserFindByPrimaryKey" validate="false" type="com.mybillr.app.struts.actions.UserFindByPrimaryKeyAction">
-      <forward name="view" path=".user.view" />
-      <forward name="update" path=".user.edit" />
-      <forward name="failure" path=".user.findByPrimaryKey.form" />
-    </action>
-    <action path="/UserFindAll" forward=".user.findAll.form" />
-    <action path="/UserFindAllResults" name="UserFindAll" validate="false" type="com.mybillr.app.struts.actions.UserFindAllAction">
-      <forward name="success" path=".user.findAll.results" />
-      <forward name="failure" path=".user.findAll.form" />
-    </action>
-    <action path="/UserFindWhereIdEquals" forward=".user.findWhereIdEquals.form" />
-    <action path="/UserFindWhereIdEqualsResults" name="UserFindWhereIdEquals" validate="false" type="com.mybillr.app.struts.actions.UserFindWhereIdEqualsAction">
-      <forward name="success" path=".user.findWhereIdEquals.results" />
-      <forward name="failure" path=".user.findWhereIdEquals.form" />
-    </action>
-    <action path="/UserFindWhereFnameEquals" forward=".user.findWhereFnameEquals.form" />
-    <action path="/UserFindWhereFnameEqualsResults" name="UserFindWhereFnameEquals" validate="false" type="com.mybillr.app.struts.actions.UserFindWhereFnameEqualsAction">
-      <forward name="success" path=".user.findWhereFnameEquals.results" />
-      <forward name="failure" path=".user.findWhereFnameEquals.form" />
-    </action>
-    <action path="/UserFindWhereLnameEquals" forward=".user.findWhereLnameEquals.form" />
-    <action path="/UserFindWhereLnameEqualsResults" name="UserFindWhereLnameEquals" validate="false" type="com.mybillr.app.struts.actions.UserFindWhereLnameEqualsAction">
-      <forward name="success" path=".user.findWhereLnameEquals.results" />
-      <forward name="failure" path=".user.findWhereLnameEquals.form" />
-    </action>
-    <action path="/UserFindWhereEmailEquals" forward=".user.findWhereEmailEquals.form" />
-    <action path="/UserFindWhereEmailEqualsResults" name="UserFindWhereEmailEquals" validate="false" type="com.mybillr.app.struts.actions.UserFindWhereEmailEqualsAction">
-      <forward name="success" path=".user.findWhereEmailEquals.results" />
-      <forward name="failure" path=".user.findWhereEmailEquals.form" />
-    </action>
-    <action path="/UserFindWherePhoneEquals" forward=".user.findWherePhoneEquals.form" />
-    <action path="/UserFindWherePhoneEqualsResults" name="UserFindWherePhoneEquals" validate="false" type="com.mybillr.app.struts.actions.UserFindWherePhoneEqualsAction">
-      <forward name="success" path=".user.findWherePhoneEquals.results" />
-      <forward name="failure" path=".user.findWherePhoneEquals.form" />
-    </action>
-    <action path="/UserFindWhereSaltEquals" forward=".user.findWhereSaltEquals.form" />
-    <action path="/UserFindWhereSaltEqualsResults" name="UserFindWhereSaltEquals" validate="false" type="com.mybillr.app.struts.actions.UserFindWhereSaltEqualsAction">
-      <forward name="success" path=".user.findWhereSaltEquals.results" />
-      <forward name="failure" path=".user.findWhereSaltEquals.form" />
-    </action>
-    <action path="/UserFindWherePasswordEquals" forward=".user.findWherePasswordEquals.form" />
-    <action path="/UserFindWherePasswordEqualsResults" name="UserFindWherePasswordEquals" validate="false" type="com.mybillr.app.struts.actions.UserFindWherePasswordEqualsAction">
-      <forward name="success" path=".user.findWherePasswordEquals.results" />
-      <forward name="failure" path=".user.findWherePasswordEquals.form" />
-    </action>
-    <action path="/UserFindWhereCreatedOnEquals" forward=".user.findWhereCreatedOnEquals.form" />
-    <action path="/UserFindWhereCreatedOnEqualsResults" name="UserFindWhereCreatedOnEquals" validate="false" type="com.mybillr.app.struts.actions.UserFindWhereCreatedOnEqualsAction">
-      <forward name="success" path=".user.findWhereCreatedOnEquals.results" />
-      <forward name="failure" path=".user.findWhereCreatedOnEquals.form" />
-    </action>
-    <action path="/UserFindWhereUpdatedOnEquals" forward=".user.findWhereUpdatedOnEquals.form" />
-    <action path="/UserFindWhereUpdatedOnEqualsResults" name="UserFindWhereUpdatedOnEquals" validate="false" type="com.mybillr.app.struts.actions.UserFindWhereUpdatedOnEqualsAction">
-      <forward name="success" path=".user.findWhereUpdatedOnEquals.results" />
-      <forward name="failure" path=".user.findWhereUpdatedOnEquals.form" />
-    </action>
-    <action path="/UserFindWhereLastLoggedEquals" forward=".user.findWhereLastLoggedEquals.form" />
-    <action path="/UserFindWhereLastLoggedEqualsResults" name="UserFindWhereLastLoggedEquals" validate="false" type="com.mybillr.app.struts.actions.UserFindWhereLastLoggedEqualsAction">
-      <forward name="success" path=".user.findWhereLastLoggedEquals.results" />
-      <forward name="failure" path=".user.findWhereLastLoggedEquals.form" />
-    </action>
-    <action path="/Currencies" parameter=".currencies.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
-    <action path="/CurrenciesInsert" name="Currencies" validate="false" type="com.mybillr.app.struts.actions.CurrenciesInsertAction">
-      <forward name="success" path=".currencies.edit" />
-    </action>
-    <action path="/CurrenciesUpdate" name="Currencies" validate="false" type="com.mybillr.app.struts.actions.CurrenciesUpdateAction">
-      <forward name="success" path=".currencies.edit" />
-    </action>
-    <action path="/CurrenciesDelete" name="Currencies" validate="false" type="com.mybillr.app.struts.actions.CurrenciesDeleteAction">
-      <forward name="success" path=".currencies.edit" />
-    </action>
-    <action path="/CurrenciesSave" name="Currencies" type="com.mybillr.app.struts.actions.CurrenciesSaveAction" input=".currencies.edit">
-      <forward name="success" path=".currencies.index" />
-      <forward name="failure" path=".currencies.edit" />
-    </action>
-    <action path="/CurrenciesFindByPrimaryKey" forward=".currencies.findByPrimaryKey.form" />
-    <action path="/CurrenciesFindByPrimaryKeyResults" name="CurrenciesFindByPrimaryKey" validate="false" type="com.mybillr.app.struts.actions.CurrenciesFindByPrimaryKeyAction">
-      <forward name="view" path=".currencies.view" />
-      <forward name="update" path=".currencies.edit" />
-      <forward name="failure" path=".currencies.findByPrimaryKey.form" />
-    </action>
-    <action path="/CurrenciesFindAll" forward=".currencies.findAll.form" />
-    <action path="/CurrenciesFindAllResults" name="CurrenciesFindAll" validate="false" type="com.mybillr.app.struts.actions.CurrenciesFindAllAction">
-      <forward name="success" path=".currencies.findAll.results" />
-      <forward name="failure" path=".currencies.findAll.form" />
-    </action>
-    <action path="/CurrenciesFindWhereIdEquals" forward=".currencies.findWhereIdEquals.form" />
-    <action path="/CurrenciesFindWhereIdEqualsResults" name="CurrenciesFindWhereIdEquals" validate="false" type="com.mybillr.app.struts.actions.CurrenciesFindWhereIdEqualsAction">
-      <forward name="success" path=".currencies.findWhereIdEquals.results" />
-      <forward name="failure" path=".currencies.findWhereIdEquals.form" />
-    </action>
-    <action path="/CurrenciesFindWhereCodeEquals" forward=".currencies.findWhereCodeEquals.form" />
-    <action path="/CurrenciesFindWhereCodeEqualsResults" name="CurrenciesFindWhereCodeEquals" validate="false" type="com.mybillr.app.struts.actions.CurrenciesFindWhereCodeEqualsAction">
-      <forward name="success" path=".currencies.findWhereCodeEquals.results" />
-      <forward name="failure" path=".currencies.findWhereCodeEquals.form" />
-    </action>
-    <action path="/CurrenciesFindWhereCurrencyEquals" forward=".currencies.findWhereCurrencyEquals.form" />
-    <action path="/CurrenciesFindWhereCurrencyEqualsResults" name="CurrenciesFindWhereCurrencyEquals" validate="false" type="com.mybillr.app.struts.actions.CurrenciesFindWhereCurrencyEqualsAction">
-      <forward name="success" path=".currencies.findWhereCurrencyEquals.results" />
-      <forward name="failure" path=".currencies.findWhereCurrencyEquals.form" />
-    </action>
-    <action path="/CurrenciesFindWhereCountryEquals" forward=".currencies.findWhereCountryEquals.form" />
-    <action path="/CurrenciesFindWhereCountryEqualsResults" name="CurrenciesFindWhereCountryEquals" validate="false" type="com.mybillr.app.struts.actions.CurrenciesFindWhereCountryEqualsAction">
-      <forward name="success" path=".currencies.findWhereCountryEquals.results" />
-      <forward name="failure" path=".currencies.findWhereCountryEquals.form" />
+    <action path="/AccountActivation" parameter=".accountActivation.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
+    <action path="/AccountActivationInsert" name="AccountActivation" validate="false" type="com.mybillr.db.struts.actions.AccountActivationInsertAction">
+      <forward name="success" path=".accountActivation.edit" />
+    </action>
+    <action path="/AccountActivationUpdate" name="AccountActivation" validate="false" type="com.mybillr.db.struts.actions.AccountActivationUpdateAction">
+      <forward name="success" path=".accountActivation.edit" />
+    </action>
+    <action path="/AccountActivationDelete" name="AccountActivation" validate="false" type="com.mybillr.db.struts.actions.AccountActivationDeleteAction">
+      <forward name="success" path=".accountActivation.edit" />
+    </action>
+    <action path="/AccountActivationSave" name="AccountActivation" type="com.mybillr.db.struts.actions.AccountActivationSaveAction" input=".accountActivation.edit">
+      <forward name="success" path=".accountActivation.index" />
+      <forward name="failure" path=".accountActivation.edit" />
+    </action>
+    <action path="/AccountActivationFindByPrimaryKey" forward=".accountActivation.findByPrimaryKey.form" />
+    <action path="/AccountActivationFindByPrimaryKeyResults" name="AccountActivationFindByPrimaryKey" validate="false" type="com.mybillr.db.struts.actions.AccountActivationFindByPrimaryKeyAction">
+      <forward name="view" path=".accountActivation.view" />
+      <forward name="update" path=".accountActivation.edit" />
+      <forward name="failure" path=".accountActivation.findByPrimaryKey.form" />
+    </action>
+    <action path="/AccountActivationFindAll" forward=".accountActivation.findAll.form" />
+    <action path="/AccountActivationFindAllResults" name="AccountActivationFindAll" validate="false" type="com.mybillr.db.struts.actions.AccountActivationFindAllAction">
+      <forward name="success" path=".accountActivation.findAll.results" />
+      <forward name="failure" path=".accountActivation.findAll.form" />
+    </action>
+    <action path="/AccountActivationFindByUser" forward=".accountActivation.findByUser.form" />
+    <action path="/AccountActivationFindByUserResults" name="AccountActivationFindByUser" validate="false" type="com.mybillr.db.struts.actions.AccountActivationFindByUserAction">
+      <forward name="success" path=".accountActivation.findByUser.results" />
+      <forward name="failure" path=".accountActivation.findByUser.form" />
+    </action>
+    <action path="/AccountActivationFindWhereIdEquals" forward=".accountActivation.findWhereIdEquals.form" />
+    <action path="/AccountActivationFindWhereIdEqualsResults" name="AccountActivationFindWhereIdEquals" validate="false" type="com.mybillr.db.struts.actions.AccountActivationFindWhereIdEqualsAction">
+      <forward name="success" path=".accountActivation.findWhereIdEquals.results" />
+      <forward name="failure" path=".accountActivation.findWhereIdEquals.form" />
+    </action>
+    <action path="/AccountActivationFindWhereUserIdEquals" forward=".accountActivation.findWhereUserIdEquals.form" />
+    <action path="/AccountActivationFindWhereUserIdEqualsResults" name="AccountActivationFindWhereUserIdEquals" validate="false" type="com.mybillr.db.struts.actions.AccountActivationFindWhereUserIdEqualsAction">
+      <forward name="success" path=".accountActivation.findWhereUserIdEquals.results" />
+      <forward name="failure" path=".accountActivation.findWhereUserIdEquals.form" />
+    </action>
+    <action path="/AccountActivationFindWhereActivationHashEquals" forward=".accountActivation.findWhereActivationHashEquals.form" />
+    <action path="/AccountActivationFindWhereActivationHashEqualsResults" name="AccountActivationFindWhereActivationHashEquals" validate="false" type="com.mybillr.db.struts.actions.AccountActivationFindWhereActivationHashEqualsAction">
+      <forward name="success" path=".accountActivation.findWhereActivationHashEquals.results" />
+      <forward name="failure" path=".accountActivation.findWhereActivationHashEquals.form" />
+    </action>
+    <action path="/Bill" parameter=".bill.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
+    <action path="/BillInsert" name="Bill" validate="false" type="com.mybillr.db.struts.actions.BillInsertAction">
+      <forward name="success" path=".bill.edit" />
+    </action>
+    <action path="/BillUpdate" name="Bill" validate="false" type="com.mybillr.db.struts.actions.BillUpdateAction">
+      <forward name="success" path=".bill.edit" />
+    </action>
+    <action path="/BillDelete" name="Bill" validate="false" type="com.mybillr.db.struts.actions.BillDeleteAction">
+      <forward name="success" path=".bill.edit" />
+    </action>
+    <action path="/BillSave" name="Bill" type="com.mybillr.db.struts.actions.BillSaveAction" input=".bill.edit">
+      <forward name="success" path=".bill.index" />
+      <forward name="failure" path=".bill.edit" />
+    </action>
+    <action path="/BillFindByPrimaryKey" forward=".bill.findByPrimaryKey.form" />
+    <action path="/BillFindByPrimaryKeyResults" name="BillFindByPrimaryKey" validate="false" type="com.mybillr.db.struts.actions.BillFindByPrimaryKeyAction">
+      <forward name="view" path=".bill.view" />
+      <forward name="update" path=".bill.edit" />
+      <forward name="failure" path=".bill.findByPrimaryKey.form" />
+    </action>
+    <action path="/BillFindAll" forward=".bill.findAll.form" />
+    <action path="/BillFindAllResults" name="BillFindAll" validate="false" type="com.mybillr.db.struts.actions.BillFindAllAction">
+      <forward name="success" path=".bill.findAll.results" />
+      <forward name="failure" path=".bill.findAll.form" />
+    </action>
+    <action path="/BillFindWhereIdEquals" forward=".bill.findWhereIdEquals.form" />
+    <action path="/BillFindWhereIdEqualsResults" name="BillFindWhereIdEquals" validate="false" type="com.mybillr.db.struts.actions.BillFindWhereIdEqualsAction">
+      <forward name="success" path=".bill.findWhereIdEquals.results" />
+      <forward name="failure" path=".bill.findWhereIdEquals.form" />
+    </action>
+    <action path="/BillFindWhereNameEquals" forward=".bill.findWhereNameEquals.form" />
+    <action path="/BillFindWhereNameEqualsResults" name="BillFindWhereNameEquals" validate="false" type="com.mybillr.db.struts.actions.BillFindWhereNameEqualsAction">
+      <forward name="success" path=".bill.findWhereNameEquals.results" />
+      <forward name="failure" path=".bill.findWhereNameEquals.form" />
+    </action>
+    <action path="/BillFindWhereTotalEquals" forward=".bill.findWhereTotalEquals.form" />
+    <action path="/BillFindWhereTotalEqualsResults" name="BillFindWhereTotalEquals" validate="false" type="com.mybillr.db.struts.actions.BillFindWhereTotalEqualsAction">
+      <forward name="success" path=".bill.findWhereTotalEquals.results" />
+      <forward name="failure" path=".bill.findWhereTotalEquals.form" />
+    </action>
+    <action path="/BillDetails" parameter=".billDetails.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
+    <action path="/BillDetailsInsert" name="BillDetails" validate="false" type="com.mybillr.db.struts.actions.BillDetailsInsertAction">
+      <forward name="success" path=".billDetails.edit" />
+    </action>
+    <action path="/BillDetailsUpdate" name="BillDetails" validate="false" type="com.mybillr.db.struts.actions.BillDetailsUpdateAction">
+      <forward name="success" path=".billDetails.edit" />
+    </action>
+    <action path="/BillDetailsDelete" name="BillDetails" validate="false" type="com.mybillr.db.struts.actions.BillDetailsDeleteAction">
+      <forward name="success" path=".billDetails.edit" />
+    </action>
+    <action path="/BillDetailsSave" name="BillDetails" type="com.mybillr.db.struts.actions.BillDetailsSaveAction" input=".billDetails.edit">
+      <forward name="success" path=".billDetails.index" />
+      <forward name="failure" path=".billDetails.edit" />
+    </action>
+    <action path="/BillDetailsFindByPrimaryKey" forward=".billDetails.findByPrimaryKey.form" />
+    <action path="/BillDetailsFindByPrimaryKeyResults" name="BillDetailsFindByPrimaryKey" validate="false" type="com.mybillr.db.struts.actions.BillDetailsFindByPrimaryKeyAction">
+      <forward name="view" path=".billDetails.view" />
+      <forward name="update" path=".billDetails.edit" />
+      <forward name="failure" path=".billDetails.findByPrimaryKey.form" />
+    </action>
+    <action path="/BillDetailsFindAll" forward=".billDetails.findAll.form" />
+    <action path="/BillDetailsFindAllResults" name="BillDetailsFindAll" validate="false" type="com.mybillr.db.struts.actions.BillDetailsFindAllAction">
+      <forward name="success" path=".billDetails.findAll.results" />
+      <forward name="failure" path=".billDetails.findAll.form" />
+    </action>
+    <action path="/BillDetailsFindByBill" forward=".billDetails.findByBill.form" />
+    <action path="/BillDetailsFindByBillResults" name="BillDetailsFindByBill" validate="false" type="com.mybillr.db.struts.actions.BillDetailsFindByBillAction">
+      <forward name="success" path=".billDetails.findByBill.results" />
+      <forward name="failure" path=".billDetails.findByBill.form" />
+    </action>
+    <action path="/BillDetailsFindByUser" forward=".billDetails.findByUser.form" />
+    <action path="/BillDetailsFindByUserResults" name="BillDetailsFindByUser" validate="false" type="com.mybillr.db.struts.actions.BillDetailsFindByUserAction">
+      <forward name="success" path=".billDetails.findByUser.results" />
+      <forward name="failure" path=".billDetails.findByUser.form" />
+    </action>
+    <action path="/BillDetailsFindWhereBillIdEquals" forward=".billDetails.findWhereBillIdEquals.form" />
+    <action path="/BillDetailsFindWhereBillIdEqualsResults" name="BillDetailsFindWhereBillIdEquals" validate="false" type="com.mybillr.db.struts.actions.BillDetailsFindWhereBillIdEqualsAction">
+      <forward name="success" path=".billDetails.findWhereBillIdEquals.results" />
+      <forward name="failure" path=".billDetails.findWhereBillIdEquals.form" />
+    </action>
+    <action path="/BillDetailsFindWhereUserIdEquals" forward=".billDetails.findWhereUserIdEquals.form" />
+    <action path="/BillDetailsFindWhereUserIdEqualsResults" name="BillDetailsFindWhereUserIdEquals" validate="false" type="com.mybillr.db.struts.actions.BillDetailsFindWhereUserIdEqualsAction">
+      <forward name="success" path=".billDetails.findWhereUserIdEquals.results" />
+      <forward name="failure" path=".billDetails.findWhereUserIdEquals.form" />
+    </action>
+    <action path="/BillDetailsFindWhereItemNameEquals" forward=".billDetails.findWhereItemNameEquals.form" />
+    <action path="/BillDetailsFindWhereItemNameEqualsResults" name="BillDetailsFindWhereItemNameEquals" validate="false" type="com.mybillr.db.struts.actions.BillDetailsFindWhereItemNameEqualsAction">
+      <forward name="success" path=".billDetails.findWhereItemNameEquals.results" />
+      <forward name="failure" path=".billDetails.findWhereItemNameEquals.form" />
+    </action>
+    <action path="/BillDetailsFindWhereShareEquals" forward=".billDetails.findWhereShareEquals.form" />
+    <action path="/BillDetailsFindWhereShareEqualsResults" name="BillDetailsFindWhereShareEquals" validate="false" type="com.mybillr.db.struts.actions.BillDetailsFindWhereShareEqualsAction">
+      <forward name="success" path=".billDetails.findWhereShareEquals.results" />
+      <forward name="failure" path=".billDetails.findWhereShareEquals.form" />
+    </action>
+    <action path="/BillDetailsFindWhereAmountEquals" forward=".billDetails.findWhereAmountEquals.form" />
+    <action path="/BillDetailsFindWhereAmountEqualsResults" name="BillDetailsFindWhereAmountEquals" validate="false" type="com.mybillr.db.struts.actions.BillDetailsFindWhereAmountEqualsAction">
+      <forward name="success" path=".billDetails.findWhereAmountEquals.results" />
+      <forward name="failure" path=".billDetails.findWhereAmountEquals.form" />
+    </action>
+    <action path="/BillPayee" parameter=".billPayee.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
+    <action path="/BillPayeeInsert" name="BillPayee" validate="false" type="com.mybillr.db.struts.actions.BillPayeeInsertAction">
+      <forward name="success" path=".billPayee.edit" />
+    </action>
+    <action path="/BillPayeeUpdate" name="BillPayee" validate="false" type="com.mybillr.db.struts.actions.BillPayeeUpdateAction">
+      <forward name="success" path=".billPayee.edit" />
+    </action>
+    <action path="/BillPayeeDelete" name="BillPayee" validate="false" type="com.mybillr.db.struts.actions.BillPayeeDeleteAction">
+      <forward name="success" path=".billPayee.edit" />
+    </action>
+    <action path="/BillPayeeSave" name="BillPayee" type="com.mybillr.db.struts.actions.BillPayeeSaveAction" input=".billPayee.edit">
+      <forward name="success" path=".billPayee.index" />
+      <forward name="failure" path=".billPayee.edit" />
+    </action>
+    <action path="/BillPayeeFindByPrimaryKey" forward=".billPayee.findByPrimaryKey.form" />
+    <action path="/BillPayeeFindByPrimaryKeyResults" name="BillPayeeFindByPrimaryKey" validate="false" type="com.mybillr.db.struts.actions.BillPayeeFindByPrimaryKeyAction">
+      <forward name="view" path=".billPayee.view" />
+      <forward name="update" path=".billPayee.edit" />
+      <forward name="failure" path=".billPayee.findByPrimaryKey.form" />
+    </action>
+    <action path="/BillPayeeFindAll" forward=".billPayee.findAll.form" />
+    <action path="/BillPayeeFindAllResults" name="BillPayeeFindAll" validate="false" type="com.mybillr.db.struts.actions.BillPayeeFindAllAction">
+      <forward name="success" path=".billPayee.findAll.results" />
+      <forward name="failure" path=".billPayee.findAll.form" />
+    </action>
+    <action path="/BillPayeeFindByBill" forward=".billPayee.findByBill.form" />
+    <action path="/BillPayeeFindByBillResults" name="BillPayeeFindByBill" validate="false" type="com.mybillr.db.struts.actions.BillPayeeFindByBillAction">
+      <forward name="success" path=".billPayee.findByBill.results" />
+      <forward name="failure" path=".billPayee.findByBill.form" />
+    </action>
+    <action path="/BillPayeeFindByUser" forward=".billPayee.findByUser.form" />
+    <action path="/BillPayeeFindByUserResults" name="BillPayeeFindByUser" validate="false" type="com.mybillr.db.struts.actions.BillPayeeFindByUserAction">
+      <forward name="success" path=".billPayee.findByUser.results" />
+      <forward name="failure" path=".billPayee.findByUser.form" />
+    </action>
+    <action path="/BillPayeeFindWhereBillIdEquals" forward=".billPayee.findWhereBillIdEquals.form" />
+    <action path="/BillPayeeFindWhereBillIdEqualsResults" name="BillPayeeFindWhereBillIdEquals" validate="false" type="com.mybillr.db.struts.actions.BillPayeeFindWhereBillIdEqualsAction">
+      <forward name="success" path=".billPayee.findWhereBillIdEquals.results" />
+      <forward name="failure" path=".billPayee.findWhereBillIdEquals.form" />
+    </action>
+    <action path="/BillPayeeFindWhereUserIdEquals" forward=".billPayee.findWhereUserIdEquals.form" />
+    <action path="/BillPayeeFindWhereUserIdEqualsResults" name="BillPayeeFindWhereUserIdEquals" validate="false" type="com.mybillr.db.struts.actions.BillPayeeFindWhereUserIdEqualsAction">
+      <forward name="success" path=".billPayee.findWhereUserIdEquals.results" />
+      <forward name="failure" path=".billPayee.findWhereUserIdEquals.form" />
+    </action>
+    <action path="/BillPayeeFindWhereShareEquals" forward=".billPayee.findWhereShareEquals.form" />
+    <action path="/BillPayeeFindWhereShareEqualsResults" name="BillPayeeFindWhereShareEquals" validate="false" type="com.mybillr.db.struts.actions.BillPayeeFindWhereShareEqualsAction">
+      <forward name="success" path=".billPayee.findWhereShareEquals.results" />
+      <forward name="failure" path=".billPayee.findWhereShareEquals.form" />
+    </action>
+    <action path="/BillPayeeFindWhereAmountEquals" forward=".billPayee.findWhereAmountEquals.form" />
+    <action path="/BillPayeeFindWhereAmountEqualsResults" name="BillPayeeFindWhereAmountEquals" validate="false" type="com.mybillr.db.struts.actions.BillPayeeFindWhereAmountEqualsAction">
+      <forward name="success" path=".billPayee.findWhereAmountEquals.results" />
+      <forward name="failure" path=".billPayee.findWhereAmountEquals.form" />
+    </action>
+    <action path="/Debt" parameter=".debt.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
+    <action path="/DebtInsert" name="Debt" validate="false" type="com.mybillr.db.struts.actions.DebtInsertAction">
+      <forward name="success" path=".debt.edit" />
+    </action>
+    <action path="/DebtUpdate" name="Debt" validate="false" type="com.mybillr.db.struts.actions.DebtUpdateAction">
+      <forward name="success" path=".debt.edit" />
+    </action>
+    <action path="/DebtDelete" name="Debt" validate="false" type="com.mybillr.db.struts.actions.DebtDeleteAction">
+      <forward name="success" path=".debt.edit" />
+    </action>
+    <action path="/DebtSave" name="Debt" type="com.mybillr.db.struts.actions.DebtSaveAction" input=".debt.edit">
+      <forward name="success" path=".debt.index" />
+      <forward name="failure" path=".debt.edit" />
+    </action>
+    <action path="/DebtFindByPrimaryKey" forward=".debt.findByPrimaryKey.form" />
+    <action path="/DebtFindByPrimaryKeyResults" name="DebtFindByPrimaryKey" validate="false" type="com.mybillr.db.struts.actions.DebtFindByPrimaryKeyAction">
+      <forward name="view" path=".debt.view" />
+      <forward name="update" path=".debt.edit" />
+      <forward name="failure" path=".debt.findByPrimaryKey.form" />
+    </action>
+    <action path="/DebtFindAll" forward=".debt.findAll.form" />
+    <action path="/DebtFindAllResults" name="DebtFindAll" validate="false" type="com.mybillr.db.struts.actions.DebtFindAllAction">
+      <forward name="success" path=".debt.findAll.results" />
+      <forward name="failure" path=".debt.findAll.form" />
+    </action>
+    <action path="/DebtFindByUser" forward=".debt.findByUser.form" />
+    <action path="/DebtFindByUserResults" name="DebtFindByUser" validate="false" type="com.mybillr.db.struts.actions.DebtFindByUserAction">
+      <forward name="success" path=".debt.findByUser.results" />
+      <forward name="failure" path=".debt.findByUser.form" />
+    </action>
+    <action path="/DebtFindByUser2" forward=".debt.findByUser2.form" />
+    <action path="/DebtFindByUser2Results" name="DebtFindByUser2" validate="false" type="com.mybillr.db.struts.actions.DebtFindByUser2Action">
+      <forward name="success" path=".debt.findByUser2.results" />
+      <forward name="failure" path=".debt.findByUser2.form" />
+    </action>
+    <action path="/DebtFindWhereIdEquals" forward=".debt.findWhereIdEquals.form" />
+    <action path="/DebtFindWhereIdEqualsResults" name="DebtFindWhereIdEquals" validate="false" type="com.mybillr.db.struts.actions.DebtFindWhereIdEqualsAction">
+      <forward name="success" path=".debt.findWhereIdEquals.results" />
+      <forward name="failure" path=".debt.findWhereIdEquals.form" />
+    </action>
+    <action path="/DebtFindWhereOwedByEquals" forward=".debt.findWhereOwedByEquals.form" />
+    <action path="/DebtFindWhereOwedByEqualsResults" name="DebtFindWhereOwedByEquals" validate="false" type="com.mybillr.db.struts.actions.DebtFindWhereOwedByEqualsAction">
+      <forward name="success" path=".debt.findWhereOwedByEquals.results" />
+      <forward name="failure" path=".debt.findWhereOwedByEquals.form" />
+    </action>
+    <action path="/DebtFindWhereOwedToEquals" forward=".debt.findWhereOwedToEquals.form" />
+    <action path="/DebtFindWhereOwedToEqualsResults" name="DebtFindWhereOwedToEquals" validate="false" type="com.mybillr.db.struts.actions.DebtFindWhereOwedToEqualsAction">
+      <forward name="success" path=".debt.findWhereOwedToEquals.results" />
+      <forward name="failure" path=".debt.findWhereOwedToEquals.form" />
     </action>
     <action path="/Friends" parameter=".friends.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
-    <action path="/FriendsInsert" name="Friends" validate="false" type="com.mybillr.app.struts.actions.FriendsInsertAction">
+    <action path="/FriendsInsert" name="Friends" validate="false" type="com.mybillr.db.struts.actions.FriendsInsertAction">
       <forward name="success" path=".friends.edit" />
     </action>
-    <action path="/FriendsUpdate" name="Friends" validate="false" type="com.mybillr.app.struts.actions.FriendsUpdateAction">
+    <action path="/FriendsUpdate" name="Friends" validate="false" type="com.mybillr.db.struts.actions.FriendsUpdateAction">
       <forward name="success" path=".friends.edit" />
     </action>
-    <action path="/FriendsDelete" name="Friends" validate="false" type="com.mybillr.app.struts.actions.FriendsDeleteAction">
+    <action path="/FriendsDelete" name="Friends" validate="false" type="com.mybillr.db.struts.actions.FriendsDeleteAction">
       <forward name="success" path=".friends.edit" />
     </action>
-    <action path="/FriendsSave" name="Friends" type="com.mybillr.app.struts.actions.FriendsSaveAction" input=".friends.edit">
+    <action path="/FriendsSave" name="Friends" type="com.mybillr.db.struts.actions.FriendsSaveAction" input=".friends.edit">
       <forward name="success" path=".friends.index" />
       <forward name="failure" path=".friends.edit" />
     </action>
     <action path="/FriendsFindByPrimaryKey" forward=".friends.findByPrimaryKey.form" />
-    <action path="/FriendsFindByPrimaryKeyResults" name="FriendsFindByPrimaryKey" validate="false" type="com.mybillr.app.struts.actions.FriendsFindByPrimaryKeyAction">
+    <action path="/FriendsFindByPrimaryKeyResults" name="FriendsFindByPrimaryKey" validate="false" type="com.mybillr.db.struts.actions.FriendsFindByPrimaryKeyAction">
       <forward name="view" path=".friends.view" />
       <forward name="update" path=".friends.edit" />
       <forward name="failure" path=".friends.findByPrimaryKey.form" />
     </action>
     <action path="/FriendsFindAll" forward=".friends.findAll.form" />
-    <action path="/FriendsFindAllResults" name="FriendsFindAll" validate="false" type="com.mybillr.app.struts.actions.FriendsFindAllAction">
+    <action path="/FriendsFindAllResults" name="FriendsFindAll" validate="false" type="com.mybillr.db.struts.actions.FriendsFindAllAction">
       <forward name="success" path=".friends.findAll.results" />
       <forward name="failure" path=".friends.findAll.form" />
     </action>
     <action path="/FriendsFindByUser" forward=".friends.findByUser.form" />
-    <action path="/FriendsFindByUserResults" name="FriendsFindByUser" validate="false" type="com.mybillr.app.struts.actions.FriendsFindByUserAction">
+    <action path="/FriendsFindByUserResults" name="FriendsFindByUser" validate="false" type="com.mybillr.db.struts.actions.FriendsFindByUserAction">
       <forward name="success" path=".friends.findByUser.results" />
       <forward name="failure" path=".friends.findByUser.form" />
     </action>
     <action path="/FriendsFindByUser2" forward=".friends.findByUser2.form" />
-    <action path="/FriendsFindByUser2Results" name="FriendsFindByUser2" validate="false" type="com.mybillr.app.struts.actions.FriendsFindByUser2Action">
+    <action path="/FriendsFindByUser2Results" name="FriendsFindByUser2" validate="false" type="com.mybillr.db.struts.actions.FriendsFindByUser2Action">
       <forward name="success" path=".friends.findByUser2.results" />
       <forward name="failure" path=".friends.findByUser2.form" />
     </action>
     <action path="/FriendsFindWhereUserIdEquals" forward=".friends.findWhereUserIdEquals.form" />
-    <action path="/FriendsFindWhereUserIdEqualsResults" name="FriendsFindWhereUserIdEquals" validate="false" type="com.mybillr.app.struts.actions.FriendsFindWhereUserIdEqualsAction">
+    <action path="/FriendsFindWhereUserIdEqualsResults" name="FriendsFindWhereUserIdEquals" validate="false" type="com.mybillr.db.struts.actions.FriendsFindWhereUserIdEqualsAction">
       <forward name="success" path=".friends.findWhereUserIdEquals.results" />
       <forward name="failure" path=".friends.findWhereUserIdEquals.form" />
     </action>
-    <action path="/FriendsFindWhereFriendIdEquals" forward=".friends.findWhereFriendIdEquals.form" />
-    <action path="/FriendsFindWhereFriendIdEqualsResults" name="FriendsFindWhereFriendIdEquals" validate="false" type="com.mybillr.app.struts.actions.FriendsFindWhereFriendIdEqualsAction">
-      <forward name="success" path=".friends.findWhereFriendIdEquals.results" />
-      <forward name="failure" path=".friends.findWhereFriendIdEquals.form" />
+    <action path="/FriendsFindWhereFriendsWithEquals" forward=".friends.findWhereFriendsWithEquals.form" />
+    <action path="/FriendsFindWhereFriendsWithEqualsResults" name="FriendsFindWhereFriendsWithEquals" validate="false" type="com.mybillr.db.struts.actions.FriendsFindWhereFriendsWithEqualsAction">
+      <forward name="success" path=".friends.findWhereFriendsWithEquals.results" />
+      <forward name="failure" path=".friends.findWhereFriendsWithEquals.form" />
     </action>
-    <action path="/Geoip" parameter=".geoip.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
-    <action path="/GeoipInsert" name="Geoip" validate="false" type="com.mybillr.app.struts.actions.GeoipInsertAction">
-      <forward name="success" path=".geoip.edit" />
+    <action path="/Group" parameter=".group.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
+    <action path="/GroupInsert" name="Group" validate="false" type="com.mybillr.db.struts.actions.GroupInsertAction">
+      <forward name="success" path=".group.edit" />
     </action>
-    <action path="/GeoipSave" name="Geoip" type="com.mybillr.app.struts.actions.GeoipSaveAction" input=".geoip.edit">
-      <forward name="success" path=".geoip.index" />
-      <forward name="failure" path=".geoip.edit" />
+    <action path="/GroupUpdate" name="Group" validate="false" type="com.mybillr.db.struts.actions.GroupUpdateAction">
+      <forward name="success" path=".group.edit" />
     </action>
-    <action path="/GeoipFindAll" forward=".geoip.findAll.form" />
-    <action path="/GeoipFindAllResults" name="GeoipFindAll" validate="false" type="com.mybillr.app.struts.actions.GeoipFindAllAction">
-      <forward name="success" path=".geoip.findAll.results" />
-      <forward name="failure" path=".geoip.findAll.form" />
+    <action path="/GroupDelete" name="Group" validate="false" type="com.mybillr.db.struts.actions.GroupDeleteAction">
+      <forward name="success" path=".group.edit" />
     </action>
-    <action path="/GeoipFindWhereStartEquals" forward=".geoip.findWhereStartEquals.form" />
-    <action path="/GeoipFindWhereStartEqualsResults" name="GeoipFindWhereStartEquals" validate="false" type="com.mybillr.app.struts.actions.GeoipFindWhereStartEqualsAction">
-      <forward name="success" path=".geoip.findWhereStartEquals.results" />
-      <forward name="failure" path=".geoip.findWhereStartEquals.form" />
+    <action path="/GroupSave" name="Group" type="com.mybillr.db.struts.actions.GroupSaveAction" input=".group.edit">
+      <forward name="success" path=".group.index" />
+      <forward name="failure" path=".group.edit" />
     </action>
-    <action path="/GeoipFindWhereEndEquals" forward=".geoip.findWhereEndEquals.form" />
-    <action path="/GeoipFindWhereEndEqualsResults" name="GeoipFindWhereEndEquals" validate="false" type="com.mybillr.app.struts.actions.GeoipFindWhereEndEqualsAction">
-      <forward name="success" path=".geoip.findWhereEndEquals.results" />
-      <forward name="failure" path=".geoip.findWhereEndEquals.form" />
+    <action path="/GroupFindByPrimaryKey" forward=".group.findByPrimaryKey.form" />
+    <action path="/GroupFindByPrimaryKeyResults" name="GroupFindByPrimaryKey" validate="false" type="com.mybillr.db.struts.actions.GroupFindByPrimaryKeyAction">
+      <forward name="view" path=".group.view" />
+      <forward name="update" path=".group.edit" />
+      <forward name="failure" path=".group.findByPrimaryKey.form" />
     </action>
-    <action path="/GeoipFindWhereStartIntEquals" forward=".geoip.findWhereStartIntEquals.form" />
-    <action path="/GeoipFindWhereStartIntEqualsResults" name="GeoipFindWhereStartIntEquals" validate="false" type="com.mybillr.app.struts.actions.GeoipFindWhereStartIntEqualsAction">
-      <forward name="success" path=".geoip.findWhereStartIntEquals.results" />
-      <forward name="failure" path=".geoip.findWhereStartIntEquals.form" />
+    <action path="/GroupFindAll" forward=".group.findAll.form" />
+    <action path="/GroupFindAllResults" name="GroupFindAll" validate="false" type="com.mybillr.db.struts.actions.GroupFindAllAction">
+      <forward name="success" path=".group.findAll.results" />
+      <forward name="failure" path=".group.findAll.form" />
     </action>
-    <action path="/GeoipFindWhereEndIntEquals" forward=".geoip.findWhereEndIntEquals.form" />
-    <action path="/GeoipFindWhereEndIntEqualsResults" name="GeoipFindWhereEndIntEquals" validate="false" type="com.mybillr.app.struts.actions.GeoipFindWhereEndIntEqualsAction">
-      <forward name="success" path=".geoip.findWhereEndIntEquals.results" />
-      <forward name="failure" path=".geoip.findWhereEndIntEquals.form" />
+    <action path="/GroupFindWhereIdEquals" forward=".group.findWhereIdEquals.form" />
+    <action path="/GroupFindWhereIdEqualsResults" name="GroupFindWhereIdEquals" validate="false" type="com.mybillr.db.struts.actions.GroupFindWhereIdEqualsAction">
+      <forward name="success" path=".group.findWhereIdEquals.results" />
+      <forward name="failure" path=".group.findWhereIdEquals.form" />
     </action>
-    <action path="/GeoipFindWhereCountrySymbolEquals" forward=".geoip.findWhereCountrySymbolEquals.form" />
-    <action path="/GeoipFindWhereCountrySymbolEqualsResults" name="GeoipFindWhereCountrySymbolEquals" validate="false" type="com.mybillr.app.struts.actions.GeoipFindWhereCountrySymbolEqualsAction">
-      <forward name="success" path=".geoip.findWhereCountrySymbolEquals.results" />
-      <forward name="failure" path=".geoip.findWhereCountrySymbolEquals.form" />
+    <action path="/GroupFindWhereNameEquals" forward=".group.findWhereNameEquals.form" />
+    <action path="/GroupFindWhereNameEqualsResults" name="GroupFindWhereNameEquals" validate="false" type="com.mybillr.db.struts.actions.GroupFindWhereNameEqualsAction">
+      <forward name="success" path=".group.findWhereNameEquals.results" />
+      <forward name="failure" path=".group.findWhereNameEquals.form" />
     </action>
-    <action path="/GeoipFindWhereCountryEquals" forward=".geoip.findWhereCountryEquals.form" />
-    <action path="/GeoipFindWhereCountryEqualsResults" name="GeoipFindWhereCountryEquals" validate="false" type="com.mybillr.app.struts.actions.GeoipFindWhereCountryEqualsAction">
-      <forward name="success" path=".geoip.findWhereCountryEquals.results" />
-      <forward name="failure" path=".geoip.findWhereCountryEquals.form" />
+    <action path="/GroupMembers" parameter=".groupMembers.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
+    <action path="/GroupMembersInsert" name="GroupMembers" validate="false" type="com.mybillr.db.struts.actions.GroupMembersInsertAction">
+      <forward name="success" path=".groupMembers.edit" />
     </action>
-    <action path="/Groups" parameter=".groups.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
-    <action path="/GroupsInsert" name="Groups" validate="false" type="com.mybillr.app.struts.actions.GroupsInsertAction">
-      <forward name="success" path=".groups.edit" />
+    <action path="/GroupMembersUpdate" name="GroupMembers" validate="false" type="com.mybillr.db.struts.actions.GroupMembersUpdateAction">
+      <forward name="success" path=".groupMembers.edit" />
     </action>
-    <action path="/GroupsUpdate" name="Groups" validate="false" type="com.mybillr.app.struts.actions.GroupsUpdateAction">
-      <forward name="success" path=".groups.edit" />
+    <action path="/GroupMembersDelete" name="GroupMembers" validate="false" type="com.mybillr.db.struts.actions.GroupMembersDeleteAction">
+      <forward name="success" path=".groupMembers.edit" />
     </action>
-    <action path="/GroupsDelete" name="Groups" validate="false" type="com.mybillr.app.struts.actions.GroupsDeleteAction">
-      <forward name="success" path=".groups.edit" />
+    <action path="/GroupMembersSave" name="GroupMembers" type="com.mybillr.db.struts.actions.GroupMembersSaveAction" input=".groupMembers.edit">
+      <forward name="success" path=".groupMembers.index" />
+      <forward name="failure" path=".groupMembers.edit" />
     </action>
-    <action path="/GroupsSave" name="Groups" type="com.mybillr.app.struts.actions.GroupsSaveAction" input=".groups.edit">
-      <forward name="success" path=".groups.index" />
-      <forward name="failure" path=".groups.edit" />
+    <action path="/GroupMembersFindByPrimaryKey" forward=".groupMembers.findByPrimaryKey.form" />
+    <action path="/GroupMembersFindByPrimaryKeyResults" name="GroupMembersFindByPrimaryKey" validate="false" type="com.mybillr.db.struts.actions.GroupMembersFindByPrimaryKeyAction">
+      <forward name="view" path=".groupMembers.view" />
+      <forward name="update" path=".groupMembers.edit" />
+      <forward name="failure" path=".groupMembers.findByPrimaryKey.form" />
     </action>
-    <action path="/GroupsFindByPrimaryKey" forward=".groups.findByPrimaryKey.form" />
-    <action path="/GroupsFindByPrimaryKeyResults" name="GroupsFindByPrimaryKey" validate="false" type="com.mybillr.app.struts.actions.GroupsFindByPrimaryKeyAction">
-      <forward name="view" path=".groups.view" />
-      <forward name="update" path=".groups.edit" />
-      <forward name="failure" path=".groups.findByPrimaryKey.form" />
+    <action path="/GroupMembersFindAll" forward=".groupMembers.findAll.form" />
+    <action path="/GroupMembersFindAllResults" name="GroupMembersFindAll" validate="false" type="com.mybillr.db.struts.actions.GroupMembersFindAllAction">
+      <forward name="success" path=".groupMembers.findAll.results" />
+      <forward name="failure" path=".groupMembers.findAll.form" />
     </action>
-    <action path="/GroupsFindAll" forward=".groups.findAll.form" />
-    <action path="/GroupsFindAllResults" name="GroupsFindAll" validate="false" type="com.mybillr.app.struts.actions.GroupsFindAllAction">
-      <forward name="success" path=".groups.findAll.results" />
-      <forward name="failure" path=".groups.findAll.form" />
+    <action path="/GroupMembersFindByGroup" forward=".groupMembers.findByGroup.form" />
+    <action path="/GroupMembersFindByGroupResults" name="GroupMembersFindByGroup" validate="false" type="com.mybillr.db.struts.actions.GroupMembersFindByGroupAction">
+      <forward name="success" path=".groupMembers.findByGroup.results" />
+      <forward name="failure" path=".groupMembers.findByGroup.form" />
     </action>
-    <action path="/GroupsFindByUser" forward=".groups.findByUser.form" />
-    <action path="/GroupsFindByUserResults" name="GroupsFindByUser" validate="false" type="com.mybillr.app.struts.actions.GroupsFindByUserAction">
-      <forward name="success" path=".groups.findByUser.results" />
-      <forward name="failure" path=".groups.findByUser.form" />
+    <action path="/GroupMembersFindByUser" forward=".groupMembers.findByUser.form" />
+    <action path="/GroupMembersFindByUserResults" name="GroupMembersFindByUser" validate="false" type="com.mybillr.db.struts.actions.GroupMembersFindByUserAction">
+      <forward name="success" path=".groupMembers.findByUser.results" />
+      <forward name="failure" path=".groupMembers.findByUser.form" />
     </action>
-    <action path="/GroupsFindWhereIdEquals" forward=".groups.findWhereIdEquals.form" />
-    <action path="/GroupsFindWhereIdEqualsResults" name="GroupsFindWhereIdEquals" validate="false" type="com.mybillr.app.struts.actions.GroupsFindWhereIdEqualsAction">
-      <forward name="success" path=".groups.findWhereIdEquals.results" />
-      <forward name="failure" path=".groups.findWhereIdEquals.form" />
+    <action path="/GroupMembersFindWhereGroupIdEquals" forward=".groupMembers.findWhereGroupIdEquals.form" />
+    <action path="/GroupMembersFindWhereGroupIdEqualsResults" name="GroupMembersFindWhereGroupIdEquals" validate="false" type="com.mybillr.db.struts.actions.GroupMembersFindWhereGroupIdEqualsAction">
+      <forward name="success" path=".groupMembers.findWhereGroupIdEquals.results" />
+      <forward name="failure" path=".groupMembers.findWhereGroupIdEquals.form" />
     </action>
-    <action path="/GroupsFindWhereNameEquals" forward=".groups.findWhereNameEquals.form" />
-    <action path="/GroupsFindWhereNameEqualsResults" name="GroupsFindWhereNameEquals" validate="false" type="com.mybillr.app.struts.actions.GroupsFindWhereNameEqualsAction">
-      <forward name="success" path=".groups.findWhereNameEquals.results" />
-      <forward name="failure" path=".groups.findWhereNameEquals.form" />
+    <action path="/GroupMembersFindWhereUserIdEquals" forward=".groupMembers.findWhereUserIdEquals.form" />
+    <action path="/GroupMembersFindWhereUserIdEqualsResults" name="GroupMembersFindWhereUserIdEquals" validate="false" type="com.mybillr.db.struts.actions.GroupMembersFindWhereUserIdEqualsAction">
+      <forward name="success" path=".groupMembers.findWhereUserIdEquals.results" />
+      <forward name="failure" path=".groupMembers.findWhereUserIdEquals.form" />
     </action>
-    <action path="/GroupsFindWhereMemberIdEquals" forward=".groups.findWhereMemberIdEquals.form" />
-    <action path="/GroupsFindWhereMemberIdEqualsResults" name="GroupsFindWhereMemberIdEquals" validate="false" type="com.mybillr.app.struts.actions.GroupsFindWhereMemberIdEqualsAction">
-      <forward name="success" path=".groups.findWhereMemberIdEquals.results" />
-      <forward name="failure" path=".groups.findWhereMemberIdEquals.form" />
+    <action path="/PasswordReset" parameter=".passwordReset.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
+    <action path="/PasswordResetInsert" name="PasswordReset" validate="false" type="com.mybillr.db.struts.actions.PasswordResetInsertAction">
+      <forward name="success" path=".passwordReset.edit" />
+    </action>
+    <action path="/PasswordResetUpdate" name="PasswordReset" validate="false" type="com.mybillr.db.struts.actions.PasswordResetUpdateAction">
+      <forward name="success" path=".passwordReset.edit" />
+    </action>
+    <action path="/PasswordResetDelete" name="PasswordReset" validate="false" type="com.mybillr.db.struts.actions.PasswordResetDeleteAction">
+      <forward name="success" path=".passwordReset.edit" />
+    </action>
+    <action path="/PasswordResetSave" name="PasswordReset" type="com.mybillr.db.struts.actions.PasswordResetSaveAction" input=".passwordReset.edit">
+      <forward name="success" path=".passwordReset.index" />
+      <forward name="failure" path=".passwordReset.edit" />
+    </action>
+    <action path="/PasswordResetFindByPrimaryKey" forward=".passwordReset.findByPrimaryKey.form" />
+    <action path="/PasswordResetFindByPrimaryKeyResults" name="PasswordResetFindByPrimaryKey" validate="false" type="com.mybillr.db.struts.actions.PasswordResetFindByPrimaryKeyAction">
+      <forward name="view" path=".passwordReset.view" />
+      <forward name="update" path=".passwordReset.edit" />
+      <forward name="failure" path=".passwordReset.findByPrimaryKey.form" />
+    </action>
+    <action path="/PasswordResetFindAll" forward=".passwordReset.findAll.form" />
+    <action path="/PasswordResetFindAllResults" name="PasswordResetFindAll" validate="false" type="com.mybillr.db.struts.actions.PasswordResetFindAllAction">
+      <forward name="success" path=".passwordReset.findAll.results" />
+      <forward name="failure" path=".passwordReset.findAll.form" />
+    </action>
+    <action path="/PasswordResetFindByUser" forward=".passwordReset.findByUser.form" />
+    <action path="/PasswordResetFindByUserResults" name="PasswordResetFindByUser" validate="false" type="com.mybillr.db.struts.actions.PasswordResetFindByUserAction">
+      <forward name="success" path=".passwordReset.findByUser.results" />
+      <forward name="failure" path=".passwordReset.findByUser.form" />
+    </action>
+    <action path="/PasswordResetFindWhereIdEquals" forward=".passwordReset.findWhereIdEquals.form" />
+    <action path="/PasswordResetFindWhereIdEqualsResults" name="PasswordResetFindWhereIdEquals" validate="false" type="com.mybillr.db.struts.actions.PasswordResetFindWhereIdEqualsAction">
+      <forward name="success" path=".passwordReset.findWhereIdEquals.results" />
+      <forward name="failure" path=".passwordReset.findWhereIdEquals.form" />
+    </action>
+    <action path="/PasswordResetFindWhereUserIdEquals" forward=".passwordReset.findWhereUserIdEquals.form" />
+    <action path="/PasswordResetFindWhereUserIdEqualsResults" name="PasswordResetFindWhereUserIdEquals" validate="false" type="com.mybillr.db.struts.actions.PasswordResetFindWhereUserIdEqualsAction">
+      <forward name="success" path=".passwordReset.findWhereUserIdEquals.results" />
+      <forward name="failure" path=".passwordReset.findWhereUserIdEquals.form" />
+    </action>
+    <action path="/PasswordResetFindWhereResetHashEquals" forward=".passwordReset.findWhereResetHashEquals.form" />
+    <action path="/PasswordResetFindWhereResetHashEqualsResults" name="PasswordResetFindWhereResetHashEquals" validate="false" type="com.mybillr.db.struts.actions.PasswordResetFindWhereResetHashEqualsAction">
+      <forward name="success" path=".passwordReset.findWhereResetHashEquals.results" />
+      <forward name="failure" path=".passwordReset.findWhereResetHashEquals.form" />
+    </action>
+    <action path="/User" parameter=".user.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
+    <action path="/UserInsert" name="User" validate="false" type="com.mybillr.db.struts.actions.UserInsertAction">
+      <forward name="success" path=".user.edit" />
+    </action>
+    <action path="/UserUpdate" name="User" validate="false" type="com.mybillr.db.struts.actions.UserUpdateAction">
+      <forward name="success" path=".user.edit" />
+    </action>
+    <action path="/UserDelete" name="User" validate="false" type="com.mybillr.db.struts.actions.UserDeleteAction">
+      <forward name="success" path=".user.edit" />
+    </action>
+    <action path="/UserSave" name="User" type="com.mybillr.db.struts.actions.UserSaveAction" input=".user.edit">
+      <forward name="success" path=".user.index" />
+      <forward name="failure" path=".user.edit" />
+    </action>
+    <action path="/UserFindByPrimaryKey" forward=".user.findByPrimaryKey.form" />
+    <action path="/UserFindByPrimaryKeyResults" name="UserFindByPrimaryKey" validate="false" type="com.mybillr.db.struts.actions.UserFindByPrimaryKeyAction">
+      <forward name="view" path=".user.view" />
+      <forward name="update" path=".user.edit" />
+      <forward name="failure" path=".user.findByPrimaryKey.form" />
+    </action>
+    <action path="/UserFindAll" forward=".user.findAll.form" />
+    <action path="/UserFindAllResults" name="UserFindAll" validate="false" type="com.mybillr.db.struts.actions.UserFindAllAction">
+      <forward name="success" path=".user.findAll.results" />
+      <forward name="failure" path=".user.findAll.form" />
+    </action>
+    <action path="/UserFindWhereIdEquals" forward=".user.findWhereIdEquals.form" />
+    <action path="/UserFindWhereIdEqualsResults" name="UserFindWhereIdEquals" validate="false" type="com.mybillr.db.struts.actions.UserFindWhereIdEqualsAction">
+      <forward name="success" path=".user.findWhereIdEquals.results" />
+      <forward name="failure" path=".user.findWhereIdEquals.form" />
+    </action>
+    <action path="/UserFindWhereEmailEquals" forward=".user.findWhereEmailEquals.form" />
+    <action path="/UserFindWhereEmailEqualsResults" name="UserFindWhereEmailEquals" validate="false" type="com.mybillr.db.struts.actions.UserFindWhereEmailEqualsAction">
+      <forward name="success" path=".user.findWhereEmailEquals.results" />
+      <forward name="failure" path=".user.findWhereEmailEquals.form" />
+    </action>
+    <action path="/UserFindWhereSaltEquals" forward=".user.findWhereSaltEquals.form" />
+    <action path="/UserFindWhereSaltEqualsResults" name="UserFindWhereSaltEquals" validate="false" type="com.mybillr.db.struts.actions.UserFindWhereSaltEqualsAction">
+      <forward name="success" path=".user.findWhereSaltEquals.results" />
+      <forward name="failure" path=".user.findWhereSaltEquals.form" />
+    </action>
+    <action path="/UserFindWherePasswordEquals" forward=".user.findWherePasswordEquals.form" />
+    <action path="/UserFindWherePasswordEqualsResults" name="UserFindWherePasswordEquals" validate="false" type="com.mybillr.db.struts.actions.UserFindWherePasswordEqualsAction">
+      <forward name="success" path=".user.findWherePasswordEquals.results" />
+      <forward name="failure" path=".user.findWherePasswordEquals.form" />
+    </action>
+    <action path="/UserFindWhereActiveEquals" forward=".user.findWhereActiveEquals.form" />
+    <action path="/UserFindWhereActiveEqualsResults" name="UserFindWhereActiveEquals" validate="false" type="com.mybillr.db.struts.actions.UserFindWhereActiveEqualsAction">
+      <forward name="success" path=".user.findWhereActiveEquals.results" />
+      <forward name="failure" path=".user.findWhereActiveEquals.form" />
+    </action>
+    <action path="/BugReportGeneral" parameter=".bugReportGeneral.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
+    <action path="/BugReportGeneralInsert" name="BugReportGeneral" validate="false" type="com.mybillr.db.struts.actions.BugReportGeneralInsertAction">
+      <forward name="success" path=".bugReportGeneral.edit" />
+    </action>
+    <action path="/BugReportGeneralUpdate" name="BugReportGeneral" validate="false" type="com.mybillr.db.struts.actions.BugReportGeneralUpdateAction">
+      <forward name="success" path=".bugReportGeneral.edit" />
+    </action>
+    <action path="/BugReportGeneralDelete" name="BugReportGeneral" validate="false" type="com.mybillr.db.struts.actions.BugReportGeneralDeleteAction">
+      <forward name="success" path=".bugReportGeneral.edit" />
+    </action>
+    <action path="/BugReportGeneralSave" name="BugReportGeneral" type="com.mybillr.db.struts.actions.BugReportGeneralSaveAction" input=".bugReportGeneral.edit">
+      <forward name="success" path=".bugReportGeneral.index" />
+      <forward name="failure" path=".bugReportGeneral.edit" />
+    </action>
+    <action path="/BugReportGeneralFindByPrimaryKey" forward=".bugReportGeneral.findByPrimaryKey.form" />
+    <action path="/BugReportGeneralFindByPrimaryKeyResults" name="BugReportGeneralFindByPrimaryKey" validate="false" type="com.mybillr.db.struts.actions.BugReportGeneralFindByPrimaryKeyAction">
+      <forward name="view" path=".bugReportGeneral.view" />
+      <forward name="update" path=".bugReportGeneral.edit" />
+      <forward name="failure" path=".bugReportGeneral.findByPrimaryKey.form" />
+    </action>
+    <action path="/BugReportGeneralFindAll" forward=".bugReportGeneral.findAll.form" />
+    <action path="/BugReportGeneralFindAllResults" name="BugReportGeneralFindAll" validate="false" type="com.mybillr.db.struts.actions.BugReportGeneralFindAllAction">
+      <forward name="success" path=".bugReportGeneral.findAll.results" />
+      <forward name="failure" path=".bugReportGeneral.findAll.form" />
+    </action>
+    <action path="/BugReportGeneralFindWhereIdEquals" forward=".bugReportGeneral.findWhereIdEquals.form" />
+    <action path="/BugReportGeneralFindWhereIdEqualsResults" name="BugReportGeneralFindWhereIdEquals" validate="false" type="com.mybillr.db.struts.actions.BugReportGeneralFindWhereIdEqualsAction">
+      <forward name="success" path=".bugReportGeneral.findWhereIdEquals.results" />
+      <forward name="failure" path=".bugReportGeneral.findWhereIdEquals.form" />
+    </action>
+    <action path="/BugReportGeneralFindWhereReportedByEquals" forward=".bugReportGeneral.findWhereReportedByEquals.form" />
+    <action path="/BugReportGeneralFindWhereReportedByEqualsResults" name="BugReportGeneralFindWhereReportedByEquals" validate="false" type="com.mybillr.db.struts.actions.BugReportGeneralFindWhereReportedByEqualsAction">
+      <forward name="success" path=".bugReportGeneral.findWhereReportedByEquals.results" />
+      <forward name="failure" path=".bugReportGeneral.findWhereReportedByEquals.form" />
+    </action>
+    <action path="/BugReportGeneralFindWhereTitleEquals" forward=".bugReportGeneral.findWhereTitleEquals.form" />
+    <action path="/BugReportGeneralFindWhereTitleEqualsResults" name="BugReportGeneralFindWhereTitleEquals" validate="false" type="com.mybillr.db.struts.actions.BugReportGeneralFindWhereTitleEqualsAction">
+      <forward name="success" path=".bugReportGeneral.findWhereTitleEquals.results" />
+      <forward name="failure" path=".bugReportGeneral.findWhereTitleEquals.form" />
+    </action>
+    <action path="/BugReportGeneralFindWhereBugEquals" forward=".bugReportGeneral.findWhereBugEquals.form" />
+    <action path="/BugReportGeneralFindWhereBugEqualsResults" name="BugReportGeneralFindWhereBugEquals" validate="false" type="com.mybillr.db.struts.actions.BugReportGeneralFindWhereBugEqualsAction">
+      <forward name="success" path=".bugReportGeneral.findWhereBugEquals.results" />
+      <forward name="failure" path=".bugReportGeneral.findWhereBugEquals.form" />
+    </action>
+    <action path="/BugReportUser" parameter=".bugReportUser.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
+    <action path="/BugReportUserInsert" name="BugReportUser" validate="false" type="com.mybillr.db.struts.actions.BugReportUserInsertAction">
+      <forward name="success" path=".bugReportUser.edit" />
+    </action>
+    <action path="/BugReportUserUpdate" name="BugReportUser" validate="false" type="com.mybillr.db.struts.actions.BugReportUserUpdateAction">
+      <forward name="success" path=".bugReportUser.edit" />
+    </action>
+    <action path="/BugReportUserDelete" name="BugReportUser" validate="false" type="com.mybillr.db.struts.actions.BugReportUserDeleteAction">
+      <forward name="success" path=".bugReportUser.edit" />
+    </action>
+    <action path="/BugReportUserSave" name="BugReportUser" type="com.mybillr.db.struts.actions.BugReportUserSaveAction" input=".bugReportUser.edit">
+      <forward name="success" path=".bugReportUser.index" />
+      <forward name="failure" path=".bugReportUser.edit" />
+    </action>
+    <action path="/BugReportUserFindByPrimaryKey" forward=".bugReportUser.findByPrimaryKey.form" />
+    <action path="/BugReportUserFindByPrimaryKeyResults" name="BugReportUserFindByPrimaryKey" validate="false" type="com.mybillr.db.struts.actions.BugReportUserFindByPrimaryKeyAction">
+      <forward name="view" path=".bugReportUser.view" />
+      <forward name="update" path=".bugReportUser.edit" />
+      <forward name="failure" path=".bugReportUser.findByPrimaryKey.form" />
+    </action>
+    <action path="/BugReportUserFindAll" forward=".bugReportUser.findAll.form" />
+    <action path="/BugReportUserFindAllResults" name="BugReportUserFindAll" validate="false" type="com.mybillr.db.struts.actions.BugReportUserFindAllAction">
+      <forward name="success" path=".bugReportUser.findAll.results" />
+      <forward name="failure" path=".bugReportUser.findAll.form" />
+    </action>
+    <action path="/BugReportUserFindByUser" forward=".bugReportUser.findByUser.form" />
+    <action path="/BugReportUserFindByUserResults" name="BugReportUserFindByUser" validate="false" type="com.mybillr.db.struts.actions.BugReportUserFindByUserAction">
+      <forward name="success" path=".bugReportUser.findByUser.results" />
+      <forward name="failure" path=".bugReportUser.findByUser.form" />
+    </action>
+    <action path="/BugReportUserFindWhereIdEquals" forward=".bugReportUser.findWhereIdEquals.form" />
+    <action path="/BugReportUserFindWhereIdEqualsResults" name="BugReportUserFindWhereIdEquals" validate="false" type="com.mybillr.db.struts.actions.BugReportUserFindWhereIdEqualsAction">
+      <forward name="success" path=".bugReportUser.findWhereIdEquals.results" />
+      <forward name="failure" path=".bugReportUser.findWhereIdEquals.form" />
+    </action>
+    <action path="/BugReportUserFindWhereReportedByEquals" forward=".bugReportUser.findWhereReportedByEquals.form" />
+    <action path="/BugReportUserFindWhereReportedByEqualsResults" name="BugReportUserFindWhereReportedByEquals" validate="false" type="com.mybillr.db.struts.actions.BugReportUserFindWhereReportedByEqualsAction">
+      <forward name="success" path=".bugReportUser.findWhereReportedByEquals.results" />
+      <forward name="failure" path=".bugReportUser.findWhereReportedByEquals.form" />
+    </action>
+    <action path="/BugReportUserFindWhereTitleEquals" forward=".bugReportUser.findWhereTitleEquals.form" />
+    <action path="/BugReportUserFindWhereTitleEqualsResults" name="BugReportUserFindWhereTitleEquals" validate="false" type="com.mybillr.db.struts.actions.BugReportUserFindWhereTitleEqualsAction">
+      <forward name="success" path=".bugReportUser.findWhereTitleEquals.results" />
+      <forward name="failure" path=".bugReportUser.findWhereTitleEquals.form" />
+    </action>
+    <action path="/BugReportUserFindWhereBugEquals" forward=".bugReportUser.findWhereBugEquals.form" />
+    <action path="/BugReportUserFindWhereBugEqualsResults" name="BugReportUserFindWhereBugEquals" validate="false" type="com.mybillr.db.struts.actions.BugReportUserFindWhereBugEqualsAction">
+      <forward name="success" path=".bugReportUser.findWhereBugEquals.results" />
+      <forward name="failure" path=".bugReportUser.findWhereBugEquals.form" />
+    </action>
+    <action path="/EmailsSent" parameter=".emailsSent.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
+    <action path="/EmailsSentInsert" name="EmailsSent" validate="false" type="com.mybillr.db.struts.actions.EmailsSentInsertAction">
+      <forward name="success" path=".emailsSent.edit" />
+    </action>
+    <action path="/EmailsSentUpdate" name="EmailsSent" validate="false" type="com.mybillr.db.struts.actions.EmailsSentUpdateAction">
+      <forward name="success" path=".emailsSent.edit" />
+    </action>
+    <action path="/EmailsSentDelete" name="EmailsSent" validate="false" type="com.mybillr.db.struts.actions.EmailsSentDeleteAction">
+      <forward name="success" path=".emailsSent.edit" />
+    </action>
+    <action path="/EmailsSentSave" name="EmailsSent" type="com.mybillr.db.struts.actions.EmailsSentSaveAction" input=".emailsSent.edit">
+      <forward name="success" path=".emailsSent.index" />
+      <forward name="failure" path=".emailsSent.edit" />
+    </action>
+    <action path="/EmailsSentFindByPrimaryKey" forward=".emailsSent.findByPrimaryKey.form" />
+    <action path="/EmailsSentFindByPrimaryKeyResults" name="EmailsSentFindByPrimaryKey" validate="false" type="com.mybillr.db.struts.actions.EmailsSentFindByPrimaryKeyAction">
+      <forward name="view" path=".emailsSent.view" />
+      <forward name="update" path=".emailsSent.edit" />
+      <forward name="failure" path=".emailsSent.findByPrimaryKey.form" />
+    </action>
+    <action path="/EmailsSentFindAll" forward=".emailsSent.findAll.form" />
+    <action path="/EmailsSentFindAllResults" name="EmailsSentFindAll" validate="false" type="com.mybillr.db.struts.actions.EmailsSentFindAllAction">
+      <forward name="success" path=".emailsSent.findAll.results" />
+      <forward name="failure" path=".emailsSent.findAll.form" />
+    </action>
+    <action path="/EmailsSentFindByUser" forward=".emailsSent.findByUser.form" />
+    <action path="/EmailsSentFindByUserResults" name="EmailsSentFindByUser" validate="false" type="com.mybillr.db.struts.actions.EmailsSentFindByUserAction">
+      <forward name="success" path=".emailsSent.findByUser.results" />
+      <forward name="failure" path=".emailsSent.findByUser.form" />
+    </action>
+    <action path="/EmailsSentFindByUser2" forward=".emailsSent.findByUser2.form" />
+    <action path="/EmailsSentFindByUser2Results" name="EmailsSentFindByUser2" validate="false" type="com.mybillr.db.struts.actions.EmailsSentFindByUser2Action">
+      <forward name="success" path=".emailsSent.findByUser2.results" />
+      <forward name="failure" path=".emailsSent.findByUser2.form" />
+    </action>
+    <action path="/EmailsSentFindWhereIdEquals" forward=".emailsSent.findWhereIdEquals.form" />
+    <action path="/EmailsSentFindWhereIdEqualsResults" name="EmailsSentFindWhereIdEquals" validate="false" type="com.mybillr.db.struts.actions.EmailsSentFindWhereIdEqualsAction">
+      <forward name="success" path=".emailsSent.findWhereIdEquals.results" />
+      <forward name="failure" path=".emailsSent.findWhereIdEquals.form" />
+    </action>
+    <action path="/EmailsSentFindWhereSenderIdEquals" forward=".emailsSent.findWhereSenderIdEquals.form" />
+    <action path="/EmailsSentFindWhereSenderIdEqualsResults" name="EmailsSentFindWhereSenderIdEquals" validate="false" type="com.mybillr.db.struts.actions.EmailsSentFindWhereSenderIdEqualsAction">
+      <forward name="success" path=".emailsSent.findWhereSenderIdEquals.results" />
+      <forward name="failure" path=".emailsSent.findWhereSenderIdEquals.form" />
+    </action>
+    <action path="/EmailsSentFindWhereReceiverIdEquals" forward=".emailsSent.findWhereReceiverIdEquals.form" />
+    <action path="/EmailsSentFindWhereReceiverIdEqualsResults" name="EmailsSentFindWhereReceiverIdEquals" validate="false" type="com.mybillr.db.struts.actions.EmailsSentFindWhereReceiverIdEqualsAction">
+      <forward name="success" path=".emailsSent.findWhereReceiverIdEquals.results" />
+      <forward name="failure" path=".emailsSent.findWhereReceiverIdEquals.form" />
+    </action>
+    <action path="/EmailsSentFindWhereSubjectEquals" forward=".emailsSent.findWhereSubjectEquals.form" />
+    <action path="/EmailsSentFindWhereSubjectEqualsResults" name="EmailsSentFindWhereSubjectEquals" validate="false" type="com.mybillr.db.struts.actions.EmailsSentFindWhereSubjectEqualsAction">
+      <forward name="success" path=".emailsSent.findWhereSubjectEquals.results" />
+      <forward name="failure" path=".emailsSent.findWhereSubjectEquals.form" />
+    </action>
+    <action path="/EmailsSentFindWhereContentEquals" forward=".emailsSent.findWhereContentEquals.form" />
+    <action path="/EmailsSentFindWhereContentEqualsResults" name="EmailsSentFindWhereContentEquals" validate="false" type="com.mybillr.db.struts.actions.EmailsSentFindWhereContentEqualsAction">
+      <forward name="success" path=".emailsSent.findWhereContentEquals.results" />
+      <forward name="failure" path=".emailsSent.findWhereContentEquals.form" />
     </action>
     <action path="/News" parameter=".news.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
-    <action path="/NewsInsert" name="News" validate="false" type="com.mybillr.app.struts.actions.NewsInsertAction">
+    <action path="/NewsInsert" name="News" validate="false" type="com.mybillr.db.struts.actions.NewsInsertAction">
       <forward name="success" path=".news.edit" />
     </action>
-    <action path="/NewsUpdate" name="News" validate="false" type="com.mybillr.app.struts.actions.NewsUpdateAction">
+    <action path="/NewsUpdate" name="News" validate="false" type="com.mybillr.db.struts.actions.NewsUpdateAction">
       <forward name="success" path=".news.edit" />
     </action>
-    <action path="/NewsDelete" name="News" validate="false" type="com.mybillr.app.struts.actions.NewsDeleteAction">
+    <action path="/NewsDelete" name="News" validate="false" type="com.mybillr.db.struts.actions.NewsDeleteAction">
       <forward name="success" path=".news.edit" />
     </action>
-    <action path="/NewsSave" name="News" type="com.mybillr.app.struts.actions.NewsSaveAction" input=".news.edit">
+    <action path="/NewsSave" name="News" type="com.mybillr.db.struts.actions.NewsSaveAction" input=".news.edit">
       <forward name="success" path=".news.index" />
       <forward name="failure" path=".news.edit" />
     </action>
     <action path="/NewsFindByPrimaryKey" forward=".news.findByPrimaryKey.form" />
-    <action path="/NewsFindByPrimaryKeyResults" name="NewsFindByPrimaryKey" validate="false" type="com.mybillr.app.struts.actions.NewsFindByPrimaryKeyAction">
+    <action path="/NewsFindByPrimaryKeyResults" name="NewsFindByPrimaryKey" validate="false" type="com.mybillr.db.struts.actions.NewsFindByPrimaryKeyAction">
       <forward name="view" path=".news.view" />
       <forward name="update" path=".news.edit" />
       <forward name="failure" path=".news.findByPrimaryKey.form" />
     </action>
     <action path="/NewsFindAll" forward=".news.findAll.form" />
-    <action path="/NewsFindAllResults" name="NewsFindAll" validate="false" type="com.mybillr.app.struts.actions.NewsFindAllAction">
+    <action path="/NewsFindAllResults" name="NewsFindAll" validate="false" type="com.mybillr.db.struts.actions.NewsFindAllAction">
       <forward name="success" path=".news.findAll.results" />
       <forward name="failure" path=".news.findAll.form" />
     </action>
     <action path="/NewsFindWhereIdEquals" forward=".news.findWhereIdEquals.form" />
-    <action path="/NewsFindWhereIdEqualsResults" name="NewsFindWhereIdEquals" validate="false" type="com.mybillr.app.struts.actions.NewsFindWhereIdEqualsAction">
+    <action path="/NewsFindWhereIdEqualsResults" name="NewsFindWhereIdEquals" validate="false" type="com.mybillr.db.struts.actions.NewsFindWhereIdEqualsAction">
       <forward name="success" path=".news.findWhereIdEquals.results" />
       <forward name="failure" path=".news.findWhereIdEquals.form" />
     </action>
+    <action path="/NewsFindWhereTitleEquals" forward=".news.findWhereTitleEquals.form" />
+    <action path="/NewsFindWhereTitleEqualsResults" name="NewsFindWhereTitleEquals" validate="false" type="com.mybillr.db.struts.actions.NewsFindWhereTitleEqualsAction">
+      <forward name="success" path=".news.findWhereTitleEquals.results" />
+      <forward name="failure" path=".news.findWhereTitleEquals.form" />
+    </action>
     <action path="/NewsFindWhereContentEquals" forward=".news.findWhereContentEquals.form" />
-    <action path="/NewsFindWhereContentEqualsResults" name="NewsFindWhereContentEquals" validate="false" type="com.mybillr.app.struts.actions.NewsFindWhereContentEqualsAction">
+    <action path="/NewsFindWhereContentEqualsResults" name="NewsFindWhereContentEquals" validate="false" type="com.mybillr.db.struts.actions.NewsFindWhereContentEqualsAction">
       <forward name="success" path=".news.findWhereContentEquals.results" />
       <forward name="failure" path=".news.findWhereContentEquals.form" />
     </action>
-    <action path="/NewsFindWhereDatedEquals" forward=".news.findWhereDatedEquals.form" />
-    <action path="/NewsFindWhereDatedEqualsResults" name="NewsFindWhereDatedEquals" validate="false" type="com.mybillr.app.struts.actions.NewsFindWhereDatedEqualsAction">
-      <forward name="success" path=".news.findWhereDatedEquals.results" />
-      <forward name="failure" path=".news.findWhereDatedEquals.form" />
+    <action path="/Table1" parameter=".table1.index" type="org.apache.struts.actions.ForwardAction" validate="false" />
+    <action path="/Table1Insert" name="Table1" validate="false" type="com.mybillr.db.struts.actions.Table1InsertAction">
+      <forward name="success" path=".table1.edit" />
+    </action>
+    <action path="/Table1Update" name="Table1" validate="false" type="com.mybillr.db.struts.actions.Table1UpdateAction">
+      <forward name="success" path=".table1.edit" />
+    </action>
+    <action path="/Table1Delete" name="Table1" validate="false" type="com.mybillr.db.struts.actions.Table1DeleteAction">
+      <forward name="success" path=".table1.edit" />
+    </action>
+    <action path="/Table1Save" name="Table1" type="com.mybillr.db.struts.actions.Table1SaveAction" input=".table1.edit">
+      <forward name="success" path=".table1.index" />
+      <forward name="failure" path=".table1.edit" />
+    </action>
+    <action path="/Table1FindByPrimaryKey" forward=".table1.findByPrimaryKey.form" />
+    <action path="/Table1FindByPrimaryKeyResults" name="Table1FindByPrimaryKey" validate="false" type="com.mybillr.db.struts.actions.Table1FindByPrimaryKeyAction">
+      <forward name="view" path=".table1.view" />
+      <forward name="update" path=".table1.edit" />
+      <forward name="failure" path=".table1.findByPrimaryKey.form" />
+    </action>
+    <action path="/Table1FindAll" forward=".table1.findAll.form" />
+    <action path="/Table1FindAllResults" name="Table1FindAll" validate="false" type="com.mybillr.db.struts.actions.Table1FindAllAction">
+      <forward name="success" path=".table1.findAll.results" />
+      <forward name="failure" path=".table1.findAll.form" />
+    </action>
+    <action path="/Table1FindWhereIdEquals" forward=".table1.findWhereIdEquals.form" />
+    <action path="/Table1FindWhereIdEqualsResults" name="Table1FindWhereIdEquals" validate="false" type="com.mybillr.db.struts.actions.Table1FindWhereIdEqualsAction">
+      <forward name="success" path=".table1.findWhereIdEquals.results" />
+      <forward name="failure" path=".table1.findWhereIdEquals.form" />
+    </action>
+    <action path="/Table1FindWhereNameEquals" forward=".table1.findWhereNameEquals.form" />
+    <action path="/Table1FindWhereNameEqualsResults" name="Table1FindWhereNameEquals" validate="false" type="com.mybillr.db.struts.actions.Table1FindWhereNameEqualsAction">
+      <forward name="success" path=".table1.findWhereNameEquals.results" />
+      <forward name="failure" path=".table1.findWhereNameEquals.form" />
+    </action>
+    <action path="/Table1FindWhereSymbolEquals" forward=".table1.findWhereSymbolEquals.form" />
+    <action path="/Table1FindWhereSymbolEqualsResults" name="Table1FindWhereSymbolEquals" validate="false" type="com.mybillr.db.struts.actions.Table1FindWhereSymbolEqualsAction">
+      <forward name="success" path=".table1.findWhereSymbolEquals.results" />
+      <forward name="failure" path=".table1.findWhereSymbolEquals.form" />
+    </action>
+    <action path="/Table1FindWhereRateEquals" forward=".table1.findWhereRateEquals.form" />
+    <action path="/Table1FindWhereRateEqualsResults" name="Table1FindWhereRateEquals" validate="false" type="com.mybillr.db.struts.actions.Table1FindWhereRateEqualsAction">
+      <forward name="success" path=".table1.findWhereRateEquals.results" />
+      <forward name="failure" path=".table1.findWhereRateEquals.form" />
     </action>
   </action-mappings>
   <!-- ===================================== Controller Configuration -->

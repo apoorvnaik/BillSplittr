@@ -11,20 +11,8 @@
 <td><html:text property="id" readonly="false"size="30" /></td>
 </tr>
 <tr>
-<td>fname:</td>
-<td><html:text property="fname" readonly="false"size="30" /></td>
-</tr>
-<tr>
-<td>lname:</td>
-<td><html:text property="lname" readonly="false"size="30" /></td>
-</tr>
-<tr>
 <td>email:</td>
 <td><html:text property="email" readonly="false"size="30" /></td>
-</tr>
-<tr>
-<td>phone:</td>
-<td><html:text property="phone" readonly="false"size="30" /></td>
 </tr>
 <tr>
 <td>salt:</td>
@@ -35,16 +23,8 @@
 <td><html:text property="password" readonly="false"size="30" /></td>
 </tr>
 <tr>
-<td>createdOn:</td>
-<td><html:text property="createdOn" readonly="false"size="30" /></td>
-</tr>
-<tr>
-<td>updatedOn:</td>
-<td><html:text property="updatedOn" readonly="false"size="30" /></td>
-</tr>
-<tr>
-<td>lastLogged:</td>
-<td><html:text property="lastLogged" readonly="false"size="30" /></td>
+<td>active:</td>
+<td><html:text property="active" readonly="false"size="30" /></td>
 </tr>
 </table>
 <html:submit/>

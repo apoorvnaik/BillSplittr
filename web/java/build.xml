@@ -5,9 +5,9 @@
     <javac destdir="classes">
       <src path="src" />
       <classpath>
-        <pathelement location="C:\Program Files (x86)\FireStormDAO-4.0.1\jars\hibernate3.jar" />
-        <pathelement location="C:\Program Files (x86)\FireStormDAO-4.0.1\jars\j2ee.jar" />
-        <pathelement location="C:\Program Files (x86)\FireStormDAO-4.0.1\jars\log4j-1.2.8.jar" />
+        <pathelement location="/home/anaik/FireStormDAO-4.0.1/jars/hibernate3.jar" />
+        <pathelement location="/home/anaik/FireStormDAO-4.0.1/jars/j2ee.jar" />
+        <pathelement location="/home/anaik/FireStormDAO-4.0.1/jars/log4j-1.2.8.jar" />
         <pathelement location="webapp/WEB-INF/lib/struts.jar" />
       </classpath>
     </javac>
@@ -16,7 +16,7 @@
     </jar>
     <war destfile="mybillr.war" baseDir="webapp" webxml="webapp/WEB-INF/web.xml">
       <lib file="mybillr.jar" />
-      <lib file="C:\Program Files (x86)\FireStormDAO-4.0.1\jars\log4j-1.2.8.jar" />
+      <lib file="/home/anaik/FireStormDAO-4.0.1/jars/log4j-1.2.8.jar" />
     </war>
     <ear destfile="mybillr.ear" appxml="application.xml">
       <fileset dir="." includes="mybillr*.jar,mybillr*.war" />

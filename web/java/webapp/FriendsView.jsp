@@ -9,14 +9,14 @@
 <td><bean:write name="Friends" property="userId" /></td>
 </tr>
 <tr>
-<td>friendId:</td>
-<td><bean:write name="Friends" property="friendId" /></td>
+<td>friendsWith:</td>
+<td><bean:write name="Friends" property="friendsWith" /></td>
 </tr>
 </table>
 <html:form action="FriendsFindByPrimaryKeyResults.do" >
 <input type="hidden" name="crudMethod" value="update" />
 <html:hidden property="userId" />
-<html:hidden property="friendId" />
+<html:hidden property="friendsWith" />
 <input type="submit" value="Edit"/>
 </html:form>
 <hr>

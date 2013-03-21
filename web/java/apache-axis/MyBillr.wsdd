@@ -1,55 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <wsdd:deployment xmlns:wsdd="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
-  <wsdd:service name="BugReportService" provider="java:RPC">
-    <parameter name="className" value="com.mybillr.app.jdbc.BugReportDaoImpl" />
+  <wsdd:service name="AccountActivationService" provider="java:RPC">
+    <parameter name="className" value="com.mybillr.db.jdbc.AccountActivationDaoImpl" />
     <parameter name="allowedMethods" value="*" />
   </wsdd:service>
-  <wsdd:service name="EmailSentService" provider="java:RPC">
-    <parameter name="className" value="com.mybillr.app.jdbc.EmailSentDaoImpl" />
+  <wsdd:service name="BillService" provider="java:RPC">
+    <parameter name="className" value="com.mybillr.db.jdbc.BillDaoImpl" />
     <parameter name="allowedMethods" value="*" />
   </wsdd:service>
-  <wsdd:service name="ItemShareService" provider="java:RPC">
-    <parameter name="className" value="com.mybillr.app.jdbc.ItemShareDaoImpl" />
+  <wsdd:service name="BillDetailsService" provider="java:RPC">
+    <parameter name="className" value="com.mybillr.db.jdbc.BillDetailsDaoImpl" />
     <parameter name="allowedMethods" value="*" />
   </wsdd:service>
-  <wsdd:service name="ItemizedBillService" provider="java:RPC">
-    <parameter name="className" value="com.mybillr.app.jdbc.ItemizedBillDaoImpl" />
+  <wsdd:service name="BillPayeeService" provider="java:RPC">
+    <parameter name="className" value="com.mybillr.db.jdbc.BillPayeeDaoImpl" />
     <parameter name="allowedMethods" value="*" />
   </wsdd:service>
-  <wsdd:service name="ItemsService" provider="java:RPC">
-    <parameter name="className" value="com.mybillr.app.jdbc.ItemsDaoImpl" />
-    <parameter name="allowedMethods" value="*" />
-  </wsdd:service>
-  <wsdd:service name="LedgerService" provider="java:RPC">
-    <parameter name="className" value="com.mybillr.app.jdbc.LedgerDaoImpl" />
-    <parameter name="allowedMethods" value="*" />
-  </wsdd:service>
-  <wsdd:service name="SharedBillService" provider="java:RPC">
-    <parameter name="className" value="com.mybillr.app.jdbc.SharedBillDaoImpl" />
-    <parameter name="allowedMethods" value="*" />
-  </wsdd:service>
-  <wsdd:service name="UserService" provider="java:RPC">
-    <parameter name="className" value="com.mybillr.app.jdbc.UserDaoImpl" />
-    <parameter name="allowedMethods" value="*" />
-  </wsdd:service>
-  <wsdd:service name="CurrenciesService" provider="java:RPC">
-    <parameter name="className" value="com.mybillr.app.jdbc.CurrenciesDaoImpl" />
+  <wsdd:service name="DebtService" provider="java:RPC">
+    <parameter name="className" value="com.mybillr.db.jdbc.DebtDaoImpl" />
     <parameter name="allowedMethods" value="*" />
   </wsdd:service>
   <wsdd:service name="FriendsService" provider="java:RPC">
-    <parameter name="className" value="com.mybillr.app.jdbc.FriendsDaoImpl" />
+    <parameter name="className" value="com.mybillr.db.jdbc.FriendsDaoImpl" />
     <parameter name="allowedMethods" value="*" />
   </wsdd:service>
-  <wsdd:service name="GeoipService" provider="java:RPC">
-    <parameter name="className" value="com.mybillr.app.jdbc.GeoipDaoImpl" />
+  <wsdd:service name="GroupService" provider="java:RPC">
+    <parameter name="className" value="com.mybillr.db.jdbc.GroupDaoImpl" />
     <parameter name="allowedMethods" value="*" />
   </wsdd:service>
-  <wsdd:service name="GroupsService" provider="java:RPC">
-    <parameter name="className" value="com.mybillr.app.jdbc.GroupsDaoImpl" />
+  <wsdd:service name="GroupMembersService" provider="java:RPC">
+    <parameter name="className" value="com.mybillr.db.jdbc.GroupMembersDaoImpl" />
+    <parameter name="allowedMethods" value="*" />
+  </wsdd:service>
+  <wsdd:service name="PasswordResetService" provider="java:RPC">
+    <parameter name="className" value="com.mybillr.db.jdbc.PasswordResetDaoImpl" />
+    <parameter name="allowedMethods" value="*" />
+  </wsdd:service>
+  <wsdd:service name="UserService" provider="java:RPC">
+    <parameter name="className" value="com.mybillr.db.jdbc.UserDaoImpl" />
+    <parameter name="allowedMethods" value="*" />
+  </wsdd:service>
+  <wsdd:service name="BugReportGeneralService" provider="java:RPC">
+    <parameter name="className" value="com.mybillr.db.jdbc.BugReportGeneralDaoImpl" />
+    <parameter name="allowedMethods" value="*" />
+  </wsdd:service>
+  <wsdd:service name="BugReportUserService" provider="java:RPC">
+    <parameter name="className" value="com.mybillr.db.jdbc.BugReportUserDaoImpl" />
+    <parameter name="allowedMethods" value="*" />
+  </wsdd:service>
+  <wsdd:service name="EmailsSentService" provider="java:RPC">
+    <parameter name="className" value="com.mybillr.db.jdbc.EmailsSentDaoImpl" />
     <parameter name="allowedMethods" value="*" />
   </wsdd:service>
   <wsdd:service name="NewsService" provider="java:RPC">
-    <parameter name="className" value="com.mybillr.app.jdbc.NewsDaoImpl" />
+    <parameter name="className" value="com.mybillr.db.jdbc.NewsDaoImpl" />
+    <parameter name="allowedMethods" value="*" />
+  </wsdd:service>
+  <wsdd:service name="Table1Service" provider="java:RPC">
+    <parameter name="className" value="com.mybillr.db.jdbc.Table1DaoImpl" />
     <parameter name="allowedMethods" value="*" />
   </wsdd:service>
 </wsdd:deployment>

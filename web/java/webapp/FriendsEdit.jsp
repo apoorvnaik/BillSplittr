@@ -11,8 +11,8 @@
 <td><html:text property="userId" readonly="false"size="30" /></td>
 </tr>
 <tr>
-<td>friendId:</td>
-<td><html:text property="friendId" readonly="false"size="30" /></td>
+<td>friendsWith:</td>
+<td><html:text property="friendsWith" readonly="false"size="30" /></td>
 </tr>
 </table>
 <html:submit/>

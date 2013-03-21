@@ -33,7 +33,7 @@
 </div>
 <div class="navLink">
 <small>
-<a href="FriendsFindWhereFriendIdEquals.do">FindWhereFriendIdEquals</a><br>
+<a href="FriendsFindWhereFriendsWithEquals.do">FindWhereFriendsWithEquals</a><br>
 </small>
 </div>
 </div>

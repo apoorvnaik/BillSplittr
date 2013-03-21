@@ -23,12 +23,12 @@
 </div>
 <div class="navLink">
 <small>
-<a href="NewsFindWhereContentEquals.do">FindWhereContentEquals</a><br>
+<a href="NewsFindWhereTitleEquals.do">FindWhereTitleEquals</a><br>
 </small>
 </div>
 <div class="navLink">
 <small>
-<a href="NewsFindWhereDatedEquals.do">FindWhereDatedEquals</a><br>
+<a href="NewsFindWhereContentEquals.do">FindWhereContentEquals</a><br>
 </small>
 </div>
 </div>

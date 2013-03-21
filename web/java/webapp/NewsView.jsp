@@ -9,12 +9,12 @@
 <td><bean:write name="News" property="id" /></td>
 </tr>
 <tr>
-<td>content:</td>
-<td><bean:write name="News" property="content" /></td>
+<td>title:</td>
+<td><bean:write name="News" property="title" /></td>
 </tr>
 <tr>
-<td>dated:</td>
-<td><bean:write name="News" property="dated" /></td>
+<td>content:</td>
+<td><bean:write name="News" property="content" /></td>
 </tr>
 </table>
 <html:form action="NewsFindByPrimaryKeyResults.do" >
